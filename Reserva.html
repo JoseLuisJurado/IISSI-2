@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta title="Residencia Estudiantil Digital">
+    <meta name="autor" content="José Luis Jurado Ortiz">
+    <style>
+        .background {
+            background: white;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgb(0, 128, 122);
+        }
+
+        div.sticky {
+            position: sticky;
+            border-bottom: 2px solid black;
+            top: 0;
+            background: white;
+        }
+
+        .cuerpo {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 30px;
+            padding-left: 30px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: coral;
+            margin-top: 2cm;
+            margin-left: 6cm;
+            margin-right: 6cm;
+        }
+
+        .ImgUS {
+            margin-right: 415px;
+            margin-left: 15px;
+            margin-top: 15px;
+            margin-bottom: 0cm;
+        }
+
+        .margenFormulario {
+            padding: 10px;
+            border-style: solid;
+            border-color: black;
+            margin: 2cm;
+            background-color: white;
+
+        }
+
+        .margenSexo {
+            margin-right: 30px;
+        }
+
+        .margenGeneral {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body background="Wallpaperbackground.jpg">
+
+    <div class="sticky">
+        <h2>
+            <img src="Emblema_Universidad_de_Sevilla.png" alt="UniversidadDeSevilla" height="80" width="80"
+                class="ImgUS">
+            Residencia Estudiantil Digital
+        </h2>
+        <div>
+            <ul>
+                <li><a href="" id="">Reserva</a></li>
+                <li><a href="" id="">Administración</a></li>
+                <li><a href="" id="">Cómo llegar</a></li>
+                <li><a href="" id="">Residencia</a>
+                    <ul class="" hidden>
+                        <li><a href="" id="">Conocenos</a></li>
+                        <li><a href="" id="">Contacto</a></li>
+                        <li><a href="" id="">Servicios</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="margenFormulario">
+        <form method="GET" >
+            DNI: <input type="text" name="DNI"  pattern="[A-Z]{1}?[0-9]{7,8}[A-Z]{1}" required><br>
+            Nombre: <input type="text" name="FirstName" class="margenGeneral" required><br>
+            Primer Apellido: <input type="text" name="Primer Apellido" class="margenGeneral" required><br>
+            Segundo Apellido: <input type="text" name="Segundo Apellido" class="margenGeneral" required><br>
+            <div class="margenGeneral">
+                Sexo: <select class="margenSexo">
+                    <option value="">Sexo</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+
+                País: <input type="text" name="País" class="margenSexo">
+
+                Población: <input type="text" name="Población" class="margenSexo">
+
+                Código Postal: <input type="text" name="CódigoPostal"><br>
+            </div>
+            <div class="margenGeneral">
+                Domicilio: <input type="text" name="Domicilio" class="margenSexo" required>
+
+                Correo electrónico: <input type="text" name="Correo electrónico" class="margenSexo" pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" required>
+
+                Correo electrónico Padre: <input type="text" name="CorreoPadre" pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}">
+
+            </div>
+            Fecha de llegada: <input type="datetime-local" name="FechaLLegada" class="margenGeneral" required><br>
+
+            Fecha de salida: <input type="datetime-local" name="FechaSalida" class="margenGeneral" required><br>
+            <div class="margenGeneral">
+
+                Tipo de pago:
+                <select class="margenSexo" required>
+                    <option value="Mensual">Mensual</option>
+                    <option value="Bimensual">Bimensual</option>
+                    <option value="Cuatrimestral">Cuatrimestral</option>
+                    <option value="Anual">Anual</option>
+                </select>
+
+                Forma de pago:
+                <select required>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Transferencia">Transferencia</option>
+                    <option value="Recibo bancario">Recibo bancario</option>
+                </select>
+
+            </div><br>
+
+            <input type="submit" title="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>

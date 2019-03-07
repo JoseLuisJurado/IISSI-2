@@ -126,8 +126,10 @@ div.sticky {
 }
 
 .ImgUS {
-    margin-right: 415px;
+    margin-right: 0px;
     margin-left: 0cm;
     margin-top: 0cm;
     margin-bottom: 0cm;
+    width: 140px;
+    height: 140px;
 }

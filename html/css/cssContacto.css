@@ -117,3 +117,17 @@ div.sticky {
 .margenGeneral {
     margin-top: 10px;
 }
+
+.Cuerpo2{
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+
+}
+.texto{
+   border: 2px solid black;
+   margin-right: 800px;
+   padding-left: 4px;
+   margin-bottom: 10px
+}
+

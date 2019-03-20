@@ -135,15 +135,15 @@ div.sticky {
 }
 
 .cuerpo2{
-    margin-top: 1cm;
-    margin-left: 3cm;
-    margin-right: 3cm;
-    margin-bottom: 3cm;
+    margin-top: 2%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 8%;
 }
 
 .cuerpo3{
-    margin-top: 1cm;
-    margin-bottom: 2cm;
+    margin-top: 2%;
+    margin-bottom: 4%;
     
 }
 
@@ -163,7 +163,7 @@ div.sticky {
     }
 
 .imagen2:hover {
-    margin:10px auto;
+    margin:4% auto;
 	display:block;
     filter: grayscale(80%);
     

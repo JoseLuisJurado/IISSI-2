@@ -19,7 +19,6 @@
         ?>
 
     </div>
-    <p><i>Los campos obligatorios están marcados con *</i></p>
 
     <fieldset>
         <legend>Datos Personales</legend>

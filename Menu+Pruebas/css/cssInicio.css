@@ -1,5 +1,7 @@
 div.example1 {
-  background: url(panoramica1.jpg);
+  background: url("../imagenes/panoramica1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .texto-chulo{
     text-align: center; 

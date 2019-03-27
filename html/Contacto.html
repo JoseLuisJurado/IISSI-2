@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta title="Residencia Estudiantil Digital">
-<meta name="autor" content="Antonio Miguel González Villar">
-<link rel="stylesheet" href="css/cssContacto.css" />
-<link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
+    <meta charset="utf-8">
+    <meta title="Residencia Estudiantil Digital">
+    <meta name="autor" content="Antonio Miguel González Villar">
+    <link rel="stylesheet" href="css/cssContacto.css" />
+    <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
 </head>
 
 <body class="background">
-        <div>
-                <a href="pagina_base.html" target="_blank">
-                <img src="imagenes/LogoRED.jpeg" alt="Logo"
-                    class="ImgUS"></a>
-                <img src="imagenes/panoramica1.jpg" id="panoramica" width="1180" height="140">
-    
-        </div>
-        <h2 class="texto-chulo">
-            Residencia Estudiantil Digital
-        </h2>
-            <div class="sticky">
-                        <!-- start nav -->
-             <nav id="menu">
-                    <!-- start menu -->
-                    <ul>
-                    <li><a href="formulario-reserva.html">Reserva</a></li>
-                    <li><a href="#">Administación</a></li>
-                    <li><a href="Como-llegar.html">Como Llegar</a></li>
-                    <li><a href="Residencia.html">Residencia</a>
+    <div>
+        <a href="pagina_base.html" target="_blank">
+            <img src="imagenes/LogoRED.jpeg" alt="Logo" class="ImgUS"></a>
+        <img src="imagenes/panoramica1.jpg" id="panoramica" width="1180" height="140">
+
+    </div>
+    <h2 class="texto-chulo">
+        Residencia Estudiantil Digital
+    </h2>
+    <div class="sticky">
+        <!-- start nav -->
+        <nav id="menu">
+            <!-- start menu -->
+            <ul>
+                <li><a href="formulario-reserva.html">Reserva</a></li>
+                <li><a href="#">Administación</a></li>
+                <li><a href="Como-llegar.html">Como Llegar</a></li>
+                <li><a href="Residencia.html">Residencia</a>
                     <!-- start menu desplegable -->
-                        <ul>
-                            <li><a href="Instalaciones.html">Instalaciones</a></li>
-                            <li><a href="Conocenos.html">Conócenos</a></li>
-                            <li><a href="Contacto.html">Contacto</a></li>
-                            <li><a href="Servicios.html">Servicios</a></li>
-                            </ul>
-                            <!-- end menu desplegable -->
-                        </ul>
-                    </li>
-                    <!-- end menu -->
-                    </nav>
-                    <!-- end nav -->
+                    <ul>
+                        <li><a href="Instalaciones.html">Instalaciones</a></li>
+                        <li><a href="Conocenos.html">Conócenos</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                        <li><a href="Servicios.html">Servicios</a></li>
+                    </ul>
+                    <!-- end menu desplegable -->
+            </ul>
+            </li>
+            <!-- end menu -->
+        </nav>
+        <!-- end nav -->
+    </div>
+    <p><i>Los campos obligatorios están marcados con *</i></p>
+
+    <fieldset>
+        <div class="margenFormulario">
+
+            <h2 style="text-decoration: underline;">
+                Contacto
+            </h2>
+            <div class="texto">
+                Residencia estudiantil Bahia
             </div>
-            <p><i>Los campos obligatorios están marcados con *</i></p>
 
-            <fieldset>
-                <div class="margenFormulario">
-                    
-                        <h2 style="text-decoration: underline;">
-                            Contacto
-                        </h2>
-                        <div class="texto">
-                            Residencia estudiantil Bahia
-                        </div>
+            <div class="texto">
+                C/S.Alejandro, 179, 11510, Puerto Real, Cádiz
+            </div>
 
-                        <div class="texto">
-                            C/S.Alejandro, 179, 11510, Puerto Real, Cádiz
-                        </div>
+            <div class="texto">
+                954-789-856-1
+            </div>
 
-                        <div class="texto">
-                            954-789-856-1
-                        </div>
+            <div class="texto">
+                CorreoFalso@gmaol.ez
+            </div>
 
-                        <div class="texto">
-                            CorreoFalso@gmaol.ez
-                        </div>
+            <h2 style="text-decoration: underline;">
+                Consulta
+            </h2>
 
-                        <h2 style="text-decoration: underline;">
-                            Consulta
-                        </h2>
+            <form method="GET">
+                Nombre*: <input type="text" name="FirstName" class="margenGeneral" required><br>
+                Primer Apellido*: <input type="text" name="Primer Apellido" class="margenGeneral" required><br>
+                Segundo Apellido: <input type="text" name="Segundo Apellido" class="margenGeneral" required><br>
 
-                    <form method="GET" >
-                        Nombre*: <input type="text" name="FirstName" class="margenGeneral" required><br>
-                        Primer Apellido*: <input type="text" name="Primer Apellido" class="margenGeneral" required><br>
-                        Segundo Apellido: <input type="text" name="Segundo Apellido" class="margenGeneral" required><br>
-                        
-                        <div class="margenGeneral">
-                           
-            
-                            Correo electrónico*: <input type="text" name="Correo electrónico" class="margenSexo" pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" required><br>
-                            
-                            
-                        </div>
+                <div class="margenGeneral">
 
-                        <div class="margenGeneral">
-                            Asunto*: <input type="text" name="Asunto" maxlength="100" class="margenGeneral" required><br>
-                                Mensaje*:<br>
-                            <textarea name="Mensaje" rows=10 cols=140 maxlength="600">
-                            </textarea>
-                            </form>
 
-                                
+                    Correo electrónico*: <input type="text" name="Correo electrónico" class="margenSexo"
+                        pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" required><br>
 
-            
-                        </div><br>
-            
-                        <input type="submit" title="Enviar">
-                    </form>
+
                 </div>
-            </fieldset>
-        </body>
-        </html>
+
+                <div class="margenGeneral">
+                    Asunto*: <input type="text" name="Asunto" maxlength="100" class="margenGeneral" required><br>
+                    Mensaje*:<br>
+                    <textarea name="Mensaje" rows=10 cols=140 maxlength="600">
+                            </textarea>
+            </form>
+
+
+
+
+        </div><br>
+
+        <input type="submit" title="Enviar">
+        </form>
+        </div>
+    </fieldset>
+</body>
+
+</html>

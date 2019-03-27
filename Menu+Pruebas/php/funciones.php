@@ -239,5 +239,5 @@ $paises = array(
      "ZM"=> "Zambia",
      "ZW"=> "Zimbabue"
 );
-$default_paises = "ES"; //genero por defecto en pais
+$default_paises = "EL"; //genero por defecto en pais
  

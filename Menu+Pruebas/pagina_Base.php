@@ -9,9 +9,9 @@
 </head>
 
 <body>
-	<?php 
-	include "php/menu.php";
-	 ?>
+    <?php 
+    include "php/menu.php";
+    ?>
     <div class="cuerpo">
         <p>Contenido de imágenes y texto dentro de la página web</p>
         <p>Contenido de imágenes y texto dentro de la página web</p>
@@ -50,12 +50,12 @@
         <p>Contenido de imágenes y texto dentro de la página web</p>
         <p>Contenido de imágenes y texto dentro de la página web</p>
         <p>Contenido de imágenes y texto dentro de la página web</p>
-        
+
     </div>
-			<?php 
-	include "php/pie.php";
-	 ?>
-	
+    <?php 
+    include "php/pie.php";
+    ?>
+
 </body>
 
-</html>
+</html> 

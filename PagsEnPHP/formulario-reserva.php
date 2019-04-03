@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
     <meta name="autor" content="Antonio Miguel González Villar">
-    <meta name="autor2" content ="José Luis Jurado Ortiz">
+    <meta name="autor2" content="José Luis Jurado Ortiz">
     <link rel="stylesheet" href="css/formulario-reserva.css" />
     <link rel="stylesheet" href="css/cssInicio.css" />
     <script src="javascript/validacionFormulario.js" type="text/javascript"></script>
@@ -50,10 +50,14 @@
                 <label>
                     Sexo: <select class="margenSexo" name="Sexo" required>
                         <option value="">Sexo</option>
-                        <option value="Hombre">Hombre</option>
-                        <option value="Mujer">Mujer</option>
-                        <option value="Otro">Otro</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
                     </select>
+                </label>
+            </section>
+            <section class="margenGeneral">
+                <label>
+                    Eres mayor de edad?: <input type="checkbox" name="MayoriaEdad" style="text-align: left" required>
                 </label>
             </section>
         </fieldset>
@@ -104,20 +108,26 @@
             <section class="margenGeneral">
                 <label>
                     Tipo de pago:
-                    <select class="margenSexo" required>
-                        <option value="Mensual">Mensual</option>
-                        <option value="Bimensual">Bimensual</option>
-                        <option value="Cuatrimestral">Cuatrimestral</option>
-                        <option value="Anual">Anual</option>
+                    <select class="margenSexo" name="TipoPago" required>
+                        <option value="mensual">Mensual</option>
+                        <option value="bimensual">Bimensual</option>
+                        <option value="cuatrimestral">Cuatrimestral</option>
+                        <option value="anual">Anual</option>
                     </select>
                 </label>
                 <label>
                     Forma de pago:
-                    <select required>
-                        <option value="Efectivo">Efectivo</option>
-                        <option value="Transferencia">Transferencia</option>
-                        <option value="Recibo bancario">Recibo bancario</option>
+                    <select name="FormaPago" required>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="transferencia">Transferencia</option>
+                        <option value="recibo bancario">Recibo bancario</option>
+                        <option value="TPV">TPV</option>
                     </select>
+                </label>
+            </section>
+            <section class="margenGeneral">
+                <label>
+                    Va a pagar el comedor?: <input type="checkbox" name="pagoComedor" required>
                 </label>
             </section>
         </fieldset>

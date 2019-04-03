@@ -12,7 +12,7 @@
 	<?php 
 	include "php/menu.php";
 	 ?>
-    <div class="cuerpo">
+    <div class="cuerpo2">
         <p>Contenido de imágenes y texto dentro de la página web</p>
         <p>Contenido de imágenes y texto dentro de la página web</p>
         <p>Contenido de imágenes y texto dentro de la página web</p>

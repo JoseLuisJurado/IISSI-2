@@ -23,7 +23,7 @@
 
     </div>
 
-    <form name="formularioReserva" method="post" onsubmit="return validacionFormulario()">
+    <form name="formularioReserva" method="post" onsubmit="return validacionGeneral()">
         <fieldset>
             <legend>Datos Personales</legend>
             <section>
@@ -55,7 +55,7 @@
             </section>
             <section class="margenGeneral">
                 <label>
-                    Eres mayor de edad?: <input type="checkbox" name="MayoriaEdad" style="text-align: left" required>
+                    Eres mayor de edad?: <input type="checkbox" name="MayoriaEdad" style="text-align: left">
                 </label>
             </section>
         </fieldset>
@@ -85,22 +85,20 @@
                     Domicilio: <input type="text" name="Domicilio" class="margenSexo" required>
                 </label>
                 <label>
-                    Correo electrónico: <input type="text" name="Correo electrónico" class="margenSexo" pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" placeholder="aaaa@buscador.com" required>
+                    Correo electrónico: <input type="email" name="Correo electrónico" class="margenSexo" placeholder="aaaa@buscador.com" required>
                 </label>
                 <label>
-                    Correo electrónico del tutor legal: <input type="text" name="CorreoPadre" pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" placeholder="aaaa@buscador.com">
-                </label>
-            </section>
-            <section>
-                <label>
-                    Fecha de llegada: <input type="datetime-local" name="FechaLlegada" class="margenGeneral" required>
-                    <b style="text-transform: uppercase; margin-left: 2%"> Si no sabe la hora de llegada, marque 00:00</b>
+                    Correo electrónico del tutor legal: <input type="email" name="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
             </section>
             <section>
                 <label>
-                    Fecha de salida: <input type="datetime-local" name="FechaSalida" class="margenGeneral" required>
-                    <b style="text-transform:uppercase; margin-left: 2%"> Si no sabe la hora de llegada, marque 23:59</b>
+                    Fecha de llegada: <input type="date" name="FechaLlegada" class="margenGeneral" required>
+                </label>
+            </section>
+            <section>
+                <label>
+                    Fecha de salida: <input type="date" name="FechaSalida" class="margenGeneral" required>
                 </label>
             </section>
             <section class="margenGeneral">
@@ -123,7 +121,7 @@
             </section>
             <section class="margenGeneral">
                 <label>
-                    Va a pagar el comedor?: <input type="checkbox" name="pagoComedor" required>
+                    Va a pagar el comedor?: <input type="checkbox" name="pagoComedor">
                 </label>
             </section>
         </fieldset>

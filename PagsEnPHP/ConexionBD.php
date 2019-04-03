@@ -32,7 +32,7 @@
         $domicilio = $f["Domicilio"];
         $correoElectronico = $f["Correo electrónico"];
         $correoPadre = $f["CorreoPadre"];
-        $fechaLlegada = $f["FechaLLegada"];
+        $fechaLlegada = $f["FechaLlegada"];
         $fechaSalida = $f["FechaSalida"];
         $tipoPago = $f["TipoPago"];
         $formaPago = $f["FormaPago"];

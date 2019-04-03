@@ -93,7 +93,7 @@
             </section>
             <section>
                 <label>
-                    Fecha de llegada: <input type="datetime-local" name="FechaLLegada" class="margenGeneral" required>
+                    Fecha de llegada: <input type="datetime-local" name="FechaLlegada" class="margenGeneral" required>
                     <b style="text-transform: uppercase; margin-left: 2%"> Si no sabe la hora de llegada, marque 00:00</b>
                 </label>
             </section>

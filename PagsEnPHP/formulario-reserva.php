@@ -28,7 +28,7 @@
             <legend>Datos Personales</legend>
             <section>
                 <label>
-                    DNI: <input type="text" name="DNI" id="DNI"  pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" placeholder="12345678A" maxlength="9" required>
+                    DNI: <input type="text" name="DNI" id="DNI" placeholder="12345678A" maxlength="9" required>
                 </label>
             </section>
             <section>
@@ -48,10 +48,11 @@
             </section>
             <section class="margenGeneral">
                 <label>
-                    Sexo: <select class="margenSexo">
+                    Sexo: <select class="margenSexo" name="Sexo" required>
                         <option value="">Sexo</option>
                         <option value="Hombre">Hombre</option>
                         <option value="Mujer">Mujer</option>
+                        <option value="Otro">Otro</option>
                     </select>
                 </label>
             </section>

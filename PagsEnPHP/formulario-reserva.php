@@ -8,7 +8,7 @@
     <meta name="autor2" content ="José Luis Jurado Ortiz">
     <link rel="stylesheet" href="css/formulario-reserva.css" />
     <link rel="stylesheet" href="css/cssInicio.css" />
-    <script src="javascript/validacionDormulario.js" type="text/javascript"></script>
+    <script src="javascript/validacionFormulario.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
 </head>
 

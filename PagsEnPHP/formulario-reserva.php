@@ -48,11 +48,9 @@
             </section>
             <section class="margenGeneral">
                 <label>
-                    Sexo: <select class="margenSexo" name="Sexo" required>
-                        <option value="">Sexo</option>
-                        <option value="hombre">Hombre</option>
-                        <option value="mujer">Mujer</option>
-                    </select>
+                    Sexo:
+                        <input value="hombre" name="Sexo" type="radio">Hombre
+                        <input value="mujer" name="Sexo" type="radio">Mujer
                 </label>
             </section>
             <section class="margenGeneral">
@@ -108,21 +106,19 @@
             <section class="margenGeneral">
                 <label>
                     Tipo de pago:
-                    <select class="margenSexo" name="TipoPago" required>
-                        <option value="mensual">Mensual</option>
-                        <option value="bimensual">Bimensual</option>
-                        <option value="cuatrimestral">Cuatrimestral</option>
-                        <option value="anual">Anual</option>
-                    </select>
+                    <input value="mensual" name="TipoPago" type="radio">Mensual
+                    <input value="bimensual" name="TipoPago" type="radio">Bimensual
+                    <input value="cuatrimestral" name="TipoPago" type="radio">Cuatrimestral
+                    <input value="anual" name="TipoPago" type="radio">Anual
                 </label>
+            </section>
+            <section class="margenGeneral">
                 <label>
                     Forma de pago:
-                    <select name="FormaPago" required>
-                        <option value="efectivo">Efectivo</option>
-                        <option value="transferencia">Transferencia</option>
-                        <option value="recibo bancario">Recibo bancario</option>
-                        <option value="TPV">TPV</option>
-                    </select>
+                    <input name="FormaPago" type="radio" value="efectivo">Efectivo
+                    <input name="FormaPago" type="radio" value="transferencia">Transferencia
+                    <input name="FormaPago" type="radio" value="recibo bancario">Recibo bancario
+                    <input name="FormaPago" type="radio" value="TPV">TPV
                 </label>
             </section>
             <section class="margenGeneral">

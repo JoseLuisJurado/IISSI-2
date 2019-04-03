@@ -14,16 +14,16 @@
         <nav id="menu">
                 <!-- start menu -->
                 <ul>
-                <li><a href="#">Reserva</a></li>
-                <li><a href="#">Iniciar Sesión</a></li>
-                <li><a href="Como-llegar.html">Como Llegar</a></li>
-                <li><a href="#">Residencia</a>
+                <li><a href="formulario_reserva.php">Reserva</a></li>
+                <li><a href="inicio_sesion.php">Iniciar Sesión</a></li>
+                <li><a href="Como-llegar.php">Como Llegar</a></li>
+                <li><a href="Residencia.php">Residencia</a>
                 <!-- start menu desplegable -->
                     <ul>
-                        <li><a href="#">Instalaciones</a></li>
-                        <li><a href="#">Conócenos</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Servicios</a></li>
+                        <li><a href="Instalaciones.php">Instalaciones</a></li>
+                        <li><a href="Conocenos.php">Conócenos</a></li>
+                        <li><a href="Contacto.php">Contacto</a></li>
+                        <li><a href="Servicios.php">Servicios</a></li>
                         </ul>
                         <!-- end menu desplegable -->
                     </ul>

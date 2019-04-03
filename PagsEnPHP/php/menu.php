@@ -15,7 +15,7 @@
                 <!-- start menu -->
                 <ul>
                 <li><a href="#">Reserva</a></li>
-                <li><a href="#">Administación</a></li>
+                <li><a href="#">Iniciar Sesión</a></li>
                 <li><a href="Como-llegar.html">Como Llegar</a></li>
                 <li><a href="#">Residencia</a>
                 <!-- start menu desplegable -->

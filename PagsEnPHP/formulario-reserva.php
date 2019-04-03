@@ -88,7 +88,7 @@
                     Correo electrónico: <input type="text" name="Correo electrónico" class="margenSexo" pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" placeholder="aaaa@buscador.com" required>
                 </label>
                 <label>
-                    Correo electrónico Padre: <input type="text" name="CorreoPadre" pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" placeholder="aaaa@buscador.com">
+                    Correo electrónico del tutor legal: <input type="text" name="CorreoPadre" pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" placeholder="aaaa@buscador.com">
                 </label>
             </section>
             <section>

@@ -11,10 +11,9 @@
 </head>
 
 <body>
-    <?php 
-		include "php/menu.php";
-	 	?>
-    <p><i>Los campos obligatorios están marcados con *</i></p>
+    <?php
+    include "php/menu.php";
+    ?>
 
     <fieldset>
         <div class="margenFormulario">
@@ -43,22 +42,31 @@
             </h2>
 
             <form method="GET">
-                Nombre*: <input type="text" name="FirstName" class="margenGeneral" required><br>
-                Primer Apellido*: <input type="text" name="Primer Apellido" class="margenGeneral" required><br>
-                Segundo Apellido: <input type="text" name="Segundo Apellido" class="margenGeneral" required><br>
+                <section>
+                    Nombre*: <input type="text" name="FirstName" class="margenGeneral" required>
+                </section>
+                <section>
+                    Primer Apellido*: <input type="text" name="Primer Apellido" class="margenGeneral" required>
+                </section>
+                <section>
+                    Segundo Apellido: <input type="text" name="Segundo Apellido" class="margenGeneral" required>
+                </section>
 
-                <div class="margenGeneral">
+                <section class="margenGeneral">
 
 
-                    Correo electrónico*: <input type="text" name="Correo electrónico" class="margenSexo"
-                        pattern="[a-ze-9._$+-1+@[a-ze-9.-]+\-[a-z]{2,}" required><br>
+                    Correo electrónico*: <input type="email" name="Correo electrónico" class="margenSexo" required>
 
 
-                </div>
+                </section>
 
-                <div class="margenGeneral">
-                    Asunto*: <input type="text" name="Asunto" maxlength="100" class="margenGeneral" required><br>
-                    Mensaje*:<br>
+                <section class="margenGeneral">
+                    <section>
+                        Asunto*: <input type="text" name="Asunto" maxlength="100" class="margenGeneral" required>
+                    </section>
+                    <section style="margin-top: 1%; margin-bottom: 1%   ">
+                        Mensaje*:
+                    </section>
                     <textarea name="Mensaje" rows=10 cols=140 maxlength="600">
                             </textarea>
             </form>
@@ -66,15 +74,15 @@
 
 
 
-        </div><br>
+            </section>
 
-        <input type="submit" title="Enviar">
-        </form>
+            <input type="submit" title="Enviar">
+            </form>
         </div>
     </fieldset>
-    <?php 
-	include "php/pie.php";
-	 ?>
+    <?php
+    include "php/pie.php";
+    ?>
 </body>
 
 </html>

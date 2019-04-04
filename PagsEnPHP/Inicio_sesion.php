@@ -15,9 +15,9 @@
 	 ?>
 	 <div>
         <main class="main">
-            <form>
+            <form method="POST" name="formularioInicio" id ="formularioInicio">
                 <fieldset class="field">
-                    <legend><u> Iniciar sesión como usuarío </u></legend>
+                    <legend><u> Iniciar sesión</u></legend>
                     <section>
                         <label>
                             Usuario: <input type="text" name="Usuario" id="Usuario" placeholder="Mi nombre de usuario" required>

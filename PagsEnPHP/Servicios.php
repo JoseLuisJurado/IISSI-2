@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <?php 
-		include "php/menu.php";
-	 	?>
+    <?php
+    include "php/menu.php";
+    ?>
     <div class="Cuerpo">
         <h2 class="texto">Comedor</h2>
     </div>
@@ -23,41 +23,37 @@
             Incluye Almuerzo completo. Este servicio estará disponible cuando un mínimo de 30 residentes lo hayan
             solicitado en el contrato.
         </p>
-        </img>
     </div>
     <div class="Cuerpo2">
         <h2 class="texto">Mantenimiento</h2>
     </div>
-    <div>
+    <div style="text-align: center">
         <img class="fotos" src="imagenes/100D7VIZ003_1.jpg">
         <p class="texto-imagen">Esta residencia consta con un eficiente servicio de mantenimiento que se encargará de la
-            reparación de cualquier desperfecto en la misma.<br> En caso de que el desperfecto sea causado por un
+            reparación de cualquier desperfecto en la misma. En caso de que el desperfecto sea causado por un
             residente, este pagará los gastos pertinentes.</p>
-        </img>
     </div>
     <div class="Cuerpo2">
         <h2 class="texto">Vigilancia</h2>
     </div>
-    <div>
+    <div style="text-align: center">
         <img class="fotos" src="imagenes/Chuck Norris.jpg">
         <p class="texto-imagen">El servicio de vigilancia, es el encargado de evitar que personas no autorizadas entren
             en la residencia, así como de defender la misma de cualquier peligro externo, como ladrones o ETA.</p>
-        </img>
     </div>
     <div class="Cuerpo2">
         <h2 class="texto">Limpieza</h2>
     </div>
-    <div>
+    <div style="text-align: center;margin-bottom: 10%">
         <img class="fotos" src="imagenes/depositphotos_98500248-stock-photo-worker-in-protective-chemical-suit.jpg">
         <p class="texto-imagen"> El contrato de la residencia incluye nuestro servicio de limpieza. Los residentes
             podrán disponer de limpieza en sus habitaciones todos los viernes. Además de ser el encargado de la limpieza
             post-estancia.
         </p>
-        </img>
     </div>
-    <?php 
-	include "php/pie.php";
-	 ?>
+    <?php
+    include "php/pie.php";
+    ?>
 </body>
 
 </html>

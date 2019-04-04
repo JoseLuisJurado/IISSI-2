@@ -21,62 +21,62 @@
             <h2 style="text-decoration: underline;">
                 Contacto
             </h2>
-            <div class="texto">
+            <p class="texto">
                 Residencia estudiantil Bahia
-            </div>
+            </p>
 
-            <div class="texto">
+            <p class="texto">
                 C/S.Alejandro, 179, 11510, Puerto Real, Cádiz
-            </div>
+            </p>
 
-            <div class="texto">
+            <p class="texto">
                 954-789-856-1
-            </div>
+            </p>
 
-            <div class="texto">
+            <p class="texto">
                 CorreoFalso@gmaol.ez
-            </div>
+            </p>
 
             <h2 style="text-decoration: underline;">
                 Consulta
             </h2>
 
-            <form method="GET">
+            <form method="GET" name="formularioContacto" if="formularioContacto">
                 <section>
-                    Nombre*: <input type="text" name="FirstName" class="margenGeneral" required>
+                    <label>
+                        Nombre*: <input type="text" name="FirstName" id="FirstName" class="margenGeneral" required>
+                    </label>
                 </section>
                 <section>
-                    Primer Apellido*: <input type="text" name="Primer Apellido" class="margenGeneral" required>
+                    <label>
+                        Primer Apellido*: <input type="text" name="Primer Apellido" id="Primer Apellido" class="margenGeneral" required>
+                    </label>
                 </section>
                 <section>
-                    Segundo Apellido: <input type="text" name="Segundo Apellido" class="margenGeneral" required>
+                    <label>
+                        Segundo Apellido: <input type="text" name="Segundo Apellido" id="Segundo Apellido" class="margenGeneral" required>
+                    </label>
                 </section>
 
                 <section class="margenGeneral">
-
-
-                    Correo electrónico*: <input type="email" name="Correo electrónico" class="margenSexo" required>
-
-
+                    <label>
+                        Correo electrónico*: <input type="email" name="Correo electrónico" id="Correo electrónico" class="margenSexo" required>
+                    </label>
                 </section>
 
                 <section class="margenGeneral">
                     <section>
-                        Asunto*: <input type="text" name="Asunto" maxlength="100" class="margenGeneral" required>
+                        Asunto*: <input type="text" name="Asunto" id="Asunto" maxlength="100" class="margenGeneral" required>
                     </section>
-                    <section style="margin-top: 1%; margin-bottom: 1%   ">
+                    <section style="margin-top: 1%; margin-bottom: 1%">
                         Mensaje*:
                     </section>
                     <textarea name="Mensaje" rows=10 cols=140 maxlength="600">
                             </textarea>
-            </form>
 
+                </section>
 
-
-
-            </section>
-
-            <input type="submit" title="Enviar">
+                <input type="submit" title="Enviar" name="Enviar" id=Enviar>
             </form>
         </div>
     </fieldset>

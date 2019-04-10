@@ -9,16 +9,24 @@
 </head>
 
 <body>
-	<?php 
-	include "php/menu.php";
-	 ?>
+    <?php
+    include "php/menu.php";
+    session_start();
+
+    require_once("ConexionBD.php");
+
+    ?>
     <div class="cuerpo">
-        <p>Hola, no recuerdo que venía aquí</p>
+        <?php
+            
+        ?>
     </div>
-			<?php 
-	include "php/pie.php";
-	 ?>
-	
+    <?php
+    include "php/pie.php";
+    ?>
+
+
+
 </body>
 
 </html>

@@ -2,8 +2,8 @@
     function crearconexionBD(){
         
         $host="oci:dbname=localhost/XE;charset=UTF8";
-        $usuario = "Conexion de usuario";
-        $password = "Contraseña de conxeión";
+        $usuario = "IISSI";
+        $password = "IISSI";
 
         try{
             $conexion = new PDO($host, $usuario, $password, array(PDO::ATTR_PERSISTENT => true));

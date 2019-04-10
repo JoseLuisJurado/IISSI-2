@@ -14,9 +14,23 @@
         <nav id="menu">
                 <!-- start menu -->
                 <ul>
-                <li><a href="formulario-reserva.php">Reserva</a></li>
-                <li><a href="inicio_sesion.php">Iniciar Sesión</a></li>
+                <li><?php if (!(isset($_SESSION['login']))) {	?>
+                	<a href="formulario-reserva.php">Reserva</a><?php } ?>
+                	</li>
+                	
+                <li><?php if (!(isset($_SESSION['login']))) {	?>
+               	<a href="inicio_sesion.php">Iniciar Sesión</a><?php } ?>
+               	</li>
                 <li><a href="Como-llegar.php">Como Llegar</a></li>
+                <li><?php if (isset($_SESSION['login'])) {	?>
+				<a href="logout.php">Cerrar Sesión</a>
+			<?php } ?>
+		</li>
+		
+		<li><?php if (isset($_SESSION['login'])) {	?>
+				<a href="Perfil.php">Perfil</a>
+			<?php } ?>
+		</li>
                 <li><a href="Residencia.php">Residencia</a>
                 <!-- start menu desplegable -->
                     <ul>

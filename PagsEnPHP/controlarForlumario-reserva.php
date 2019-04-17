@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     if(isset($_REQUEST["DNI"])){
         $reserva["DNI"] = $_REQUEST["DNI"];
         $reserva["FirstName"] = $_REQUEST["FirstName"];
@@ -19,5 +21,6 @@
         $reserva["pagoComedor"] = $_REQUEST["pagoComedor"];
 
         $_SESSION["reserva"] = $reserva;
-    }
+        
+    }else Header("Location: controlarForlumario-reserva.php");
 ?>

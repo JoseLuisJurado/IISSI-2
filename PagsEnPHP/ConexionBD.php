@@ -41,9 +41,9 @@
         $mayoriaEdad = $f["MayoriaEdad"];
         $pagoComedor = $f["pagoComedor"];
 
-        $comando1 = "INSERT INTO RESIDENTE(DNI_R, Nombre, Genero, PagoComedor, Es_Mayor) ";
+        $comando1 = "INSERT INTO RESIDENTE(DNI_R, NOMBRE, APELLIDO1, APELLIDO2, GENERO, PAGOCOMEDOR, ES_MAYOR) ";
         
-        $comando1 += "VALUES('$nif','$nombre'+' '+'$primerApellido'+' '+'$segundoApellido','$sexo','$pagoComedor','$mayoriaEdad')";
+        $comando1 += "VALUES('$nif','$nombre, '$primerApellido', '$segundoApellido','$sexo','$pagoComedor','$mayoriaEdad')";
 
         $comando2 = "INSERT INTO contrato_residente (Correo_Hijo, Correo_padre, Fecha_inicio, Fecha_fin, TipoPago,"
         ." FormaPago, Pais, Poblacion, Domicilio, CodPostal, DNI_R)";

@@ -23,7 +23,7 @@
 
     </div>
 
-    <form name="formularioReserva" method="post" onsubmit="return validacionGeneral()" action="">
+    <form name="formularioReserva" method="post" onsubmit="return validacionGeneral()" action="controlarForlumario-reserva.php">
         <fieldset>
             <legend>Datos Personales</legend>
             <section>

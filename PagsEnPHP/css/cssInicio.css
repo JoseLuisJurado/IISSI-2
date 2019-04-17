@@ -1,18 +1,35 @@
-﻿div.example1 {
-  background: url("../imagenes/panoramica1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+﻿input[type=submit], input[type=button] {
+    color: white;
+    background-color: aqua !important;
+    padding: 2%;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    float: left;
 }
-.texto-chulo{
-    text-align: center; 
-    font-family: Arial Black; 
-    font-weight: bold; font-size: 30px; 
-    background: #202020; 
-    -webkit-background-clip: text; 
-    -moz-background-clip: text; 
-    background-clip: text; 
-    color: #FFFFFF; 
-    text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+
+input[type=submit]:hover, input[type=button]:hover{
+    background-color: #16a5be;
+}
+
+
+div.example1 {
+    background: url("../imagenes/panoramica1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.texto-chulo {
+    text-align: center;
+    font-family: Arial Black;
+    font-weight: bold;
+    font-size: 30px;
+    background: #202020;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: #FFFFFF;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
     margin: 0px;
 }
 
@@ -22,7 +39,6 @@ div.sticky {
     top: 0;
     background: white;
 }
-
 
 .cuerpo2 {
     padding-top: 50px;
@@ -36,7 +52,6 @@ div.sticky {
     margin-left: 6cm;
     margin-right: 6cm;
 }
-
 
 #menu ul {
     list-style-type: none;
@@ -65,39 +80,36 @@ div.sticky {
 /* menu desplegable */
 
 #menu ul ul {
-    display:none;
+    display: none;
     position: absolute;
-    top:100%;
-    background:lightblue;
-    padding:0;
+    top: 100%;
+    background: lightblue;
+    padding: 0;
     border-left: solid 2px #000000;
     border-right: solid 2px #000000;
     border-bottom: solid 2px #000000;
     text-align: center;
+}
 
-   }
-   
-   /* items del menu desplegable */
-   
-   #menu ul ul li {
-    float:none;
-    width:100px
-   }
-   
-   /* enlaces de los items del menu desplegable */
-   
-   #menu ul ul a {
-    line-height:120%;
-    padding:10px 15px;
-   }
-   
-   /* items del menu desplegable al pasar el ratón */
-   
-   #menu ul li:hover > ul {
-    display:block;
-   }
+/* items del menu desplegable */
 
+#menu ul ul li {
+    float: none;
+    width: 100px
+}
 
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover>ul {
+    display: block;
+}
 
 .ImgUS {
     margin-right: 0px;
@@ -109,5 +121,5 @@ div.sticky {
 }
 
 div.pie {
-  text-align: center;
+    text-align: center;
 }

@@ -9,6 +9,8 @@
             $conexion = new PDO($host, $usuario, $password, array(PDO::ATTR_PERSISTENT => true));
 
             $conexion-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+            echo "Conexión realizada satisfactoriamente";
             return $conexion;
         }catch(PDOException $e){
             $_SESSION['excepcion'] = $e->getMessage();
@@ -48,5 +50,13 @@
         
         $comando2 += "VALUES('$correoElectronico','$correoPadre','$fechaLlegada','$fechaSalida','$tipoPago',"
         ."'$formaPago','$pais','$poblacion','$domicilio','$codigoPostal','$nif')";
+    
+        $conexion = crearconexionBD();
+
+        //Inserción de los datos en la base de datos
+        $conexion->exec($comando1);
+        $conexion->exec($comando2);
+        echo "Inserción hecha";
+
     }
 ?>

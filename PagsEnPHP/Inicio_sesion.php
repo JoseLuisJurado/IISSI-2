@@ -10,12 +10,12 @@
 </head>
 
 <body>
-	<?php 
-	include "php/menu.php";
-	 ?>
-	 <div>
+    <?php
+    include "php/menu.php";
+    ?>
+    <div>
         <main class="main">
-            <form method="POST" name="formularioInicio" id ="formularioInicio">
+            <form method="POST" name="formularioInicio" id="formularioInicio" action="">
                 <fieldset class="field">
                     <legend><u> Iniciar sesión</u></legend>
                     <section>
@@ -25,18 +25,22 @@
                     </section>
                     <section>
                         <label>
-                            Contraseña: <input type="password" name="Contraseña" id="Contraseña"
-                                placeholder="Ejemplo: 123456abcdef" required>
+                            Contraseña: <input type="password" name="Contraseña" id="Contraseña" placeholder="Ejemplo: 123456abcdef" required>
                         </label>
-                        ¿Aun no has hecho tu reserva? <a href="formulario-reserva.php">Reserva Aquí</a>
+                        <div>
+                            <label>
+                                ¿Aun no has hecho tu reserva? <a href="formulario-reserva.php">Reserva Aquí</a>
+                            </label>
+                        </div>
                     </section>
                 </fieldset>
                 <input type="submit" title="Enviar">
             </form>
         </main>
     </div>
-	 <?php 
-	include "php/pie.php";
-	 ?>
+    <?php
+    include "php/pie.php";
+    ?>
 </body>
+
 </html>

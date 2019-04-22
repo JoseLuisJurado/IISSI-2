@@ -1,23 +1,29 @@
 ﻿input[type=submit], input[type=button] {
     color: white;
     background-color: aqua !important;
-    padding: .2m !important;
+    padding: 1%;
     border: none;
     border-radius: 2px;
     cursor: pointer;
     float: left;
     margin-top: 0.2%;
+    font-style: italic;
+    word-spacing: .1em;
 }
 
 input[type=submit]:hover, input[type=button]:hover{
     background-color: #16a5be;
 }
 
-
 div.example1 {
     background: url("../imagenes/panoramica1.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+body{
+    background-image: url("PagsEnPHP\imagenes\82988366-textura-de-la-pared-de-ladrillo-blanco-fondo-abstracto-vacío-para-presentaciones-y-diseño-web-un-montón-de-e.jpg");
+    background-repeat: repeat;
 }
 
 .texto-chulo {
@@ -119,6 +125,7 @@ div.sticky {
     margin-bottom: 0cm;
     width: 140px;
     height: 140px;
+    opacity: 0.9;
 }
 
 div.pie {

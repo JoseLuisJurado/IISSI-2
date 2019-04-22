@@ -1,8 +1,4 @@
-﻿.background {
-    background: white;
-}
-
-.texto-chulo{
+﻿.texto-chulo{
     text-align: center; 
     font-family: Arial Black; 
     font-weight: bold; font-size: 30px; 
@@ -16,6 +12,25 @@
 
 form{
     padding: 2%;
+}
+
+fieldset{
+    border-radius: .5em;
+    margin-bottom: 1%;
+    border-width: .2em;
+    background-color: whitesmoke;
+}
+
+section{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+label{
+    display:inline-block;
+    float: left;
+    clear: left;
+    text-align: left;
+    padding: .2em;
 }
 
 div.sticky {

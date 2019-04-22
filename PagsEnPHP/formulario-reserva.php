@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
 </head>
 
-<body class="background">
+<body>
     <div>
         <?php
         include "php/menu.php";
@@ -22,7 +22,6 @@
         ?>
 
     </div>
-
     <form name="formularioReserva" method="post" onsubmit="return validacionGeneral()" action="controlarForlumario-reserva.php">
         <fieldset>
             <legend>Datos Personales</legend>
@@ -33,7 +32,7 @@
             </section>
             <section>
                 <label>
-                    Nombre: <input type="text" name="FirstName"  id="FirstName" class="margenGeneral" required>
+                    Nombre: <input type="text" name="FirstName" id="FirstName" class="margenGeneral" required>
                 </label>
             </section>
             <section>
@@ -49,13 +48,13 @@
             <section class="margenGeneral">
                 <label>
                     Sexo:
-                        <input value="hombre" name="Sexo" id="Sexo" type="radio">Hombre
-                        <input value="mujer" name="Sexo" id="Sexo" type="radio">Mujer
+                    <input value="hombre" name="Sexo" id="Sexo" type="radio">Hombre
+                    <input value="mujer" name="Sexo" id="Sexo" type="radio">Mujer
                 </label>
             </section>
             <section class="margenGeneral">
                 <label>
-                    Eres mayor de edad?: <input type="checkbox" name="MayoriaEdad" id="MayoriaEdad" style="text-align: left">
+                    Eres mayor de edad?: <input type="checkbox" name="MayoriaEdad" id="MayoriaEdad">
                 </label>
             </section>
         </fieldset>
@@ -67,7 +66,7 @@
                         <?php
                         $selected = "";
                         foreach ($paises as $p => $paises) {
-                            $selected = ($p == $default_paises) ?"selected" : "";
+                            $selected = ($p == $default_paises) ? "selected" : "";
                             echo "<option $selected value='$p'>$paises</option>";
                         }
                         ?>

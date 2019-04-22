@@ -1,6 +1,12 @@
 main.main {
 	margin: 5% 20% 20% 20%;
 }
-.field{
-	padding: 5%;
+field{
+	padding: 2%;
 }
+
+input{
+	margin-bottom: 1%;
+}
+
+

@@ -1,11 +1,12 @@
 ﻿input[type=submit], input[type=button] {
     color: white;
     background-color: aqua !important;
-    padding: 2%;
+    padding: .2m !important;
     border: none;
     border-radius: 2px;
     cursor: pointer;
     float: left;
+    margin-top: 0.2%;
 }
 
 input[type=submit]:hover, input[type=button]:hover{

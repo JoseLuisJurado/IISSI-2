@@ -17,9 +17,13 @@ if (isset($_REQUEST["pag_act"])) {
     $pag_act = $_REQUEST["pag_act"];
 }
 
-if (isset($_REQUEST["pag_size"])) {
-    $pag_size = $_REQUEST["pag_size"];
-} else $pag_size = 10;
+$pag_act = isset($_SESSION["pag_act"])? $_SESSION["pag_act"]:1;
+
+$pag_act = isset($_REQUEST["pag_act"]) && is_numeric($_REQUEST["pag_act"])? $_REQUEST["pag_act"]:null;
+
+$pag_size = isset($_REQUEST["pag_size"])? $_REQUEST["pag_size"]:10;
+
+$pag_size = isset($_REQUEST["pag_size"]) && is_numeric($_REQUEST["pag_size"])? $_REQUEST["pag_size"]:$pag_size;
 
 $_SESSION["pag_act"] = $pag_act;
 

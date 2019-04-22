@@ -40,8 +40,7 @@ function total_consulta( $conn, $query )
 	}
 }
 
-$consulta = "SELECT DNI_R, NOMBRE, APELLIDO1, APELLIDO2, PAGOCOMEDOR, ES_MAYOR, FECHA_INICIO, FECHA_FIN"
-	."FROM RESIDENTE NATURAL JOIN RESIDENTE ORDER BY FECHA_INICIO, FECHA_FIN";
+$consulta = "SELECT * FROM RESIDENTE NATURAL JOIN RESIDENTE ORDER BY FECHA_INICIO, FECHA_FIN";
 
 function consultarTodos($conexion){
 	global $consulta;

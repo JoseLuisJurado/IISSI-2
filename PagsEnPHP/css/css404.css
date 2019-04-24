@@ -32,6 +32,12 @@ div.sticky {
     margin-right: 25%;
 }
 
+p{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 120%;
+}
+
 .ImgUS {
     margin-right: 415px;
     margin-left: 0cm;

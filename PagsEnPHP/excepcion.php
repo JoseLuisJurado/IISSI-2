@@ -16,9 +16,8 @@
 	 	?>
     <div class="cuerpo">
 
-        <p style="text-align: center; font-size: 20px">La Página a la que intenta acceder</p>
-        <p style="text-align: center; font-size: 20px">no existe</p>
-        <img hspace="5" vspace="5" src="imagenes/caritaTriste.png" />
+        <p>La Página a la que intenta acceder no existe</p>
+        <img hspace="5" vspace="5" src="imagenes/caritaTriste.png" width="50%" height="50%" style="text-align: center;"/>
 
 
     </div>

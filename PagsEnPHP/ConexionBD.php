@@ -10,7 +10,6 @@
 
             $conexion-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
-            echo "Conexión realizada satisfactoriamente";
             return $conexion;
         }catch(PDOException $e){
             $_SESSION['excepcion'] = $e->getMessage();

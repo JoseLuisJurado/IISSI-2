@@ -41,7 +41,7 @@
                 Consulta
             </h2>
 
-            <form method="GET" name="formularioContacto" if="formularioContacto">
+            <form method="POST" name="formularioContacto" if="formularioContacto" action="">
                 <section>
                     <label>
                         Nombre*: <input type="text" name="FirstName" id="FirstName" class="margenGeneral" required>

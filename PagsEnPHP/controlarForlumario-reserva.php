@@ -22,5 +22,7 @@
 
         $_SESSION["reserva"] = $reserva;
         
-    }else Header("Location: controlarForlumario-reserva.php");
+    }else{
+        echo "No se ha pasado ningún parámetro";
+    }
 ?>

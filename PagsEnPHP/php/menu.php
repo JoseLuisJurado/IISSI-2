@@ -34,7 +34,7 @@
                 <li><a href="Residencia.php">Residencia</a>
                 <!-- start menu desplegable -->
                     <ul>
-                        <li><a href="Instalaciones.php">Instalaciones</a></li>
+                        <li><a href="Instalaciones.php">Instalación</a></li>
                         <li><a href="Conocenos.php">Conócenos</a></li>
                         <li><a href="Contacto.php">Contacto</a></li>
                         <li><a href="Servicios.php">Servicios</a></li>

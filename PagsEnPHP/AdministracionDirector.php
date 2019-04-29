@@ -9,15 +9,7 @@ if (isset($_SESSION["reserva"])) {
     unset($_SESSION["reserva"]);
 }
 
-if (isset($_SESSION["pag_act"])) {
-    $pag_act = $_SESSION["pag_act"];
-} else     $pag_act = 1;
-
-if (isset($_REQUEST["pag_act"])) {
-    $pag_act = $_REQUEST["pag_act"];
-}
-
-$pag_act = isset($_SESSION["pag_act"])? $_SESSION["pag_act"]:1;
+$pag_act = isset($_SESSION["pag_act"])? $_SESSION["pag_act"]:2;
 
 $pag_act = isset($_REQUEST["pag_act"]) && is_numeric($_REQUEST["pag_act"])? $_REQUEST["pag_act"]:null;
 
@@ -67,16 +59,16 @@ cerrarConexionBD($conn);
                 <input type="submit" value="Cambiar!">
             </form>
         </nav>
-        <?php foreach ($consulaPaginada as $pagina) { ?>
+        <?php foreach ($consulaPaginada as $pagina) {?>
             <article>
                 <form method="post" action="controlarForlumario-reserva.php">
                     <div>
-                        <input id="DNI" name="DNI" type="text" value="<?php echo $pagina["DNI"];?>"/>
-                        <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["FirstName"]." ".
-                        $pagina["Primer Apellido"]." ".$pagina["Segundo Apellido"];?>"/>
-                        <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["Sexo"];?>"/>
-                        <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FechaLlegada"];?>"/>
-                        <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FechaSalida"];?>"/>
+                        <input id="DNI" name="DNI" type="text" value="<?php echo $pagina["DNI_R"];?>"/>
+                        <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]." ".
+                        $pagina["APELLIDO1"]." ".$pagina["APELLIDO2"];?>"/>
+                        <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"];?>"/>
+                        <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"];?>"/>
+                        <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"];?>"/>
                     </div>
                 </form>
             </article>

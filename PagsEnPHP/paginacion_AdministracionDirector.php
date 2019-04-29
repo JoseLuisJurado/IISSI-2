@@ -3,6 +3,7 @@
 function consulta_paginada( $conn, $query, $pag_num, $pag_size )
 {
 	try {
+		
 		$primera = ( $pag_num - 1 ) * $pag_size + 1;
 		$ultima  = $pag_num * $pag_size;
 		$consulta_paginada = 
@@ -28,7 +29,6 @@ function total_consulta( $conn, $query )
 {
 	try {
 		$total_consulta = "SELECT COUNT(*) AS TOTAL FROM ($query)";
-
 		$stmt = $conn->query($total_consulta);
 		$result = $stmt->fetch();
 		$total = $result['TOTAL'];

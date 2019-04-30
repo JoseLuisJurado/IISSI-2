@@ -3,21 +3,6 @@ session_start();
 require_once("conexionBD.php");
 $conn = crearconexionBD();
 require_once("paginacion_AdministracionDirector.php");
-/*
-if (isset($_SESSION["reserva"])) {
-    $reserva = $_SESSION["reserva"];
-    unset($_SESSION["reserva"]);
-}
-
-$pag_act = isset($_SESSION["pag_act"])? $_SESSION["pag_act"]:2;
-
-$pag_act = isset($_REQUEST["pag_act"]) && is_numeric($_REQUEST["pag_act"])? $_REQUEST["pag_act"]:null;
-
-$pag_size = isset($_REQUEST["pag_size"])? $_REQUEST["pag_size"]:10;
-
-$pag_size = isset($_REQUEST["pag_size"]) && is_numeric($_REQUEST["pag_size"])? $_REQUEST["pag_size"]:$pag_size;
-*/
-
 
 if (isset($_SESSION["reserva"])) $reserva = $_SESSION["reserva"];
 $pag_act = isset($_GET["pag_act"]) ? (int)$_GET["pag_act"] : (isset($reserva) ? (int)$reserva["PAG_ACT"] : 1);
@@ -29,9 +14,6 @@ unset($_SESSION["reserva"]);
 
 $total_registros = total_consulta($conn, $consulta);
 $consultaTotal = ceil($total_registros / $pag_size);
-echo $consultaTotal.",";
-echo $total_registros.",";
-echo $pag_size.",";
 if ($pag_act > $consultaTotal) $pag_act = $consultaTotal;
 
 $reserva["PAG_ACT"] = $pag_act;
@@ -42,16 +24,6 @@ $filas = consulta_paginada($conn, $consulta, $pag_act, $pag_size);
 
 cerrarConexionBD($conn);
 
-
-/*
-$_SESSION["pag_act"] = $pag_act;
-
-$consultaTotal = ceil(total_consulta($conn, $consulta) / $pag_size);
-
-$consulaPaginada = consulta_paginada($conn, $consulta, $pag_act, $pag_size);
-
-cerrarConexionBD($conn);
-*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -60,6 +32,7 @@ cerrarConexionBD($conn);
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
     <link rel="stylesheet" href="css/cssInicio.css" />
+    <link rel="stylesheet" href="css/cssAdministracionDirector.css" />
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
 </head>
 
@@ -90,13 +63,27 @@ cerrarConexionBD($conn);
         <?php foreach ($filas as $pagina) { ?>
             <article>
                 <form method="post" action="controlarForlumario-reserva.php" class="muestraFormulario">
-                    <div id=botones_modificacion>
+
+                    <div id="botones_modificacion" class="botones_modificacion">
                         
+                        <?php if(isset($reserva) && $reserva["DNI"] == $pagina["DNI_R"]){ ?>
+                            <button id="editar" class="editar" type="submit" name="editar">
+                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px" height="30px">
+                            </button>
+                        <?php } else{?>
+                            <button >
+                                <img src="" width="40px" height="30px">
+                            </button>
+                        <?php } ?>
+                            <button id="borrar" class="borrar" type="submit" name="borrar">
+                                <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="40px" height="30px" />
+                            </button>
                     </div>
-                    <div>
+
+                    <div id="input_display" class="input_display">
                         <input id="DNI" name="DNI" type="text" value="<?php echo $pagina["DNI_R"]; ?>" />
                         <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"] . " " .
-                                                                                $pagina["APELLIDO1"] . " " . $pagina["APELLIDO2"]; ?>" />
+                        $pagina["APELLIDO1"] . " " . $pagina["APELLIDO2"]; ?>" />
                         <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"]; ?>" />
                         <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
                         <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />
@@ -108,9 +95,6 @@ cerrarConexionBD($conn);
     <?php
     include "php/pie.php";
     ?>
-
-
-
 </body>
 
 </html>

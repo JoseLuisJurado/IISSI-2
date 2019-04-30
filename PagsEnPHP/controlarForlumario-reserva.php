@@ -22,7 +22,8 @@
 
         $_SESSION["reserva"] = $reserva;
         
+        header("Location: ");
     }else{
-        echo "No se ha pasado ningún parámetro";
+        header("Location: AdministracionDirector.php");
     }
 ?>

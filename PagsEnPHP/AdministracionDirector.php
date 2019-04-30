@@ -1,3 +1,15 @@
+<?php 
+	session_start();
+	
+	$excepcion = $_SESSION["excepcion"];
+	unset($_SESSION["excepcion"]);
+	
+	if (isset ($_SESSION["destino"])) {
+		$destino = $_SESSION["destino"];
+		unset($_SESSION["destino"]);
+	} else 
+		$destino = "";
+?>
 <?php
 session_start();
 require_once("conexionBD.php");
@@ -65,7 +77,7 @@ cerrarConexionBD($conn);
                 <form method="post" action="controlarForlumario-reserva.php" class="muestraFormulario">
 
                     <div id="botones_modificacion" class="botones_modificacion">
-                        
+
                         <?php if(isset($reserva) && $reserva["DNI"] == $pagina["DNI_R"]){ ?>
                             <button id="editar" class="editar" type="submit" name="editar">
                                 <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px" height="30px">

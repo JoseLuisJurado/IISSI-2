@@ -2,7 +2,7 @@
 session_start();
 require_once("conexionBD.php");
 $conn = crearconexionBD();
-require_once("paginacion_AdministracionDirector.php");
+require_once("gestion_AdministracionDirector.php");
 
 if (isset($_SESSION["reserva"])) $reserva = $_SESSION["reserva"];
 $pag_act = isset($_GET["pag_act"]) ? (int)$_GET["pag_act"] : (isset($reserva) ? (int)$reserva["PAG_ACT"] : 1);
@@ -65,7 +65,7 @@ cerrarConexionBD($conn);
                 <form method="post" action="controlarForlumario-reserva.php" class="muestraFormulario">
 
                     <div id="botones_modificacion" class="botones_modificacion">
-
+                        <?php ?>
                         <?php if(isset($reserva) && $reserva["DNI"] == $pagina["DNI_R"]){ ?>
                             <button id="editar" class="editar" type="submit" name="editar">
                                 <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px" height="30px">
@@ -82,8 +82,9 @@ cerrarConexionBD($conn);
 
                     <div id="input_display" class="input_display">
                         <input id="DNI" name="DNI" type="text" value="<?php echo $pagina["DNI_R"]; ?>" />
-                        <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"] . " " .
-                        $pagina["APELLIDO1"] . " " . $pagina["APELLIDO2"]; ?>" />
+                        <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" />
+                        <input id="APELLIDO1" name="Primer apellido" value ="<?php  echo $pagina["APELLIDO1"]; ?>" />
+                        <input id="APELLIDO2" name="Segundo Apellido" value ="<?php echo $pagina["APELLIDO2"]; ?>" />
                         <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"]; ?>" />
                         <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
                         <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />

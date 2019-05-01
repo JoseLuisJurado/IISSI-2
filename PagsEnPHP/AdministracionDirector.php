@@ -5,8 +5,8 @@ $conn = crearconexionBD();
 require_once("gestion_AdministracionDirector.php");
 
 if (isset($_SESSION["reserva"])) $reserva = $_SESSION["reserva"];
-$pag_act = isset($_GET["pag_act"]) ? (int)$_GET["pag_act"] : (isset($reserva) ? (int)$reserva["PAG_ACT"] : 1);
-$pag_size = isset($_GET["pag_size"]) ? (int)$_GET["pag_size"] : (isset($reserva) ? (int)$reserva["PAG_SIZE"] : 10);
+$pag_act = isset($_GET["pag_act"]) ? (int)$_GET["pag_act"] : (isset($reserva["PAG_ACT"]) ? (int)$reserva["PAG_ACT"] : 1);
+$pag_size = isset($_GET["pag_size"]) ? (int)$_GET["pag_size"] : (isset($reserva["PAG_SIZE"]) ? (int)$reserva["PAG_SIZE"] : 10);
 if ($pag_act < 1) $pag_act = 1;
 if ($pag_size < 1) $pag_size = 10;
 
@@ -34,6 +34,7 @@ cerrarConexionBD($conn);
     <link rel="stylesheet" href="css/cssInicio.css" />
     <link rel="stylesheet" href="css/cssAdministracionDirector.css" />
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
+    <Title>Residencia de estudiantes bahía</Title>
 </head>
 
 <body>
@@ -62,17 +63,17 @@ cerrarConexionBD($conn);
         </nav>
         <?php foreach ($filas as $pagina) { ?>
             <article>
-                <form method="post" action="controlarForlumario-reserva.php" class="muestraFormulario">
+                <form method="post" action="controlarAdministracionDirector.php" class="muestraFormulario">
 
                     <div id="botones_modificacion" class="botones_modificacion">
                         <?php ?>
-                        <?php if(isset($reserva) && $reserva["DNI"] == $pagina["DNI_R"]){ ?>
-                            <button id="editar" class="editar" type="submit" name="editar">
-                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px" height="30px">
+                        <?php if(isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]){ ?>
+                            <button id = "modificar" class="modificar" type="submit" name="modificar">
+                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="40px" height="30px">
                             </button>
                         <?php } else{?>
-                            <button >
-                                <img src="" width="40px" height="30px">
+                            <button id="editar" class="editar" type="submit" name="editar">
+                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px" height="30px">
                             </button>
                         <?php } ?>
                             <button id="borrar" class="borrar" type="submit" name="borrar">

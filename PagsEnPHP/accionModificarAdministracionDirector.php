@@ -10,9 +10,11 @@ if (isset($_SESSION["reserva"])) {
     require_once("gestion_AdministracionDirector.php");
 
     $conn = crearconexionBD();
-    $borrar = borrarConsulta($conn, $reserva["DNI"]);
+    $borrar = editarLibros($conn, $reserva["DNI"],
+    $reserva["NOMBRE"],$reserva["APELLIDO1"],$reserva["APELLIDO2"],
+    $reserva["SEXO"],$reserva["FECHALLEGADA"],$reserva["FECHASALIDA"] );
     cerrarConexionBD($conn);
-    
+
     if ($excepcion <> "") {
         $_SESSION["excepcion"] = $excepcion;
         

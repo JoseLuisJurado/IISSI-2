@@ -70,7 +70,7 @@ function editarLibros($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECH
 		$stmt->execute();
 		$stmt1->execute();
 
-		return $stmt;
+		echo $stmt;
 	} catch (PDOException $e) {
 		$_SESSION['excepcion'] = $e->GetMessage();
 		header("Location: excepcion.php");

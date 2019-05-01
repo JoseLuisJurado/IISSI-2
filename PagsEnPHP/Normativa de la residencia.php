@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/cssNormativa.css" />
 	<link rel="stylesheet" href="css/cssInicio.css" />
 	<link rel="icon" type="image/jpeg" href="imagenes/LogoRED.jpeg" />
+	<Title>Residencia de estudiantes bahía</Title>
 </head>
 
 <body>

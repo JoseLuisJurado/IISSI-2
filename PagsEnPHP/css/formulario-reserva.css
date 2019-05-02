@@ -1,15 +1,3 @@
-﻿.texto-chulo{
-    text-align: center; 
-    font-family: Arial Black; 
-    font-weight: bold; font-size: 30px; 
-    background: #202020; 
-    -webkit-background-clip: text; 
-    -moz-background-clip: text; 
-    background-clip: text; 
-    color: transparent; 
-    text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
-}
-
 form{
     padding: 2%;
 }
@@ -33,82 +21,6 @@ label{
     padding: .2em;
 }
 
-div.sticky {
-    position: sticky;
-    border-bottom: 2px solid black;
-    top: 0;
-    background: white;
-}
-
-#menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: lightblue;
-    text-align: center;
-}
-
-#menu li {
-    float: left;
-}
-
-#menu li a {
-    display: block;
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-#menu li a:hover {
-    background-color: rgb(0, 128, 122);
-}
-
-/* menu desplegable */
-
-#menu ul ul {
-    display:none;
-    position: absolute;
-    top:100%;
-    background:lightblue;
-    padding:0;
-    border-left: solid 2px #000000;
-    border-right: solid 2px #000000;
-    border-bottom: solid 2px #000000;
-    text-align: center;
-
-   }
-   
-   /* items del menu desplegable */
-   
-   #menu ul ul li {
-    float:none;
-    width:100px
-   }
-   
-   /* enlaces de los items del menu desplegable */
-   
-   #menu ul ul a {
-    line-height:120%;
-    padding:10px 15px;
-   }
-   
-   /* items del menu desplegable al pasar el ratón */
-   
-   #menu ul li:hover > ul {
-    display:block;
-   }
-
-
-
-.ImgUS {
-    margin-right: 0px;
-    margin-left: 0cm;
-    margin-top: 0cm;
-    margin-bottom: 0cm;
-    width: 140px;
-    height: 140px;
-}
 .ubi-text{
     text-align: center;
 }
@@ -136,3 +48,77 @@ div.sticky {
 .margenGeneral {
     margin-top: 10px;
 }
+
+.titulo{
+    text-align: center;
+    color: black;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 10 px;
+    text-decoration: underline;
+}
+
+.titulo2{
+    text-align: center;
+    color: black;
+    
+    font-size: 10 px;
+    text-decoration: underline;
+}
+
+div.alineacion{
+	margin-top: 2%;
+	margin-bottom: 2%; 
+	padding: 5%;
+}
+
+div.admin1{
+	margin-right: 7%;
+	margin-left: 7%;
+}
+
+div.admin2{
+	margin-top: 2%; 
+	margin-bottom: 2%; 
+	text-align: end;
+}
+
+p.adminP{
+	text-align: left;
+}
+
+img.adminI{
+	height: 5%;
+	width: 5%;
+	margin-right: 0%; 
+	margin-bottom: 0%; 
+	float: left;
+}
+
+label.adminL{
+	text-align: left;
+}
+
+section.adminS{
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+
+section.adminS2{
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-bottom: 5%
+}
+
+p.adminP2{
+	float: left;
+}
+
+p.adminP3{
+	float:right;
+}
+
+p.adminP4{
+	margin-top: 20%;
+	text-align: left;
+}
+

@@ -6,8 +6,8 @@
     <meta title="Residencia Estudiantil Digital">
     <meta name="autor" content="Antonio Miguel González Villar">
     <meta name="autor2" content="José Luis Jurado Ortiz">
-    <link rel="stylesheet" href="css/formulario-reserva.css" />
-    <link rel="stylesheet" href="css/cssInicio.css" />
+    <link rel="stylesheet" href="css/formulario-reserva.css"/>
+    <link rel="stylesheet" href="css/cssInicio.css"/>
     <script src="javascript/validacionFormulario.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>

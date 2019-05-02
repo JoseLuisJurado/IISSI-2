@@ -19,7 +19,7 @@
     <fieldset>
         <div class="margenFormulario">
 
-            <h2 style="text-decoration: underline;">
+            <h2>
                 Contacto
             </h2>
             <p class="texto">
@@ -38,7 +38,7 @@
                 CorreoFalso@gmaol.ez
             </p>
 
-            <h2 style="text-decoration: underline;">
+            <h2>
                 Consulta
             </h2>
 

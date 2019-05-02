@@ -16,9 +16,9 @@
 	include "php/menu.php";
 	 ?>
     <div>
-        <main style="margin: 5% 20% 20% 20%;">
+        <main>
             <form>
-                <fieldset style="padding: 5%">
+                <fieldset>
                     <legend><u> Entrada a la administración </u></legend>
                     <section>
                         <label>
@@ -40,4 +40,3 @@
 	include "php/pie.php";
 	 ?>
 </html>
-

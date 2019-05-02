@@ -1,3 +1,34 @@
+<?php
+	session_start();
+	
+	// Importar librerías necesarias para gestionar direcciones y géneros literarios
+	require_once("ConexionBD.php");
+	
+	// Si no existen datos del formulario en la sesión, se crea una entrada con valores por defecto
+	if (!isset($_SESSION["formulario"])) {
+		$formulario['Nombre'] = "";
+		$formulario['PrimerApellido'] = "";
+		$formulario['SegundoApellido'] = "";
+		$formulario['CorreoElectronico'] = "";
+		$formulario['Asunto'] = "";
+		$formulario['Mensaje'] = "";
+	
+		$_SESSION["formulario"] = $formulario;
+	}
+	// Si ya existían valores, los cogemos para inicializar el formulario
+	else
+		$formulario = $_SESSION["formulario"];
+			
+	// Si hay errores de validación, hay que mostrarlos y marcar los campos (El estilo viene dado y ya se explicará)
+	if (isset($_SESSION["errores"])){
+		$errores = $_SESSION["errores"];
+		unset($_SESSION["errores"]);
+	}
+		
+	// Creamos una conexión con la BD
+	print_r($_SESSION);
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +50,7 @@
     <fieldset>
         <div class="margenFormulario">
 
-            <h2 style="text-decoration: underline;">
+            <h2>
                 Contacto
             </h2>
             <p class="texto">
@@ -38,7 +69,7 @@
                 CorreoFalso@gmaol.ez
             </p>
 
-            <h2 style="text-decoration: underline;">
+            <h2>
                 Consulta
             </h2>
 

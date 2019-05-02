@@ -67,18 +67,18 @@ cerrarConexionBD($conn);
 
                     <div id="botones_modificacion" class="botones_modificacion">
                         <?php ?>
-                        <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
-                            <button id="modificar" class="modificar" type="submit" name="modificar">
-                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="40px" height="30px">
+                        <?php if(isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]){ ?>
+                            <button id = "modificar" class="modificar" type="submit" name="modificar">
+                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png">
                             </button>
                         <?php } else { ?>
                             <button id="editar" class="editar" type="submit" name="editar">
-                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px" height="30px">
+                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png">
                             </button>
                         <?php } ?>
-                        <button id="borrar" class="borrar" type="submit" name="borrar">
-                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="40px" height="30px" />
-                        </button>
+                            <button id="borrar" class="borrar" type="submit" name="borrar">
+                                <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png"/>
+                            </button>
                     </div>
 
                     <div id="input_display" class="input_display">
@@ -94,7 +94,7 @@ cerrarConexionBD($conn);
             </article>
         <?php   } ?>
 
-        <form method="post" action="controladorCreacionContraseñas.php">
+        <form method="post" action="controladorCreacionContraseñas.php" onsubmit="">
             <section>
                 <label>
                     Escriba el usuario: <input type="text" id="usuario" class="usuario" width="200" name="usuario" />

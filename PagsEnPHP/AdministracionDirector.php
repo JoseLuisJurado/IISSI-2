@@ -67,25 +67,25 @@ cerrarConexionBD($conn);
 
                     <div id="botones_modificacion" class="botones_modificacion">
                         <?php ?>
-                        <?php if(isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]){ ?>
-                            <button id = "modificar" class="modificar" type="submit" name="modificar">
+                        <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
+                            <button id="modificar" class="modificar" type="submit" name="modificar">
                                 <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="40px" height="30px">
                             </button>
-                        <?php } else{?>
+                        <?php } else { ?>
                             <button id="editar" class="editar" type="submit" name="editar">
                                 <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px" height="30px">
                             </button>
                         <?php } ?>
-                            <button id="borrar" class="borrar" type="submit" name="borrar">
-                                <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="40px" height="30px" />
-                            </button>
+                        <button id="borrar" class="borrar" type="submit" name="borrar">
+                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="40px" height="30px" />
+                        </button>
                     </div>
 
                     <div id="input_display" class="input_display">
                         <input id="DNI" name="DNI" type="text" value="<?php echo $pagina["DNI_R"]; ?>" />
                         <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" />
-                        <input id="APELLIDO1" name="Primer apellido" value ="<?php  echo $pagina["APELLIDO1"]; ?>" />
-                        <input id="APELLIDO2" name="Segundo Apellido" value ="<?php echo $pagina["APELLIDO2"]; ?>" />
+                        <input id="APELLIDO1" name="Primer apellido" value="<?php echo $pagina["APELLIDO1"]; ?>" />
+                        <input id="APELLIDO2" name="Segundo Apellido" value="<?php echo $pagina["APELLIDO2"]; ?>" />
                         <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"]; ?>" />
                         <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
                         <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />
@@ -93,6 +93,26 @@ cerrarConexionBD($conn);
                 </form>
             </article>
         <?php   } ?>
+
+        <form method="post" action="controladorCreacionContraseñas.php">
+            <section>
+                <label>
+                    Escriba el usuario: <input type="text" id="usuario" class="usuario" width="200" name="usuario" />
+                </label> <br>
+                <label>
+                    Escriba la contraseña: <input type="text" id="contraseña" class="contraseña" width="200" name="contraseña" />
+                </label> <br>
+                <label> 
+                    Repita la contraseña: <input type="text" id="repetirContraseña" class="repetirContraseña" width="200" name="repetirContraseña" />
+                </label> <br>
+                <label>
+                    Especifique el DNI del residente <input type="text" id ="DNIResidente" class="DNIResidente" width="200" name="123456789X"/>
+                </label> <br>
+                <label>
+                    <input type="submit" id="crearusuario" class="crearusuario" />
+                </label>
+            </section>
+        </form>
     </main>
     <?php
     include "php/pie.php";

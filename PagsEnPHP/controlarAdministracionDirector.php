@@ -1,6 +1,6 @@
 <?php
+    try{
     session_start();
-    echo "Pasa por aqui";
     if(isset($_REQUEST["DNI"])){
         $reserva["DNI"] = $_REQUEST["DNI"];
         $reserva["NOMBRE"] = $_REQUEST["NOMBRE"];
@@ -11,10 +11,14 @@
         $reserva["FECHASALIDA"] = $_REQUEST["FECHASALIDA"];
         $_SESSION["reserva"] = $reserva;
         
-        if(isset($_REQUEST["modificar"])) header("Location: accionModificarAdministracionDirector.php");
-        else if(isset($_REQUEST["borrar"])) header("Location: accionBorrarAdministracionDirector.php");
-        else header("Location: AdministracionDirector.php");
+        if(isset($_REQUEST["editar"])) header("Location: AdministracionDirector.php");
+        else if(isset($_REQUEST["modificar"])) header("Location: accionModificarAdministracionDirector.php");
+        else header("Location: accionBorrarAdministracionDirector.php");
+
     }else{
         header("Location: AdministracionDirector.php");
     }
-?>
+    } catch (PDOException $e) {
+		$_SESSION['excepcion'] = $e->GetMessage();
+		header("Location: excepcion.php");
+	}

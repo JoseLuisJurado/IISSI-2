@@ -90,6 +90,15 @@
                 <label>
                     Correo electrónico del tutor legal: <input type="email" name="CorreoPadre" id="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
+                
+                  <label for="pass">Password:
+                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" required oninput="passwordValidation(); "/>
+                </label>
+                
+                <label for="confirmpass">Confirmar Password: 
+				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña"  oninput="passwordConfirmation();" required"/>
+                </label>
+                
             </section>
             <section>
                 <label>

@@ -73,26 +73,26 @@
                 Consulta
             </h2>
 
-            <form method="POST" name="formularioContacto" if="formularioContacto" action="">
+            <form method="get" name="formularioContacto" if="formularioContacto" action="validacionContacto.php">
                 <section>
                     <label>
-                        Nombre*: <input type="text" name="FirstName" id="FirstName" class="margenGeneral" required>
+                        Nombre*: <input type="text" name="Nombre" id="Nombre" class="margenGeneral" required>
                     </label>
                 </section>
                 <section>
                     <label>
-                        Primer Apellido*: <input type="text" name="Primer Apellido" id="Primer Apellido" class="margenGeneral" required>
+                        Primer Apellido*: <input type="text" name="PrimerApellido" id="PrimerApellido" class="margenGeneral" required>
                     </label>
                 </section>
                 <section>
                     <label>
-                        Segundo Apellido: <input type="text" name="Segundo Apellido" id="Segundo Apellido" class="margenGeneral" required>
+                        Segundo Apellido: <input type="text" name="SegundoApellido" id="SegundoApellido" class="margenGeneral" required>
                     </label>
                 </section>
 
                 <section class="margenGeneral">
                     <label>
-                        Correo electrónico*: <input type="email" name="Correo electrónico" id="Correo electrónico" class="margenSexo" required>
+                        Correo electrónico*: <input type="email" name="CorreoElectronico" id="CorreoElectronico" class="margenSexo" required>
                     </label>
                 </section>
 
@@ -114,6 +114,7 @@
     </fieldset>
     <?php
     include "php/pie.php";
+	cerrarConexionBD($conexion);
     ?>
 </body>
 

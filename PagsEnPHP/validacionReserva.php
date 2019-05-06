@@ -1,5 +1,5 @@
 <?php 
-include_once 'gestionarContacto.php';
+include_once 'gestionarReserva.php';
 ?>
 <?php
 	session_start();
@@ -10,7 +10,6 @@ include_once 'gestionarContacto.php';
 	// Comprobar que hemos llegado a esta página porque se ha rellenado el formulario
 	if (isset($_SESSION["formulario"])) {
 		// Recogemos los datos del formulario
-		print_r($_SESSION);
 		$reservaForm['DNI'] = $_REQUEST["DNI"];
 		$reservaForm['Nombre'] = $_REQUEST["Nombre"];
 		$reservaForm['PrimerApellido'] = $_REQUEST["PrimerApellido"];
@@ -29,7 +28,7 @@ include_once 'gestionarContacto.php';
 		$reservaForm['TipoPago'] = $_REQUEST["TipoPago"];
 		$reservaForm['FormaPago'] = $_REQUEST["FormaPago"];
 		$reservaForm['pagoComedor'] = $_REQUEST["pagoComedor"];
-	
+		
 	}
 	else // En caso contrario, vamos al formulario
 		Header("Location: Contacto.php");

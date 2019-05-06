@@ -16,7 +16,7 @@
 	try {
 		$consulta = "CALL INSERTAR_CONTACTO(:nombre, :ape1, :ape2, :corr, :asu, :men)";
 		$stmt=$conexion->prepare($consulta);
-		$stmt->bindParam(':nombre',$usuario["nombre"]);
+		$stmt->bindParam(':nombre',$usuario["Nombre"]);
 		$stmt->bindParam(':ape1',$usuario["PrimerApellido"]);
 		$stmt->bindParam(':ape2',$usuario["SegundoApellido"]);
 		$stmt->bindParam(':corr',$usuario["CorreoElectronico"]);

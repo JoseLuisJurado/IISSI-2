@@ -49,28 +49,32 @@ function consultarTodos($conexion)
 function editarLibros($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECHALLEGADA, $FECHASALIDA)
 {
 	try {
-		$editarConsulta1 = "UPDATE RESIDENTE SET NOMBRE = :NOMBRE, APELLIDO1 = :APELLIDO1"
-			. ",APELLIDO2 = :APELLIDO2,  GENERO = :SEXO WHERE DNI_R = :DNI;";
 
-		$editarConsulta2 = "UPDATE CONTRATO_RESIDENTE SET FECHA_INICIO = :FECHA_INICIO, FECHA_FIN = :FECHA_FIN WHERE DNI_R = :DNI; ";
+		$editarConsulta1 = "UPDATE RESIDENTE SET NOMBRE = ':NOMBRE', APELLIDO1 = ':APELLIDO1'"
+			. ",APELLIDO2 = ':APELLIDO2',  GENERO = ':SEXO' WHERE DNI_R = ':DNI';"
+		."UPDATE CONTRATO_RESIDENTE SET FECHA_INICIO = ':FECHA_INICIO', FECHA_FIN = ':FECHA_FIN' WHERE DNI_R = ':DNI'; "
+		."COMMIT;";
 
 		$stmt = $conn->prepare($editarConsulta1);
-		$stmt1 = $conn->prepare($editarConsulta2);
 
-		$stmt->bindParam(':NOMBRE', $NOMBRE, PDO::PARAM_STR);
-		$stmt->bindParam(':APELLIDO1', $APELLIDO1, PDO::PARAM_STR);
-		$stmt->bindParam(':APELLIDO2', $APELLIDO2, PDO::PARAM_STR);
-		$stmt->bindParam(':SEXO', $SEXO, PDO::PARAM_STR);
-		$stmt->bindParam(':DNI', $DNI, PDO::PARAM_STR);
+		$stmt->bindParam(':NOMBRE', $NOMBRE);
+		$stmt->bindParam(':APELLIDO1', $APELLIDO1);
+		$stmt->bindParam(':APELLIDO2', $APELLIDO2);
+		$stmt->bindParam(':SEXO', $SEXO);
+		$stmt->bindParam(':DNI', $DNI);
+		$stmt->bindParam(':FECHA_INICIO', $FECHALLEGADA);
+		$stmt->bindParam(':FECHA_FIN', $FECHASALIDA);
 
-		$stmt1->bindParam(':FECHA_INICIO', $FECHALLEGADA, PDO::PARAM_STR);
-		$stmt1->bindParam(':FECHA_FIN', $FECHASALIDA, PDO::PARAM_STR);
-		$stmt1->bindParam(':DNI', $DNI, PDO::PARAM_STR);
+		if (!isset($_SESSION["dentro"])) {
+			$_SESSION["dentro"] = "Estoy dentro de editar Libro1";
+		} else {
+			unset($_SESSION["dentro"]);
+			$_SESSION["dentro"] = "Estoy dentro de editar Libro2";
+		}
 
 		$stmt->execute();
-		$stmt1->execute();
 
-		return $stmt;
+		return "";
 	} catch (PDOException $e) {
 		$_SESSION['excepcion'] = $e->GetMessage();
 		header("Location: excepcion.php");
@@ -92,7 +96,7 @@ function borrarConsulta($conn, $DNI_R)
 		$stmt->execute();
 		$stmt1->execute();
 
-		return $stmt;
+		return "";
 	} catch (PDOException $e) {
 		$_SESSION['excepcion'] = $e->GetMessage();
 		header("Location: excepcion.php");
@@ -106,13 +110,12 @@ function validacionCreacionUsuario($conn, $usuario)
 
 	//Comprobación de que el residente se encuentra ya en la base de datos
 
-	try{
-		$stmt = $conn-> prepare("SELECT COUNT(*) AS CONTADOR FROM RESIDENTE WHERE DNI_R = :DNI");
-		$stmt -> bindParam(':DNI', $usuario["DNI"]);
+	try {
+		$stmt = $conn->prepare("SELECT COUNT(*) AS CONTADOR FROM RESIDENTE WHERE DNI_R = :DNI");
+		$stmt->bindParam(':DNI', $usuario["DNI"]);
 		$resultado = $stmt->fetch();
 		$valor = $resultado["CONTADOR"];
-		$res += $valor >= 1 && res == true? "":"<p>El residente no se encuentra registrado en la BD</p><br>"; 
-
+		$res += $valor >= 1 && res == true ? "" : "<p>El residente no se encuentra registrado en la BD</p><br>";
 	} catch (PDOException $e) {
 		$_SESSION['excepcion'] = $e->GetMessage();
 		header("Location: excepcion.php");
@@ -120,13 +123,12 @@ function validacionCreacionUsuario($conn, $usuario)
 
 	//Comprobacion de que no se ha registrado anteriormente el DNI
 
-	try{
+	try {
 		$stmt = $conn->prepare("SELECT COUNT(*) AS NUMERO FROM USUARIO_REGISTRADO WHERE DNI_R = :DNI");
-		$stmt -> bindParam(':DNI', $usuario["DNI"]);
+		$stmt->bindParam(':DNI', $usuario["DNI"]);
 		$resultado = $stmt->fetch();
 		$numero = $resultado["NUMERO"];
-		$res += $numero >= 1? "<p>El usuario ya se ha registrado anteriormente</p><br>":"";
-
+		$res += $numero >= 1 ? "<p>El usuario ya se ha registrado anteriormente</p><br>" : "";
 	} catch (PDOException $e) {
 		$_SESSION['excepcion'] = $e->GetMessage();
 		header("Location: excepcion.php");
@@ -134,13 +136,15 @@ function validacionCreacionUsuario($conn, $usuario)
 
 	//Validacion de la fortaleza de la password
 
-	try{
-		if(!isset($usuario["contraseña"]) || strlen($usuario["contraseña"]) > 5){
+	try {
+		if (!isset($usuario["contraseña"]) || strlen($usuario["contraseña"]) > 5) {
 			$res += "<p>La contraseña debe de tener al menos 5 caracteres</p><br>";
-		}else if(!preg_match("/[a-z]+/", $usuario["contraseña"]) || !preg_match("/[A-Z]+/", $usuario["contraseña"])
-		|| !preg_match("/[0-9]+/", $usuario["contraseña"])){
+		} else if (
+			!preg_match("/[a-z]+/", $usuario["contraseña"]) || !preg_match("/[A-Z]+/", $usuario["contraseña"])
+			|| !preg_match("/[0-9]+/", $usuario["contraseña"])
+		) {
 			$res += "<p>La contraseña debe de tener una mayúscula, una minúscula y un número</p><br>";
-		}else if($usuario["contraseña"] != $usuario["repetirContraseña"]){
+		} else if ($usuario["contraseña"] != $usuario["repetirContraseña"]) {
 			$res += "<p>La confirmación de la contraseña debe de coincidir con la contraseña escrita</p><br>";
 		}
 	} catch (PDOException $e) {

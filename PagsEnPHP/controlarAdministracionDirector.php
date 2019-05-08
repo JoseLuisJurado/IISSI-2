@@ -2,6 +2,7 @@
     try{
     session_start();
     if(isset($_REQUEST["DNI"])){
+        if(isset($_SESSION["reserva"])) $reserva = $_SESSION["reserva"]; unset($_SESSION["reserva"]);
         $reserva["DNI"] = $_REQUEST["DNI"];
         $reserva["NOMBRE"] = $_REQUEST["NOMBRE"];
         $reserva["APELLIDO1"] = $_REQUEST["APELLIDO1"];
@@ -18,6 +19,7 @@
     }else{
         header("Location: AdministracionDirector.php");
     }
+    
     } catch (PDOException $e) {
 		$_SESSION['excepcion'] = $e->GetMessage();
 		header("Location: excepcion.php");

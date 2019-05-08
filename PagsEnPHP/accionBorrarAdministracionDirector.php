@@ -4,7 +4,9 @@ session_start();
 if (isset($_SESSION["reserva"])) {
     $reserva = $_SESSION["reserva"];
     unset($_SESSION["reserva"]);
-
+    $reservaAux["PAG_ACT"] = $reserva["PAG_ACT"];
+    $reservaAux["PAG_SIZE"] = $reserva["PAG_SIZE"];
+    $_SESSION["reserva"] = $reservaAux;
 
     require_once("ConexionBD.php");
     require_once("gestion_AdministracionDirector.php");
@@ -21,6 +23,7 @@ if (isset($_SESSION["reserva"])) {
     }else {
         header("Location: AdministracionDirector.php");
     }
+    
 }else{
     header("Location: AdministracionDirector.php");
 }

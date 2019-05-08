@@ -13,6 +13,7 @@
             return $conexion;
         }catch(PDOException $e){
             $_SESSION['excepcion'] = $e->getMessage();
+            header("Location: excepcion.php");
             
         }
     }
@@ -21,7 +22,9 @@
         $conexion = null;
     }
 
-    function altaUsuarioBD($c, $f){
+    //Esto hay que cambiarlo entero, no esta haciendo ninguna insercion en la base de datos.
+    //Hay que utilizar la conexion y luego insertar directamente los datos.
+    function altaUsuarioBD($f){
         $nif = $f["DNI"];
         $nombre = $f["FirstName"];
         $primerApellido = $f["Primer Apellido"];
@@ -55,7 +58,7 @@
         //Inserción de los datos en la base de datos
         $conexion->exec($comando1);
         $conexion->exec($comando2);
-        echo "Inserción hecha";
+        $conexion->exec("COMMIT;");
 
     }
 ?>

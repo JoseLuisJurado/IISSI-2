@@ -12,7 +12,7 @@ if ($pag_size < 1) $pag_size = 10;
 
 unset($_SESSION["reserva"]);
 
-$total_registros = total_consulta($conn, $consulta);
+$total_registros = total_consulta($conn, $consulta); //Cantidad de registros totales
 $consultaTotal = ceil($total_registros / $pag_size);
 if ($pag_act > $consultaTotal) $pag_act = $consultaTotal;
 
@@ -67,29 +67,36 @@ cerrarConexionBD($conn);
 
                     <div id="botones_modificacion" class="botones_modificacion">
                         <?php ?>
-                        <?php if(isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]){ ?>
-                            <button id = "modificar" class="modificar" type="submit" name="modificar">
-                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png">
+                        <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
+                            <button id="modificar" class="modificar" type="submit" name="modificar">
+                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="40px">
                             </button>
                         <?php } else { ?>
                             <button id="editar" class="editar" type="submit" name="editar">
-                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png">
+                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px">
                             </button>
                         <?php } ?>
-                            <button id="borrar" class="borrar" type="submit" name="borrar">
-                                <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png"/>
-                            </button>
+                        <button id="borrar" class="borrar" type="submit" name="borrar">
+                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="40px" />
+                        </button>
                     </div>
 
                     <div id="input_display" class="input_display">
-                        <input id="DNI" name="DNI" type="text" value="<?php echo $pagina["DNI_R"]; ?>" />
+                        <input id="DNI" name="DNI" type="hidden" value="<?php echo $pagina["DNI_R"]; ?>" />
                         <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" />
                         <input id="APELLIDO1" name="Primer apellido" value="<?php echo $pagina["APELLIDO1"]; ?>" />
                         <input id="APELLIDO2" name="Segundo Apellido" value="<?php echo $pagina["APELLIDO2"]; ?>" />
                         <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"]; ?>" />
                         <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
                         <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />
-                    </div>
+                    </div><br>
+
+                    <!-- <?php foreach ($_SESSION["reserva"] as $res) echo "<br>Lo que hay dentro de reserva: " . $res ?> -->
+                    <?php if (isset($_SESSION["dentro"])) {
+                        echo $_SESSION["dentro"];
+                        unset($_SESSION["dentro"]);
+                    } else ?>
+
                 </form>
             </article>
         <?php   } ?>
@@ -102,11 +109,11 @@ cerrarConexionBD($conn);
                 <label>
                     Escriba la contraseña: <input type="text" id="contraseña" class="contraseña" width="200" name="contraseña" />
                 </label> <br>
-                <label> 
+                <label>
                     Repita la contraseña: <input type="text" id="repetirContraseña" class="repetirContraseña" width="200" name="repetirContraseña" />
                 </label> <br>
                 <label>
-                    Especifique el DNI del residente <input type="text" id ="DNIResidente" class="DNIResidente" width="200" name="123456789X"/>
+                    Especifique el DNI del residente <input type="text" id="DNIResidente" class="DNIResidente" width="200" name="123456789X" />
                 </label> <br>
                 <label>
                     <input type="submit" id="crearusuario" class="crearusuario" />

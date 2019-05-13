@@ -55,6 +55,7 @@ function editarLibros($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECH
 		."UPDATE CONTRATO_RESIDENTE SET FECHA_INICIO = ':FECHA_INICIO', FECHA_FIN = ':FECHA_FIN' WHERE DNI_R = ':DNI'; "
 		."COMMIT;";
 		//$editarConsulta1 = "CALL updatearResidente(:NOMBRE, APELLIDO1, APELLIDO2, SEXO, DNI, :FECHA_INICIO, :FECHA_FIN)"
+		//aqui te dejo el updateo, el procedure lo tienes en el drive
 		$stmt = $conn->prepare($editarConsulta1);
 
 		$stmt->bindParam(':NOMBRE', $NOMBRE);

@@ -22,8 +22,8 @@ div.example1 {
 }
 
 body{
-    background-image: url("PagsEnPHP\imagenes\82988366-textura-de-la-pared-de-ladrillo-blanco-fondo-abstracto-vacío-para-presentaciones-y-diseño-web-un-montón-de-e.jpg");
-    background-repeat: repeat;
+    background:rgb(255, 208, 0) url("../imagenes/fondo.jpg") no-repeat center center;
+    background-size:100% 100%;
 }
 
 .texto-chulo {

@@ -54,7 +54,7 @@ function editarLibros($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECH
 			. ",APELLIDO2 = ':APELLIDO2',  GENERO = ':SEXO' WHERE DNI_R = ':DNI';"
 		."UPDATE CONTRATO_RESIDENTE SET FECHA_INICIO = ':FECHA_INICIO', FECHA_FIN = ':FECHA_FIN' WHERE DNI_R = ':DNI'; "
 		."COMMIT;";
-
+		//$editarConsulta1 = "CALL updatearResidente(:NOMBRE, APELLIDO1, APELLIDO2, SEXO, DNI, :FECHA_INICIO, :FECHA_FIN)"
 		$stmt = $conn->prepare($editarConsulta1);
 
 		$stmt->bindParam(':NOMBRE', $NOMBRE);

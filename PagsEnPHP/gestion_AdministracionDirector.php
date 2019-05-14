@@ -48,31 +48,19 @@ function consultarTodos($conexion)
 
 function editarLibros($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECHALLEGADA, $FECHASALIDA)
 {
+
 	try {
 
-		$editarConsulta1 = "UPDATE RESIDENTE SET NOMBRE = ':NOMBRE', APELLIDO1 = ':APELLIDO1'"
-			. ",APELLIDO2 = ':APELLIDO2',  GENERO = ':SEXO' WHERE DNI_R = ':DNI';"
-		."UPDATE CONTRATO_RESIDENTE SET FECHA_INICIO = ':FECHA_INICIO', FECHA_FIN = ':FECHA_FIN' WHERE DNI_R = ':DNI'; "
-		."COMMIT;";
-		//$editarConsulta1 = "CALL updatearResidente(:NOMBRE, APELLIDO1, APELLIDO2, SEXO, DNI, :FECHA_INICIO, :FECHA_FIN)"
-		//aqui te dejo el updateo, el procedure lo tienes en el drive
-		$stmt = $conn->prepare($editarConsulta1);
+		$director = "CALL UPDATEARRESIDENTE(:dni, :nombre, :apellido1, :apellido2, :sexo, :fechallegada, :fechasalida)";
 
-		$stmt->bindParam(':NOMBRE', $NOMBRE);
-		$stmt->bindParam(':APELLIDO1', $APELLIDO1);
-		$stmt->bindParam(':APELLIDO2', $APELLIDO2);
-		$stmt->bindParam(':SEXO', $SEXO);
-		$stmt->bindParam(':DNI', $DNI);
-		$stmt->bindParam(':FECHA_INICIO', $FECHALLEGADA);
-		$stmt->bindParam(':FECHA_FIN', $FECHASALIDA);
-
-		if (!isset($_SESSION["dentro"])) {
-			$_SESSION["dentro"] = "Estoy dentro de editar Libro1";
-		} else {
-			unset($_SESSION["dentro"]);
-			$_SESSION["dentro"] = "Estoy dentro de editar Libro2";
-		}
-
+		$stmt = $conn->prepare($director);
+		$stmt->bindParam(':dni', $DNI);
+		$stmt->bindParam(':nombre', $NOMBRE);
+		$stmt->bindParam(':apellido1', $APELLIDO1);
+		$stmt->bindParam(':apellido2', $APELLIDO2);
+		$stmt->bindParam(':sexo', $SEXO);
+		$stmt->bindParam(':fechallegada', $FECHALLEGADA);
+		$stmt->bindParam(':fechasalida', $FECHASALIDA);
 		$stmt->execute();
 
 		return "";

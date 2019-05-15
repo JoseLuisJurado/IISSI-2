@@ -50,7 +50,7 @@ function editarLibros($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECH
 {
 
 	try {
-
+		print_r($APELLIDO1);
 		$director = "CALL UPDATEARRESIDENTE(:dni, :nombre, :apellido1, :apellido2, :sexo, :fechallegada, :fechasalida)";
 
 		$stmt = $conn->prepare($director);

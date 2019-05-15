@@ -84,8 +84,8 @@ cerrarConexionBD($conn);
                     <div id="input_display" class="input_display">
                         <input id="DNI" name="DNI" type="hidden" value="<?php echo $pagina["DNI_R"]; ?>" />
                         <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" />
-                        <input id="APELLIDO1" name="Primer apellido" value="<?php echo $pagina["APELLIDO1"]; ?>" />
-                        <input id="APELLIDO2" name="Segundo Apellido" value="<?php echo $pagina["APELLIDO2"]; ?>" />
+                        <input id="APELLIDO1" name="APELLIDO1" value="<?php echo $pagina["APELLIDO1"]; ?>" />
+                        <input id="APELLIDO2" name="APELLIDO2" value="<?php echo $pagina["APELLIDO2"]; ?>" />
                         <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"]; ?>" />
                         <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
                         <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />
@@ -101,25 +101,6 @@ cerrarConexionBD($conn);
             </article>
         <?php   } ?>
 
-        <form method="post" action="controladorCreacionContraseñas.php" onsubmit="">
-            <section>
-                <label>
-                    Escriba el usuario: <input type="text" id="usuario" class="usuario" width="200" name="usuario" />
-                </label> <br>
-                <label>
-                    Escriba la contraseña: <input type="text" id="contraseña" class="contraseña" width="200" name="contraseña" />
-                </label> <br>
-                <label>
-                    Repita la contraseña: <input type="text" id="repetirContraseña" class="repetirContraseña" width="200" name="repetirContraseña" />
-                </label> <br>
-                <label>
-                    Especifique el DNI del residente <input type="text" id="DNIResidente" class="DNIResidente" width="200" name="123456789X" />
-                </label> <br>
-                <label>
-                    <input type="submit" id="crearusuario" class="crearusuario" />
-                </label>
-            </section>
-        </form>
     </main>
     <?php
     include "php/pie.php";

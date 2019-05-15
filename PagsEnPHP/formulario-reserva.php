@@ -175,6 +175,9 @@
         </fieldset>
         <div><input type="submit" value="Enviar"> </div>
     </form>
+	<?php 
+	include "php/pie.php";
+	 ?>
 </body>
 
 </html>

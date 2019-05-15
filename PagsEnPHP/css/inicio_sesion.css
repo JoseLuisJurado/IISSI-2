@@ -5,6 +5,13 @@ field{
 	padding: 2%;
 }
 
+fieldset{
+    border-radius: 1em;
+    margin-bottom: 1%;
+    border-width: .2em;
+    background-color: #DEF0F3;
+}
+
 input{
 	margin-bottom: 1%;
 }

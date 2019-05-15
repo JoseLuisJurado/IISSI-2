@@ -22,7 +22,8 @@ $(document).ready(function() {
 
 // Código Java Script
 
-function passwordValidation(pwd){ // Validación de la password de una cadena
+function passwordValidation(){ // Validación de la password de una cadena
+	
 	var valid = true;
 	var hasNumber = /\d/;		var hasUpperCases = /[A-Z]/;		var hasLowerCases = /[a-z]/;
 	valid=valid && (pwd.length>=6) && (hasNumber.test(pwd)) && (hasUpperCases.test(pwd)) && (hasLowerCases.test(pwd));

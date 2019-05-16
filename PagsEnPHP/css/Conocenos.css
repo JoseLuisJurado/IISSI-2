@@ -20,15 +20,15 @@ p{
 img.imagen{
 	float: left; 
 	margin-right:1%;
-	width: 370px;
-	height:200px;
+	width: 43%;
+	height: 10%%;
 }
 
 img.imagen2{
 	margin-top:4%; 
 	margin:2% auto;
 	display:block;
-	width: 800px;
-	height:220px;
+	width: 90%;
+	height: 15%;
 }
 

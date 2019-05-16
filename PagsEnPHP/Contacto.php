@@ -24,9 +24,6 @@
 		$errores = $_SESSION["errores"];
 		unset($_SESSION["errores"]);
 	}
-		
-	// Creamos una conexión con la BD
-	print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +111,6 @@
     </fieldset>
     <?php
     include "php/pie.php";
-	cerrarConexionBD($conexion);
     ?>
 </body>
 

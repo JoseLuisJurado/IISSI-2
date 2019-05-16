@@ -1,3 +1,6 @@
+/*
+ * USADO EN: formulario-reserva, Administración_usuario
+ */
 form{
     padding: 2%;
     padding-bottom: 2%;
@@ -123,3 +126,17 @@ p.adminP4{
 	text-align: left;
 }
 
+section.tabla{
+	float:right;
+}
+
+ul.sala{
+	 list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+ li.sala{
+ 	
+ }

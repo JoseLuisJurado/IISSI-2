@@ -1,7 +1,7 @@
 <?php
 session_start();
 //if (!isset($_SESSION['login'])=='margarita@gmail.com')
-//	Header("Location: login.php");
+//	Header("Location: Inicio_sesion.php");
 
 require_once("conexionBD.php");
 $conn = crearconexionBD();

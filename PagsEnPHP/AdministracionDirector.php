@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['login'])=='margarita@gmail.com')
+	Header("Location: login.php");
+
 require_once("conexionBD.php");
 $conn = crearconexionBD();
 require_once("gestion_AdministracionDirector.php");

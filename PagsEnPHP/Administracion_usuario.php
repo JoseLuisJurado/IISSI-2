@@ -1,8 +1,15 @@
 <?php
 require_once("gestionAdministracion_Usuario.php");
-$nombre = "bbbaaaaaaaaaaaaa";
+// $nombre = 'bbbaaaaaaaaaaaaa';
 
-$fechas = extraerFechasLlegadaSalida($nombre);
+// if (!isset($_SESSION["dentro"])) {
+//     $_SESSION["dentro"] = "Estoy dentro de editar Libro";
+// } else {
+//     unset($_SESSION["dentro"]);
+//     $_SESSION["dentro"] = "Estoy dentro de editar Libro";
+// }
+
+// $fechas = extraerFechasLlegadaSalida($nombre);
 
 ?>
 <!DOCTYPE html>
@@ -33,6 +40,7 @@ $fechas = extraerFechasLlegadaSalida($nombre);
             que
             la reserva de salas está quedando muy feo, habrá que cambiarlo de alguna forma.
             </p>
+            
         </div>
         <div class="alineacion">
             <main>

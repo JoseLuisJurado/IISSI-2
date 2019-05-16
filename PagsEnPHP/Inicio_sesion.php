@@ -1,3 +1,27 @@
+<?php
+	session_start();
+  	
+  	include_once("gestionBD.php");
+ 	include_once("funcionLogin.php");
+	
+	if (isset($_POST['submit'])){
+		$email= $_POST['Email'];
+		$pass = $_POST['Contraseña'];
+
+		$conexion = crearconexionBD();
+		$num_usuarios = consultarUsuario($conexion,$email,$pass);
+		cerrarConexionBD($conexion);	
+	
+		if ($num_usuarios == 0)
+			$login = "error";	
+		else {
+			$_SESSION['login'] = $email;
+			Header("Location: index.php");
+		}	
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,7 +40,13 @@
     ?>
     <div>
         <main class="main">
-            <form method="POST" name="formularioInicio" id="formularioInicio" action="">
+        	<?php if (isset($login)) {
+		echo "<div class=\"error\">";
+		echo "Error en la contraseña o no existe el usuario.";
+		echo "</div>";
+	}	
+	?>
+            <form method="POST" name="formularioInicio" id="formularioInicio" action="inicio_sesion.php">
                 <fieldset class="field">
                     <legend><u> Iniciar sesión</u></legend>
                     <section>

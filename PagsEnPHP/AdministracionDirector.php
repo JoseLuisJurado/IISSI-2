@@ -82,7 +82,7 @@ cerrarConexionBD($conn);
                     </div>
 
                     <div id="input_display" class="input_display">
-                        <input id="DNI" name="DNI" type="hidden" value="<?php echo $pagina["DNI_R"]; ?>" />
+                        <input id="DNI" name="DNI" type="hidden" height="40px" value="<?php echo $pagina["DNI_R"]; ?>" />
                         <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" />
                         <input id="APELLIDO1" name="APELLIDO1" value="<?php echo $pagina["APELLIDO1"]; ?>" />
                         <input id="APELLIDO2" name="APELLIDO2" value="<?php echo $pagina["APELLIDO2"]; ?>" />
@@ -92,10 +92,10 @@ cerrarConexionBD($conn);
                     </div><br>
 
                     <!-- <?php foreach ($_SESSION["reserva"] as $res) echo "<br>Lo que hay dentro de reserva: " . $res ?> -->
-                    <?php if (isset($_SESSION["dentro"])) {
+                    <!-- <?php if (isset($_SESSION["dentro"])) {
                         echo $_SESSION["dentro"];
                         unset($_SESSION["dentro"]);
-                    } else ?>
+                    } else ?> -->
 
                 </form>
             </article>

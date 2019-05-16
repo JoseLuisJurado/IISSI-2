@@ -22,7 +22,7 @@ div.example1 {
 }
 
 body{
-    background:rgb(255, 208, 0) url("../imagenes/fondo.jpg") no-repeat center center;
+    background: url("../imagenes/fondo.jpg") no-repeat center center;
     background-size:100% 100%;
 }
 
@@ -59,7 +59,7 @@ div.sticky {
     border-radius: .5em;
     margin-bottom: 1%;
     border-width: .2em;
-    background-color: whitesmoke;
+    background-color: #F5F5F5;
     border-style: groove;
     border-color: threedface;
     border-image: initial;
@@ -70,7 +70,7 @@ div.sticky {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: lightblue;
+    background-color: #B0E0E6;
     text-align: center;
 }
 
@@ -95,7 +95,7 @@ div.sticky {
     display: none;
     position: absolute;
     top: 100%;
-    background: lightblue;
+    background: #B0E0E6;
     padding: 0;
     border-left: solid 2px #000000;
     border-right: solid 2px #000000;
@@ -147,6 +147,5 @@ div.col1padd{
 }
 
 div.col3{
-	float:center;
 	padding: 2%;
 }

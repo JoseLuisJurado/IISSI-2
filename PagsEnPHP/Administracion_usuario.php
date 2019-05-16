@@ -1,3 +1,10 @@
+<?php
+require_once("gestionAdministracion_Usuario.php");
+$nombre = "bbbaaaaaaaaaaaaa";
+
+$fechas = extraerFechasLlegadaSalida($nombre);
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,9 +20,9 @@
 
 <body>
 
-    <?php 
-	include "php/menu.php";
-	 ?>
+    <?php
+    include "php/menu.php";
+    ?>
     <div class="admin1">
         <div class="admin2">
             <p class="adminP"></p>
@@ -38,30 +45,42 @@
                                 Desde: <input type="datetime-local">
                             </label>
                         </section>
-                        <section >
+                        <section>
                             <label>
                                 Hasta: <input type="datetime-local">
                             </label>
                         </section>
                     </fieldset>
-                   <div><input type="submit" value="Enviar"> </div>
+                    <div><input type="submit" value="Enviar"> </div>
                 </form>
             </main>
             <section class="adminS2">
                 <p class="adminP2">Fecha último pago</p>
                 <p class="adminP3">Habitación Actual</p>
             </section>
+            <section>
+                <!-- Poner la fecha del último pago-->
+                <p style="float: left"> 16/04/2019</p>
+                <p style="float: right"> 14</p>
+            </section>
             <section class="adminS2">
                 <p style="float:left">Fecha de entrada</p>
                 <p style="float:right">Pago realizado</p>
             </section>
+            <section>
+                <p style="float: left"> <?php echo $fechas["FECHA_INICIO"] ?></p>
+                <p style="float: right"> Sí</p>
+            </section>
             <section class="adminS2">
                 <p class="adminP4">Fecha de salida</p>
             </section>
+            <section>
+                <p style="float:left"> <?php echo $fechas["FECHA_FIN"] ?></p>
+            </section>
         </div>
     </div>
-		<?php 
-	include "php/pie.php";
-	 ?>
-	
+    <?php
+    include "php/pie.php";
+    ?>
+
 </html>

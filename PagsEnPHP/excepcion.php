@@ -1,8 +1,11 @@
 <?php 
 	session_start();
 	
-	$excepcion = $_SESSION["excepcion"];
-	unset($_SESSION["excepcion"]);
+	$excepcion = "No hay error";
+	if (isset($_SESSION['excepcion'])){
+		$excepcion = $_SESSION['excepcion'];
+		unset($_SESSION['excepcion']);
+	}
 	
 	if (isset ($_SESSION["destino"])) {
 		$destino = $_SESSION["destino"];

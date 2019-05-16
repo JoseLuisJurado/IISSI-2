@@ -58,6 +58,14 @@ require_once("gestionAdministracion_Usuario.php");
                                 Hasta: <input type="datetime-local">
                             </label>
                         </section>
+                        <section class="tabla">
+                        	<ul class="sala">
+                        		<li class="sala">Sala 1</li>
+                        		<li class="sala">Sala 1</li>
+                        		<li class="sala">Sala 1</li>
+                        		<li class="sala">Sala 1</li>
+                        	</ul>
+                        </section>
                     </fieldset>
                     <div><input type="submit" value="Enviar"> </div>
                 </form>

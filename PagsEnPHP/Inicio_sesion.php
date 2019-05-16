@@ -36,12 +36,6 @@
     ?>
     <div>
         <main class="main">
-        	       	<?php if (isset($login)) {
-		echo "<div class=\"error\">";
-		echo "Error en la contraseña o no existe el usuario.";
-		echo "</div>";
-	}	
-	?>
             <form method="get" action="Inicio_sesion.php">
                 <fieldset class="field">
                     <legend><u> Iniciar sesión</u></legend>
@@ -59,6 +53,14 @@
                                 ¿Aun no has hecho tu reserva? <a href="formulario-reserva.php">Reserva Aquí</a>
                             </label>
                         </div>
+                        	<label>
+                        		   <?php if (isset($login)) {
+									echo "<div class=\"error\">";
+									echo "Error en la contraseña o no existe el usuario.";
+									echo "</div>";
+										}	
+									?>
+                        	</label>
                     </section>
                 </fieldset>
                 <input type="submit" title="Enviar" name="Enviar">

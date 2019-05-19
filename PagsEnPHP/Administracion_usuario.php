@@ -1,15 +1,13 @@
 <?php
 require_once("gestionAdministracion_Usuario.php");
-// $nombre = 'bbbaaaaaaaaaaaaa';
 
-// if (!isset($_SESSION["dentro"])) {
-//     $_SESSION["dentro"] = "Estoy dentro de editar Libro";
-// } else {
-//     unset($_SESSION["dentro"]);
-//     $_SESSION["dentro"] = "Estoy dentro de editar Libro";
-// }
+$nombre = '11111113B';
 
-// $fechas = extraerFechasLlegadaSalida($nombre);
+$conn = crearconexionBD();
+
+$fechas = extraerFechasLlegadaSalida($conn, $nombre);
+
+cerrarConexionBD($conn);
 
 ?>
 <!DOCTYPE html>
@@ -40,7 +38,7 @@ require_once("gestionAdministracion_Usuario.php");
             que
             la reserva de salas está quedando muy feo, habrá que cambiarlo de alguna forma.
             </p>
-            
+
         </div>
         <div class="alineacion">
             <main>
@@ -66,24 +64,24 @@ require_once("gestionAdministracion_Usuario.php");
                 <p class="adminP2">Fecha último pago</p>
                 <p class="adminP3">Habitación Actual</p>
             </section>
-            <section>
+            <section class="adminS2">
                 <!-- Poner la fecha del último pago-->
-                <p style="float: left"> 16/04/2019</p>
-                <p style="float: right"> 14</p>
+                <p class="adminP2"> 16/04/2019</p>
+                <p class="adminP3"> 14</p>
             </section>
             <section class="adminS2">
-                <p style="float:left">Fecha de entrada</p>
-                <p style="float:right">Pago realizado</p>
-            </section>
-            <section>
-                <p style="float: left"> <?php echo $fechas["FECHA_INICIO"] ?></p>
-                <p style="float: right"> Sí</p>
+                <p class="adminP2">Fecha de entrada</p>
+                <p class="adminP3">Pago realizado</p>
             </section>
             <section class="adminS2">
-                <p class="adminP4">Fecha de salida</p>
+                <p class="adminP2"> <?php echo $fechas[0]["FECHA_INICIO"]; ?></p>
+                <p class="adminP3"> Sí</p>
             </section>
-            <section>
-                <p style="float:left"> <?php echo $fechas["FECHA_FIN"] ?></p>
+            <section class="adminS2">
+                <p class="adminP2">Fecha de salida</p>
+            </section>
+            <section class="adminS2">
+                <p class="adminP2"> <?php echo $fechas[0]["FECHA_FIN"]; ?></p>
             </section>
         </div>
     </div>

@@ -1,13 +1,12 @@
 <?php
 	session_start();
   	
-  	include_once("gestionBD.php");
+  	include_once("conexionBD.php");
  	include_once("funcionLogin.php");
 	
-	if (isset($_POST['submit'])){
-		$email= $_POST['Email'];
-		$pass = $_POST['Contraseña'];
-
+	if (isset($_REQUEST['Enviar'])){
+		$email= $_REQUEST['Email'];
+		$pass = $_REQUEST['Contraseña'];
 		$conexion = crearconexionBD();
 		$num_usuarios = consultarUsuario($conexion,$email,$pass);
 		cerrarConexionBD($conexion);	
@@ -19,13 +18,11 @@
 			Header("Location: index.php");
 		}	
 	}
-
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+	<head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
     <link rel="stylesheet" href="css/cssInicio.css" />
@@ -33,20 +30,13 @@
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>
-
 <body>
     <?php
     include "php/menu.php";
     ?>
     <div>
         <main class="main">
-        	<?php if (isset($login)) {
-		echo "<div class=\"error\">";
-		echo "Error en la contraseña o no existe el usuario.";
-		echo "</div>";
-	}	
-	?>
-            <form method="POST" name="formularioInicio" id="formularioInicio" action="inicio_sesion.php">
+            <form method="get" action="Inicio_sesion.php">
                 <fieldset class="field">
                     <legend><u> Iniciar sesión</u></legend>
                     <section>
@@ -63,9 +53,17 @@
                                 ¿Aun no has hecho tu reserva? <a href="formulario-reserva.php">Reserva Aquí</a>
                             </label>
                         </div>
+                        	<label>
+                        		   <?php if (isset($login)) {
+									echo "<div class=\"error\">";
+									echo "Error en la contraseña o no existe el usuario.";
+									echo "</div>";
+										}	
+									?>
+                        	</label>
                     </section>
                 </fieldset>
-                <input type="submit" title="Enviar">
+                <input type="submit" title="Enviar" name="Enviar">
             </form>
         </main>
     </div>

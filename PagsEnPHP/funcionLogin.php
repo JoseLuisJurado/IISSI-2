@@ -1,6 +1,6 @@
 <?php
 function consultarUsuario($conexion,$email,$pass) {
- 	$consulta = "SELECT COUNT(*) AS TOTAL FROM USUARIOS WHERE EMAIL=:email AND PASS=:pass";
+ 	$consulta = "SELECT COUNT(*) AS TOTAL FROM usuario_registrado WHERE correo=:email AND contraseña=:pass";
 	$stmt = $conexion->prepare($consulta);
 	$stmt->bindParam(':email',$email);
 	$stmt->bindParam(':pass',$pass);

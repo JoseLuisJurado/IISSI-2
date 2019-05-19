@@ -25,6 +25,7 @@
 		$stmt->execute();
 	} catch(PDOException $e) {
 		echo $e-> getMessage();
+		header ("Location: excepcion.php");
 		// Si queremos visualizar la excepción durante la depuración: $e->getMessage();
     }
 }

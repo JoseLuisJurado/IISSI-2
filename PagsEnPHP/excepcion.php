@@ -13,12 +13,12 @@ if (isset($_SESSION["destino"])) {
 } else
 	$destino = "";
 
-if (isset($_SESSION["dentro"])) {
-	echo $_SESSION["dentro"];
-	unset($_SESSION["dentro"]);
-} else {
-	unset($_SESSION["dentro"]);
-}
+// if (isset($_SESSION["dentro"])) {
+// 	echo $_SESSION["dentro"];
+// 	unset($_SESSION["dentro"]);
+// } else {
+// 	unset($_SESSION["dentro"]);
+// }
 ?>
 
 <!DOCTYPE html>

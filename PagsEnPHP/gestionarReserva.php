@@ -51,6 +51,7 @@
 		
 	} catch(PDOException $e) {
 		echo $e-> getMessage();
+		header("Location: excepcion.php");
     }
 }
 ?>

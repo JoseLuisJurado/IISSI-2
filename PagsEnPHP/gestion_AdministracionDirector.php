@@ -92,6 +92,7 @@ function borrarConsulta($conn, $DNI_R)
 	}
 }
 
+//Esto se encuentra sin uso ahora mismo
 function validacionCreacionUsuario($conn, $usuario)
 {
 	$res = "";

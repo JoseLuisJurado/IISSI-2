@@ -18,42 +18,53 @@ session_start();
     <?php
     include "php/menu.php";
     ?>
-    <div class="Cuerpo">
-        <h2 class="texto">Comedor</h2>
-    </div>
-    <div>
-        <img class="fotos" src="imagenes/gfoto45.jpg">
-        <p class="texto-imagen">El servicio de comedor, puede ser pedido de forma opcional, con un coste adicional.
+    <div class="margen">
+        <h2 class="titulo">
+            Servicios
+        </h2>
+        <h2 class="titulo2">
+            Comedor
+        </h2>
+        <img class="centro"  src="imagenes/gfoto45.jpg" border="2" width="300" height="200" />
+        <p>
+            El servicio de comedor, puede ser pedido de forma opcional, con un coste adicional.
             Incluye Almuerzo completo. Este servicio estará disponible cuando un mínimo de 30 residentes lo hayan
             solicitado en el contrato.
         </p>
-    </div>
-    <div class="Cuerpo2">
-        <h2 class="texto">Mantenimiento</h2>
-    </div>
-    <div style="text-align: center">
-        <img class="fotos" src="imagenes/100D7VIZ003_1.jpg">
-        <p class="texto-imagen">Esta residencia consta con un eficiente servicio de mantenimiento que se encargará de la
+        <h2 class="titulo2">
+            Mantenimiento
+        </h2>
+        <img class="centro" style="margin-top:10px; " src="imagenes/100D7VIZ003_1.jpg" border="2" width="300" height="200" />
+
+        <p>
+            Esta residencia consta con un eficiente servicio de mantenimiento que se encargará de la
             reparación de cualquier desperfecto en la misma. En caso de que el desperfecto sea causado por un
-            residente, este pagará los gastos pertinentes.</p>
-    </div>
-    <div class="Cuerpo2">
-        <h2 class="texto">Vigilancia</h2>
-    </div>
-    <div style="text-align: center">
-        <img class="fotos" src="imagenes/Chuck Norris.jpg">
-        <p class="texto-imagen">El servicio de vigilancia, es el encargado de evitar que personas no autorizadas entren
-            en la residencia, así como de defender la misma de cualquier peligro externo, como ladrones o ETA.</p>
-    </div>
-    <div class="Cuerpo2">
-        <h2 class="texto">Limpieza</h2>
-    </div>
-    <div style="text-align: center;margin-bottom: 10%">
-        <img class="fotos" src="imagenes/depositphotos_98500248-stock-photo-worker-in-protective-chemical-suit.jpg">
-        <p class="texto-imagen"> El contrato de la residencia incluye nuestro servicio de limpieza. Los residentes
+            residente, este pagará los gastos pertinentes.
+        </p>
+
+        <h2 class="titulo2">
+            Vigilancia
+        </h2>
+        <img class="centro" style="margin-top:10px; " src="imagenes/Chuck Norris.jpg" border="2" width="300" height="200" />
+
+        <p>
+			El servicio de vigilancia, es el encargado de evitar que personas no autorizadas entren
+            en la residencia, así como de defender la misma de cualquier peligro externo, como ladrones o ETA.
+        </p>
+
+        <h2 class="titulo2">
+            Limpieza
+        </h2>
+        <img class="centro" style="margin-top:10px; " src="imagenes/depositphotos_98500248-stock-photo-worker-in-protective-chemical-suit.jpg" border="2" width="300" height="200" />
+
+        <p>
+         	El contrato de la residencia incluye nuestro servicio de limpieza. Los residentes
             podrán disponer de limpieza en sus habitaciones todos los viernes. Además de ser el encargado de la limpieza
             post-estancia.
         </p>
+
+
+
     </div>
     <?php
     include "php/pie.php";

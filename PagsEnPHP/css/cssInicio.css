@@ -148,3 +148,32 @@ div.col1padd{
 div.col3{
 	padding: 2%;
 }
+
+div.margen{
+	margin-top: 1%;
+	margin-left:10%;
+	margin-right:10%;
+	font-size:120%;
+}
+
+.titulo{
+	text-align: center;
+    color: black;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 10 px;
+    text-decoration: underline;
+}
+
+.titulo2{
+    text-align: center;
+    color: black;
+    
+    font-size: 10 px;
+    text-decoration: underline;
+}
+
+.centro{
+    margin:10px auto;
+	display:block;
+}
+

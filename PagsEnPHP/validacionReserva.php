@@ -31,10 +31,37 @@ include_once 'gestionarReserva.php';
 		
 	}
 	else // En caso contrario, vamos al formulario
-		Header("Location: Contacto.php");
+		Header("Location: formulario-reserva.php");
 	$_SESSION["formulario"] = $reservaForm;
 	$cone = crearconexionBD();
 	insertarReserva($cone,$reservaForm);
 	cerrarConexionBD($cone);
 	
 ?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta title="Residencia Estudiantil Digital">
+    <link rel="stylesheet" href="css/cssInicio.css" />
+    <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
+    <Title>Residencia de estudiantes bahía</Title>
+</head>
+
+<body>
+	<?php 
+	include "php/menu.php";
+	 ?>
+    <div class="cuerpo2">
+        <h1>Reserva realizada correctamente, ahora puede iniciar sesión y comprobar sus datos</h1>
+        
+    </div>
+			<?php 
+	include "php/pie.php";
+	 ?>
+	
+</body>
+
+</html>

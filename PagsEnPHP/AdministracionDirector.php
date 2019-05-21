@@ -62,7 +62,7 @@ cerrarConexionBD($conn);
             <form method="get" action="AdministracionDirector.php">
                 <input type="number" id="pag_size" name="pag_size" value="<?php echo $pag_size ?>" autofocus>
                 <input type="submit" value="Cambiar!">
-            </form>
+            </form><br><br>
         </nav>
         <?php foreach ($filas as $pagina) { ?>
             <article>
@@ -72,15 +72,15 @@ cerrarConexionBD($conn);
                         <?php ?>
                         <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
                             <button id="modificar" class="modificar" type="submit" name="modificar">
-                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="26px">
+                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="22px">
                             </button>
                         <?php } else { ?>
                             <button id="editar" class="editar" type="submit" name="editar">
-                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="26px">
+                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="22px">
                             </button>
                         <?php } ?>
                         <button id="borrar" class="borrar" type="submit" name="borrar">
-                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="26px" />
+                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="22px"/>
                         </button>
                     </div>
 

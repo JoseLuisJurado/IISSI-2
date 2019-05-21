@@ -19,7 +19,7 @@ session_start();
 	<?php 
 		include "php/menu.php";
 	 	?>
-	<div class="cuerpo">
+	<div class="cuerpoNormativa" >
 		<h2>COMPORTAMIENTO.</h2>
 		<ul>
 			<li>En las zonas comunes se deberá utilizar un vestuario adecuado.</li>

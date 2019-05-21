@@ -35,6 +35,7 @@
     <meta name="autor" content="Antonio Miguel González Villar">
     <link rel="stylesheet" href="css/cssContacto.css" />
     <link rel="stylesheet" href="css/cssInicio.css" />
+    <script src="javascript/validacionContacto.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>
@@ -70,7 +71,7 @@
                 Consulta
             </h2>
 
-            <form method="get" name="formularioContacto" if="formularioContacto" action="validacionContacto.php">
+            <form method="get" name="formularioContacto" if="formularioContacto" action="validacionContacto.php" onsubmit="return validacionGeneral()">
                 <section>
                     <label>
                         Nombre*: <input type="text" name="Nombre" id="Nombre" class="margenGeneral" required>
@@ -89,7 +90,7 @@
 
                 <section class="margenGeneral">
                     <label>
-                        Correo electrónico*: <input type="email" name="CorreoElectronico" id="CorreoElectronico" class="margenSexo" required>
+                        Correo electrónico*: <input type="email" maxlength="25" name="CorreoElectronico" id="CorreoElectronico" class="margenSexo" required>
                     </label>
                 </section>
 

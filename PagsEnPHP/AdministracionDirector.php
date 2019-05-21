@@ -72,15 +72,15 @@ cerrarConexionBD($conn);
                         <?php ?>
                         <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
                             <button id="modificar" class="modificar" type="submit" name="modificar">
-                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="40px">
+                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="26px">
                             </button>
                         <?php } else { ?>
                             <button id="editar" class="editar" type="submit" name="editar">
-                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="40px">
+                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="26px">
                             </button>
                         <?php } ?>
                         <button id="borrar" class="borrar" type="submit" name="borrar">
-                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="40px" />
+                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="26px" />
                         </button>
                     </div>
 

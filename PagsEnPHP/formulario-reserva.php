@@ -88,7 +88,7 @@
             <section class="margenGeneral">
                 <label>
                     Sexo:
-                    <input value="hombre" name="Sexo" id="Sexo" type="radio">Hombre
+                    <input value="hombre" name="Sexo" id="Sexo" type="radio" required>Hombre
                     <input value="mujer" name="Sexo" id="Sexo" type="radio">Mujer
                 </label>
             </section>

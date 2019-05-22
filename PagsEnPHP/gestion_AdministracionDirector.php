@@ -1,4 +1,4 @@
-<?php
+a<?php
 
 function consulta_paginada($conn, $query, $pag_num, $pag_size)
 {
@@ -141,6 +141,6 @@ function validacionCreacionUsuario($conn, $usuario)
 		$_SESSION['excepcion'] = $e->GetMessage();
 		header("Location: excepcion.php");
 	}
-
+	
 	return $res;
 }

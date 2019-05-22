@@ -49,9 +49,8 @@
 		$stmt->bindParam(':pagc',$comedor);
 		$stmt->execute();
 		
-	} catch(PDOException $e) {
-		echo $e-> getMessage();
+	} catch (PDOException $e) {
+		$_SESSION['excepcion'] = $e->GetMessage();
 		header("Location: excepcion.php");
-    }
 }
-?>
+}

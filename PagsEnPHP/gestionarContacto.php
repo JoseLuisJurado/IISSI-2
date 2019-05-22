@@ -23,9 +23,8 @@
 		$stmt->bindParam(':asu',$usuario["Asunto"]);
 		$stmt->bindParam(':men',$usuario["Mensaje"]);
 		$stmt->execute();
-	} catch(PDOException $e) {
-		echo $e-> getMessage();
-		header ("Location: excepcion.php");
-		// Si queremos visualizar la excepción durante la depuración: $e->getMessage();
-    }
+	} catch (PDOException $e) {
+		$_SESSION['excepcion'] = $e->GetMessage();
+		header("Location: excepcion.php");
+}
 }

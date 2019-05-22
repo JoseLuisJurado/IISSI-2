@@ -37,9 +37,9 @@ include_once 'gestionarReserva.php';
 	$cone = crearconexionBD();
 	insertarReserva($cone,$reservaForm);
 	cerrarConexionBD($cone);
-	
+
 }	catch (PDOException $e) {
-	$_SESSION['excepcion'] = $e->GetMessage();
+	$_SESSION['excepcion'] = "No se ha insertado en la base de datos";
 	header("Location: excepcion.php");
 }
 ?>

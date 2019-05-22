@@ -59,10 +59,10 @@ cerrarConexionBD($conn);
                         </section>
                         <section class="tabla">
                         	<ul class="sala">
-                        		<li class="sala">Sala 1</li>
-                        		<li class="sala">Sala 1</li>
-                        		<li class="sala">Sala 1</li>
-                        		<li class="sala">Sala 1</li>
+                        		<li class="lista"><a href="#as" class="enlace" >Sala 1</a></li>
+                        		<li class="lista"><a href="#as" class="enlace">Sala 1</a></li>
+                        		<li class="lista"><a href="#as" class="enlace">Sala 1</a></li>
+                        		<li class="lista"><a href="#as" class="enlace">Sala 1</a></li>
                         	</ul>
                         </section>
                     </fieldset>

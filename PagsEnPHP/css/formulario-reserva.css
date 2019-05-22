@@ -127,16 +127,26 @@ p.adminP4{
 }
 
 section.tabla{
-	float:right;
+	margin-top: 0;
+	float: left;
 }
 
 ul.sala{
-	 list-style-type: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333333;
 }
- li.sala{
- 	
+
+li.lista{
+float:left;
  }
+ 
+li a.enlace{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+}

@@ -18,7 +18,8 @@ session_start();
     <?php
     include "php/menu.php";
     ?>
-<div class="cuerpoNormativa">
+	<div class="cuerpo2">
+    <div class="cuerpo3">
     <h1 class="ubi-text">Residencia de estudiantes Bahía</h1>
 
     <div id="all">
@@ -41,6 +42,7 @@ session_start();
             Cercana a la estación de trenes de Puerto Real<br>
         </label>
     </address>
+</div>
 </div>
     <?php
     include "php/pie.php";

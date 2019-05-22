@@ -1,58 +1,7 @@
-create table contrato_empleados(
-OID_CONE integer primary key not null,
-fecha_inicio date not null,
-fecha_fin date not null,
-cargo varchar2(50)
-check(cargo in ('comedor', 'limpieza', 'vigilancia', 'mantenimiento')) not null,
-numero_cuenta varchar2(50) not null,
-codPostal integer not null,
-domicilio varchar2(50),
-poblacion varchar2(50)
-);
-
 create table director_a(
 DNID varchar2(50) primary key not null,
 nombre varchar2(50) not null
 );
-
-create table empleados(
-DNIE varchar2(50) primary key not null,
-nombre varchar2(50) not null,
-OID_CONE integer not null,
-DNID varchar2(500),
-foreign key(OID_CONE) REFERENCES contrato_empleados ON DELETE CASCADE,
-foreign key(DNID) REFERENCES director_a ON DELETE CASCADE
-);
-
-create table nominas(
-OID_N integer primary key not null,
-fecha_pago date not null,
-cantidad integer not null,
-OID_CONE integer not null,
-foreign key(OID_CONE) REFERENCES contrato_empleados ON DELETE CASCADE
-);
-
-create table tarea(
-OID_T integer primary key not null,
-Tarea varchar2(90) not null
-);
-
-create table Es_Realizado_Por (
-OID_REA integer primary key not null,
-OID_T integer,
-DNIE varchar(50),
-foreign key (OID_T) REFERENCES tarea ON DELETE CASCADE,
-foreign key(DNIE) REFERENCES empleados ON DELETE CASCADE
-);
-
-create table Es_empleado_de (
-OID_ES integer primary key not null,
-DNID varchar2(50),
-DNIE varchar2(50),
-foreign key (DNID) REFERENCES director_a ON DELETE CASCADE,
-foreign key (DNIE) REFERENCES empleados ON DELETE CASCADE
-);
-
 
 create table residencia(
 OID_R integer primary key not null,
@@ -133,17 +82,6 @@ FOREIGN KEY (DNI_R) REFERENCES RESIDENTE ON DELETE CASCADE,
 CONSTRAINT CHK_DIAS CHECK(Fecha_inicio < Fecha_fin)
 );
 
-create table Residente_Antiguo(
-DNI_AN varchar2(50) primary key not null,
-Nombre varchar2(50) ,
-FechaSalida date ,
-FechaEntrada date ,
-FianzaDev1 integer check(FianzaDev1 in (0,1)),
-FianzaDev2 integer check(FianzaDev2 in (0,1)) ,
-OID_CR integer,
-foreign key (OID_CR) references contrato_residente ON DELETE CASCADE
-);
-
 create table PagoInicial(
 OID_PIN integer  primary key not null,
 PagoIn integer not null,
@@ -214,57 +152,11 @@ foreign key (DNI_U) REFERENCES usuarios ON DELETE CASCADE,
 foreign key (OID_SALA) REFERENCES sala ON DELETE CASCADE
 );
 
-
-create table subcontrata (
-CIF_S varchar2(50) primary key not null,
-RS varchar2(50) not null,
-Cargo varchar2(15)
-check(cargo in ('comedor', 'limpieza', 'vigilancia', 'mantenimiento')) not null,
-PagoMensual integer not null,
-Fecha_inicial date not null,
-Fecha_fin date not null,
-DNID varchar2(50) not null,
-foreign key (DNID) REFERENCES director_a ON DELETE CASCADE,
-CONSTRAINT CHK_DIAS2 CHECK(Fecha_fin > Fecha_inicial)
-);
-
 create table comedor (
 OID_CO integer primary key not null,
 Habilitado integer
 check(habilitado in(0,1)) not null,
 CIF_S varchar2(9) not null,
-foreign key (CIF_S) REFERENCES subcontrata ON DELETE CASCADE
-);
-
-create table pagoMensualSub (
-OID_PMSUB integer primary key not null,
-Pagado integer
-check(Pagado in (0,1)) not null,
-FechaUltPago date not null,
-CIF_S varchar2(50) not null,
-foreign key (CIF_S) REFERENCES subcontrata ON DELETE CASCADE
-);
-
-create table tareaSub (
-OID_TS integer primary key not null,
-TareaSub varchar2(1000),
-CIF_S varchar(50) not null,
-foreign key (CIF_S) REFERENCES subcontrata ON DELETE CASCADE
-);
-
-create table Es_realizado_por_sub (
-OID_REASUB integer primary key, 
-OID_TS integer,
-CIF_S varchar(50) not null,
-foreign key (OID_TS) REFERENCES tareaSub ON DELETE CASCADE,
-foreign key (CIF_S) REFERENCES subcontrata ON DELETE CASCADE
-);
-
-create table Es_contratada_por (
-OID_ECP integer primary key not null,
-DNID varchar2(50),
-CIF_S varchar2(50),
-foreign key (DNID) REFERENCES director_a ON DELETE CASCADE,
 foreign key (CIF_S) REFERENCES subcontrata ON DELETE CASCADE
 );
 
@@ -280,7 +172,7 @@ FOREIGN KEY (OID_H) REFERENCES HABITACION ON DELETE CASCADE
 create table usuario_registrado(
 OID_UR integer primary key,
 correo varchar2(100) not null,
-contraseña varchar2(100) not null,
+contraseÃ±a varchar2(100) not null,
 DNI_R varchar2(9) ,
 DNID varchar2(50) ,
 Foreign key (DNI_R) References residente on delete cascade,
@@ -316,51 +208,6 @@ BEGIN
 END;
 /
 
-CREATE SEQUENCE sec_contrato_empleados;
-CREATE OR REPLACE TRIGGER crea_OID_CONE
-BEFORE INSERT ON contrato_empleados
-FOR EACH ROW
-BEGIN
-    SELECT sec_contrato_empleados.NEXTVAL INTO :NEW.OID_CONE FROM DUAL;
-END;
-/
-
-CREATE SEQUENCE sec_nominas;
-CREATE OR REPLACE TRIGGER crea_OID_N
-BEFORE INSERT ON nominas
-FOR EACH ROW
-BEGIN
-    SELECT sec_nominas.NEXTVAL INTO :NEW.OID_N FROM DUAL;
-END;
-/
-
-CREATE SEQUENCE sec_tarea;
-CREATE OR REPLACE TRIGGER crea_OID_T
-BEFORE INSERT ON tarea
-FOR EACH ROW
-BEGIN
-    SELECT sec_tarea.NEXTVAL INTO :NEW.OID_T FROM DUAL;
-END;
-/
-
-CREATE SEQUENCE sec_Es_Realizado_Por;
-CREATE OR REPLACE TRIGGER crea_OID_REA
-BEFORE INSERT ON Es_Realizado_Por
-FOR EACH ROW
-BEGIN
-    SELECT sec_Es_Realizado_Por.NEXTVAL INTO :NEW.OID_REA FROM DUAL;
-END;
-/
-
-CREATE SEQUENCE sec_Es_empleado_de;
-CREATE OR REPLACE TRIGGER crea_OID_ES
-BEFORE INSERT ON Es_empleado_de
-FOR EACH ROW
-BEGIN
-    SELECT sec_Es_empleado_de.NEXTVAL INTO :NEW.OID_ES FROM DUAL;
-END;
-/
-
 CREATE SEQUENCE sec_residencia;
 CREATE OR REPLACE TRIGGER crea_OID_R
 BEFORE INSERT ON residencia
@@ -376,15 +223,6 @@ BEFORE INSERT ON habitacion
 FOR EACH ROW
 BEGIN
     SELECT sec_habitacion.NEXTVAL INTO :NEW.OID_H FROM DUAL;
-END;
-/
-
-CREATE SEQUENCE sec_contrato_residente;
-CREATE OR REPLACE TRIGGER crea_OID_CR
-BEFORE INSERT ON contrato_residente
-FOR EACH ROW
-BEGIN
-    SELECT sec_contrato_residente.NEXTVAL INTO :NEW.OID_CR FROM DUAL;
 END;
 /
 
@@ -461,59 +299,12 @@ BEGIN
 END;
 /
 
-CREATE SEQUENCE sec_pagoMensualSub;
-CREATE OR REPLACE TRIGGER crea_OID_PMSUB
-BEFORE INSERT ON pagoMensualSub
-FOR EACH ROW
-BEGIN
-    SELECT sec_pagoMensualSub.NEXTVAL INTO :NEW.OID_PMSUB FROM DUAL;
-END;
-/
-
-CREATE SEQUENCE sec_Es_contratada_por;
-CREATE OR REPLACE TRIGGER crea_OID_ECP
-BEFORE INSERT ON Es_contratada_por
-FOR EACH ROW
-BEGIN
-    SELECT sec_Es_contratada_por.NEXTVAL INTO :NEW.OID_ECP FROM DUAL;
-END;
-/
-
-
-CREATE SEQUENCE sec_tareaSub ;
-CREATE OR REPLACE TRIGGER crea_OID_TS
-BEFORE INSERT ON tareaSub
-FOR EACH ROW
-BEGIN
-    SELECT sec_tareaSub .NEXTVAL INTO :NEW.OID_TS  FROM DUAL;
-END;
-/
-
-CREATE SEQUENCE sec_Es_realizado_por_sub  ;
-CREATE OR REPLACE TRIGGER crea_OID_REASUB 
-BEFORE INSERT ON Es_realizado_por_sub 
-FOR EACH ROW
-BEGIN
-    SELECT sec_Es_realizado_por_sub .NEXTVAL INTO :NEW.OID_REASUB  FROM DUAL;
-END;
-/
-
-
 CREATE SEQUENCE sec_habita_en   ;
 CREATE OR REPLACE TRIGGER crea_OID_HAB 
 BEFORE INSERT ON habita_en 
 FOR EACH ROW
 BEGIN
     SELECT sec_habita_en .NEXTVAL INTO :NEW.OID_HAB   FROM DUAL;
-END;
-/
-
-CREATE SEQUENCE sec_usuario_registrado  ;
-CREATE OR REPLACE TRIGGER crea_OID_UR
-BEFORE INSERT ON usuario_registrado
-FOR EACH ROW
-BEGIN
-    SELECT sec_usuario_registrado .NEXTVAL INTO :NEW.OID_UR   FROM DUAL;
 END;
 /
 
@@ -565,8 +356,6 @@ END;
 /
 
 
-
-
 CREATE OR REPLACE PROCEDURE INSERTAR_RESERVA 
   (dni IN VARCHAR2,
    nombre IN VARCHAR2,
@@ -599,9 +388,8 @@ BEGIN
         correoPadre, fechaLlegada, fechaSalida, tipoPago,
         formaPago, pais, domicilio,poblacion, codigoPostal);
   commit;
-  INSERT INTO usuario_registrado(OID_UR, correo, contraseña, DNI_R)
+  INSERT INTO usuario_registrado(OID_UR, correo, contraseÃ±a, DNI_R)
   VALUES(sec_usuario_registrado.nextval, correoElectronico, pass, dni);
   commit;
 END;
 /
-

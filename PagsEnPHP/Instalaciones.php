@@ -20,7 +20,8 @@ session_start();
     include "php/menu.php";
     ?>
     <!-- cuerpo de la pagina de inicio solamente, si estas con otro html no uses esta clase -->
-    <div style="margin-right: 15%; margin-left: 15%;";>
+        <div class="cuerpo2">
+        <div class="cuerpo3">
         <h2 class="titulo">
             Instalaciones
         </h2>
@@ -80,6 +81,7 @@ session_start();
 
 
 
+    </div>
     </div>
     <?php
     include "php/pie.php";

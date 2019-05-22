@@ -68,7 +68,7 @@ function validacionGeneral() {
                 var hasNumber = /\d/; var hasUpperCases = /[A-Z]/; var hasLowerCases = /[a-z]/;
                 valid = valid && (contraseña.length >= 6) && (hasNumber.test(contraseña)) && (hasUpperCases.test(contraseña)) && (hasLowerCases.test(contraseña));
                 if (valid == false) {
-                    alert("La contraseña debe de tener un número, una mayúscula y una minúscula");
+                    alert("La contraseña debe de tener un número, una mayúscula y una minúscula y mayor que 8");
                     return valid;
                 }
             }

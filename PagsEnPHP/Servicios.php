@@ -18,6 +18,8 @@ session_start();
     <?php
     include "php/menu.php";
     ?>
+    <div class="cuerpo2">
+    <div class="cuerpo3">
     <div class="margen">
         <h2 class="titulo">
             Servicios
@@ -65,6 +67,8 @@ session_start();
 
 
 
+    </div>
+    </div>
     </div>
     <?php
     include "php/pie.php";

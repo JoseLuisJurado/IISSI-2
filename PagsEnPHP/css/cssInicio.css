@@ -22,8 +22,9 @@ div.example1 {
 }
 
 body{
-    background: url("../imagenes/fondo.jpg") no-repeat center center;
-    background-size:100% 100%;
+/*    background: url("../imagenes/fondo.jpg") no-repeat center center;
+      background-size:100% 100%;*/
+      background-color: #ffdd99;
 }
 
 .texto-chulo {

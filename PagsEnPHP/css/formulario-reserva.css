@@ -30,34 +30,34 @@ label{
 }
 
 .Cuerpo{
-    border-width: 2px;
+    border-width: 0.125em;
     border-color: black;
     border-style: solid;
-    margin-top: 40px;
-    margin-left: 550px;
-    margin-right: 550px;
-    margin-bottom: 50px;
-    padding-bottom: 0px;
+    margin-top: 2.5em;
+    margin-left: 34.375em;
+    margin-right: 34.375em;
+    margin-bottom: 3.125em;
+    padding-bottom: 0em;
 }
 .margenFormulario {
-    padding: 10px;
+    padding: 0.625em;
     border-style: solid;
     border-color: black;
     margin: 2cm;
     background-color: white;
 }
 .margenSexo {
-    margin-right: 30px;
+    margin-right: 1.875em;
 }
 .margenGeneral {
-    margin-top: 10px;
+    margin-top: 0.625em;
 }
 
 .titulo{
     text-align: center;
     color: black;
     font-family: 'Arial Black', Gadget, sans-serif;
-    font-size: 10 px;
+    font-size: 0.625em;
     text-decoration: underline;
 }
 
@@ -65,7 +65,7 @@ label{
     text-align: center;
     color: black;
     
-    font-size: 10 px;
+    font-size: 0.625em;
     text-decoration: underline;
 }
 

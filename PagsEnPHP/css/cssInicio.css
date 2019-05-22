@@ -60,7 +60,7 @@ div.sticky {
     border-radius: .5em;
     margin-bottom: 1%;
     border-width: .2em;
-    background-color: #F5F5F5;
+    background-color: #DEF0F3;
     border-style: groove;
     border-color: threedface;
 }
@@ -168,7 +168,6 @@ div.margen{
 .titulo2{
     text-align: center;
     color: black;
-    
     font-size: 10 px;
     text-decoration: underline;
 }
@@ -177,16 +176,3 @@ div.margen{
     margin:10px auto;
 	display:block;
 }
-
-.cuerpo2{
-    margin-top: 2%;
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-bottom: 8%;
-}
-
-.cuerpo3{
-    margin-top: 2%;
-    margin-bottom: 4%;
-}
-

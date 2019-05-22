@@ -17,7 +17,6 @@ if (isset($_SESSION["reserva"])) {
     
     if ($excepcion <> "") {
         $_SESSION["excepcion"] = $excepcion;
-        
         header("Location: excepcion.php");
 
     }else {

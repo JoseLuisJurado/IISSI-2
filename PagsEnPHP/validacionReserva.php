@@ -2,6 +2,7 @@
 include_once 'gestionarReserva.php';
 ?>
 <?php
+	try{
 	session_start();
 
 	// Importar librerías necesarias para gestionar direcciones y géneros literarios
@@ -37,6 +38,10 @@ include_once 'gestionarReserva.php';
 	insertarReserva($cone,$reservaForm);
 	cerrarConexionBD($cone);
 	
+}	catch (PDOException $e) {
+	$_SESSION['excepcion'] = $e->GetMessage();
+	header("Location: excepcion.php");
+}
 ?>
 
 <!DOCTYPE html>

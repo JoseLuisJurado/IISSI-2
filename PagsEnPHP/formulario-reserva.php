@@ -72,17 +72,17 @@
             </section>
             <section>
                 <label>
-                    Nombre: <input type="text" name="Nombre" id="Nombre" class="margenGeneral" required>
+                    Nombre: <input type="text" name="Nombre" id="Nombre" maxlenght="50" class="margenGeneral" required>
                 </label>
             </section>
             <section>
                 <label>
-                    Primer Apellido: <input type="text" name="PrimerApellido" id="PrimerApellido" class="margenGeneral" required>
+                    Primer Apellido: <input type="text" name="PrimerApellido" maxlenght="50" id="PrimerApellido" class="margenGeneral" required>
                 </label>
             </section>
             <section>
                 <label>
-                    Segundo Apellido: <input type="text" name="SegundoApellido" id="SegundoApellido" class="margenGeneral" required>
+                    Segundo Apellido: <input type="text" name="SegundoApellido" maxlenght="50" id="SegundoApellido" class="margenGeneral" required>
                 </label>
             </section>
             <section class="margenGeneral">
@@ -113,29 +113,29 @@
                     </select>
                 </label>
                 <label>
-                    Población: <input type="text" name="Poblacion" id="Poblacion" class="margenSexo" placeholder="Sevilla">
+                    Población: <input type="text" name="Poblacion" id="Poblacion" maxlength="50" class="margenSexo" placeholder="Sevilla">
                 </label>
                 <label>
-                    Código Postal: <input type="text" name="CodigoPostal" id="CodigoPostal" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}">
+                    Código Postal: <input type="text" name="CodigoPostal" id="CodigoPostal" maxlength="6" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}">
                 </label>
             </section>
             <section class="margenGeneral">
                 <label>
-                    Domicilio: <input type="text" name="Domicilio" id="Domicilio" class="margenSexo" required>
+                    Domicilio: <input type="text" name="Domicilio" id="Domicilio" maxlength="50" class="margenSexo" required>
                 </label>
                 <label>
-                    Correo electrónico: <input type="email" name="CorreoElectronico" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
+                    Correo electrónico: <input type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
                 </label>
                 <label>
-                    Correo electrónico del tutor legal: <input type="email" name="CorreoPadre" id="CorreoPadre" placeholder="aaaa@buscador.com">
+                    Correo electrónico del tutor legal: <input type="email" name="CorreoPadre"  maxlength="50" id="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
                 
                   <label for="pass">Password:
-                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" required oninput="passwordValidation(); "/>
+                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" maxlength="50" required oninput="passwordValidation(); "/>
                 </label>
                 
                 <label for="confirmpass">Confirmar Password: 
-				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña"  oninput="passwordConfirmation();" required"/>
+				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="passwordConfirmation();" required"/>
                 </label>
                 
             </section>

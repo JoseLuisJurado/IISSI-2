@@ -41,8 +41,7 @@ if (isset($_SESSION["destino"])) {
 	<div class="cuerpo">
 
 		<p>La Página a la que intenta acceder no existe</p>
-		<img hspace="5" vspace="5" src="imagenes/caritaTriste.png" width="50%" height="50%" style="text-align: center;" />
-
+		<img class="caritatriste" src="imagenes/caritaTriste.png" />
 
 	</div>
 	<div class='excepcion'>

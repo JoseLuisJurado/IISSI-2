@@ -12,3 +12,14 @@ fieldset{
 	padding: 5%;
 }
 
+.caritatriste{
+	display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+
+.excepcion{
+	text-align: center;
+	font-size: 120%
+}

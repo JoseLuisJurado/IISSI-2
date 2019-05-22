@@ -48,7 +48,7 @@ BEGIN
         correoPadre, fechaLlegada, fechaSalida, tipoPago,
         formaPago, pais, domicilio,poblacion, codigoPostal);
   commit;
-  INSERT INTO usuario_registrado(OID_UR, correo, contraseña, DNI_R)
+  INSERT INTO usuario_registrado(OID_UR, correo, contraseÃ±a, DNI_R)
   VALUES(sec_usuario_registrado.nextval, correoElectronico, pass, dni);
   commit;
 END;

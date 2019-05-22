@@ -1,4 +1,4 @@
-a<?php
+<?php
 
 function consulta_paginada($conn, $query, $pag_num, $pag_size)
 {

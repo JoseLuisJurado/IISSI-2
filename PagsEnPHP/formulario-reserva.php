@@ -116,12 +116,12 @@
                     Población: <input type="text" name="Poblacion" id="Poblacion" maxlength="50" class="margenSexo" placeholder="Sevilla">
                 </label>
                 <label>
-                    Código Postal: <input type="text" name="CodigoPostal" id="CodigoPostal" maxlength="6" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}">
+                    Código Postal: <input type="text" name="CodigoPostal" id="CodigoPostal" maxlength="6" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" required>
                 </label>
             </section>
             <section class="margenGeneral">
                 <label>
-                    Domicilio: <input type="text" name="Domicilio" id="Domicilio" maxlength="50" class="margenSexo" required>
+                    Domicilio: <input type="text" name="Domicilio" id="Domicilio" maxlength="50" class="margenSexo">
                 </label>
                 <label>
                     Correo electrónico: <input type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
@@ -152,7 +152,7 @@
             <section class="margenGeneral">
                 <label>
                     Tipo de pago:
-                    <input value="mensual" name="TipoPago" id="TipoPago" type="radio">Mensual
+                    <input value="mensual" name="TipoPago" id="TipoPago" type="radio" required>Mensual
                     <input value="bimensual" name="TipoPago" id="TipoPago" type="radio">Bimensual
                     <input value="cuatrimestral" name="TipoPago" id="TipoPago" type="radio">Cuatrimestral
                     <input value="anual" name="TipoPago" id="TipoPago" type="radio">Anual
@@ -161,7 +161,7 @@
             <section class="margenGeneral">
                 <label>
                     Forma de pago:
-                    <input name="FormaPago" id="FormaPago" type="radio" value="efectivo">Efectivo
+                    <input name="FormaPago" id="FormaPago" type="radio" value="efectivo" required>Efectivo
                     <input name="FormaPago" id="FormaPago" type="radio" value="transferencia">Transferencia
                     <input name="FormaPago" id="FormaPago" type="radio" value="recibo bancario">Recibo bancario
                     <input name="FormaPago" id="FormaPago" type="radio" value="TPV">TPV

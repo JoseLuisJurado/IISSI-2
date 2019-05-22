@@ -178,3 +178,15 @@ div.margen{
 	display:block;
 }
 
+.cuerpo2{
+    margin-top: 2%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 8%;
+}
+
+.cuerpo3{
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+

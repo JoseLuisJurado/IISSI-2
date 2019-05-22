@@ -56,15 +56,17 @@ function validacionGeneral() {
         if (contraseña != confirmarContraseña) {
             alert("Las contraseñas no coinciden");
             return false;
+
         } else {
 
             if (contraseña.length > 25) {
                 alert("No se puede introducir una contraseña tan larga, debe de ser menor que 25");
                 return false;
+
             } else {
                 var valid = true;
                 var hasNumber = /\d/; var hasUpperCases = /[A-Z]/; var hasLowerCases = /[a-z]/;
-                valid = valid && (pwd.length >= 6) && (hasNumber.test(pwd)) && (hasUpperCases.test(pwd)) && (hasLowerCases.test(pwd));
+                valid = valid && (contraseña.length >= 6) && (hasNumber.test(contraseña)) && (hasUpperCases.test(contraseña)) && (hasLowerCases.test(contraseña));
                 if (valid == false) {
                     alert("La contraseña debe de tener un número, una mayúscula y una minúscula");
                     return valid;
@@ -98,11 +100,6 @@ function validacionGeneral() {
 
     validacionFormulario();
     validacionFechas();
-    validacionNombre();
-    validacionPrimerApellido();
-    validacionSegundoApellido();
     validacionConfirmacionContraseña();
-    validacionPoblacion();
-    validacionCorreo();
 }
 

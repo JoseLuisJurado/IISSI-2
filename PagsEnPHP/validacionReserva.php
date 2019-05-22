@@ -1,8 +1,9 @@
-<?php 
+<?php
 include_once 'gestionarReserva.php';
 ?>
 <?php
-	try{
+try {
+
 	session_start();
 
 	// Importar librerías necesarias para gestionar direcciones y géneros literarios
@@ -29,16 +30,14 @@ include_once 'gestionarReserva.php';
 		$reservaForm['TipoPago'] = $_REQUEST["TipoPago"];
 		$reservaForm['FormaPago'] = $_REQUEST["FormaPago"];
 		$reservaForm['pagoComedor'] = $_REQUEST["pagoComedor"];
-		
-	}
-	else // En caso contrario, vamos al formulario
+	} else // En caso contrario, vamos al formulario
 		Header("Location: formulario-reserva.php");
 	$_SESSION["formulario"] = $reservaForm;
 	$cone = crearconexionBD();
-	insertarReserva($cone,$reservaForm);
+	insertarReserva($cone, $reservaForm);
 	cerrarConexionBD($cone);
-
-}	catch (PDOException $e) {
+	
+} catch (PDOException $e) {
 	$_SESSION['excepcion'] = "No se ha insertado en la base de datos";
 	header("Location: excepcion.php");
 }
@@ -48,25 +47,25 @@ include_once 'gestionarReserva.php';
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta title="Residencia Estudiantil Digital">
-    <link rel="stylesheet" href="css/cssInicio.css" />
-    <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
-    <Title>Residencia de estudiantes bahía</Title>
+	<meta charset="utf-8">
+	<meta title="Residencia Estudiantil Digital">
+	<link rel="stylesheet" href="css/cssInicio.css" />
+	<link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
+	<Title>Residencia de estudiantes bahía</Title>
 </head>
 
 <body>
-	<?php 
+	<?php
 	include "php/menu.php";
-	 ?>
-    <div class="cuerpo2">
-        <h1>Reserva realizada correctamente, ahora puede iniciar sesión y comprobar sus datos</h1>
-        
-    </div>
-			<?php 
+	?>
+	<div class="cuerpo2">
+		<h1>Reserva realizada correctamente, ahora puede iniciar sesión y comprobar sus datos</h1>
+
+	</div>
+	<?php
 	include "php/pie.php";
-	 ?>
-	
+	?>
+
 </body>
 
 </html>

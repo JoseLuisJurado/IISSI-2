@@ -44,10 +44,4 @@ function validacionGeneral(){
             return false;
         }
     }
-
-    validacionNombre();
-    validacionPrimerApellido();
-    validacionSegundoApellido();
-    validacionCorreo();
-    validacionAsunto();
 }

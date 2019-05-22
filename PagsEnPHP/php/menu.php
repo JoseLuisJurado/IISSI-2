@@ -1,6 +1,6 @@
 <div>
 	<div class="example1">
-            <a href="pagina_Base.php" target="_blank">
+            <a href="Conocenos.php" target="_blank">
             <img src="imagenes/LogoRED.jpeg" alt="Logo"
                 class="ImgUS">
     		</a>

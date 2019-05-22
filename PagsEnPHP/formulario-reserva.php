@@ -131,7 +131,7 @@
                 </label>
                 
                   <label for="pass">Password:
-                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" maxlength="50" required oninput="passwordValidation(); "/>
+                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" maxlength="50" required oninput="validacionConfirmacionContraseña(); "/>
                 </label>
                 
                 <label for="confirmpass">Confirmar Password: 

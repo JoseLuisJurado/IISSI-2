@@ -8,7 +8,7 @@ session_start();
 	<meta charset="utf-8">
 	<meta title="Residencia Estudiantil Digital">
 	<meta name="autor" content="José Luis Jurado Ortiz">
-	<link rel="stylesheet" href="css/cssNormativa.css" />
+	<link rel="stylesheet" href="css/cssComoLlegar.css" />
 	<link rel="stylesheet" href="css/cssInicio.css" />
 	<link rel="icon" type="image/jpeg" href="imagenes/LogoRED.jpeg" />
 	<Title>Residencia de estudiantes bahía</Title>
@@ -19,7 +19,7 @@ session_start();
 	<?php 
 		include "php/menu.php";
 	 	?>
-	<div class="cuerpoNormativa" >
+	<div class="cuerpo2" >
 		<h2>COMPORTAMIENTO.</h2>
 		<ul>
 			<li>En las zonas comunes se deberá utilizar un vestuario adecuado.</li>

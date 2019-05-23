@@ -13,9 +13,12 @@
 	
 		if ($num_usuarios == 0)
 			$login = "error";	
-		else {
-			$_SESSION['login'] = $email;
-			Header("Location: index.php");
+        
+        else {
+            
+            $_SESSION['login'] = $email;
+            if($_SESSION['login'] == 'margarita@gmail.com') Header("Location: administracionDirector.php");
+			else Header("Location: Perfil.php");
 		}	
 	}
 ?>

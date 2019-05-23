@@ -1,7 +1,7 @@
 <?php
 require_once("ConexionBD.php");
 
-function extraerFechasLlegadaSalida($conn, $dni)
+function extraerFechasLlegadaSalida($conn, $correo)
 {
     try {
 
@@ -12,7 +12,7 @@ function extraerFechasLlegadaSalida($conn, $dni)
         //     $_SESSION["dentro"] = "Estoy dentro de editar Libro";
         // }
 
-        $consulta = "SELECT FECHA_INICIO, FECHA_FIN FROM CONTRATO_RESIDENTE NATURAL JOIN RESIDENTE WHERE DNI_R = '$dni'";
+        $consulta = "SELECT FECHA_INICIO, FECHA_FIN FROM USUARIO_REGISTRADO NATURAL JOIN CONTRATO_RESIDENTE WHERE CORREO = '$correo'";
 
         $stmt = $conn->query($consulta);
         $result = $stmt->fetchAll();

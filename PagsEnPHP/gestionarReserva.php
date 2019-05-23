@@ -8,14 +8,14 @@ function insertarReserva($conexion, $reservaForm)
 		$fechaSalida = date('d/m/Y', strtotime($reservaForm["FechaSalida"]));
 		$mayor = $reservaForm["MayoriaEdad"];
 		$comedor = $reservaForm["pagoComedor"];
-		if ($mayor = "on") {
+		if ($mayor == "on") {
 			$mayor = "1";
 			$mayor = (integer)$mayor;
 		} else {
 			$mayor = "0";
 			$mayor = (integer)$mayor;
 		}
-		if ($comedor = "on") {
+		if ($comedor == "on") {
 			$comedor = "1";
 			$comedor = (integer)$comedor;
 		} else {

@@ -1,5 +1,6 @@
 function validacionGeneral() {
 
+    res = true;
     function validacionFormulario() {
         var DNI = document.forms["formularioReserva"]["DNI"].value;
         var LetrasDNI = 'TRWAGMYFPDXBNJZSQVHLCKE';
@@ -98,8 +99,8 @@ function validacionGeneral() {
         }
     }
 
-    validacionFormulario();
-    validacionFechas();
-    validacionConfirmacionContraseña();
+    res = res & validacionFormulario();
+    res = res & validacionFechas();
+    res = res & validacionConfirmacionContraseña();
 }
 

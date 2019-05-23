@@ -2,13 +2,13 @@
 session_start();
 require_once("gestionAdministracion_Usuario.php");
 
-$nombre = '11111113B';
+if(isset($_SESSION['login'])){
+   $correo = $_SESSION['login']; //correo del usuario
+   $conn = crearconexionBD();
 
-$conn = crearconexionBD();
-
-$fechas = extraerFechasLlegadaSalida($conn, $nombre);
-
-cerrarConexionBD($conn);
+   $fechas = extraerFechasLlegadaSalida($conn, $correo);
+   cerrarConexionBD($conn);
+}
 
 ?>
 <!DOCTYPE html>
@@ -33,11 +33,8 @@ cerrarConexionBD($conn);
         <div class="admin2">
             <p class="adminP"></p>
             <img src="imagenes\caritaTriste.png" alt="ImagenDelUsuario" class="adminI">
-            Aquí estoy escribiendo el supuesto texto que iría junto al usuario, todavía no se cual es, pero en cuyo
-            caso aquí está. Estoy
-            probando como quedaría el texto escribiendo un texto largo aquí al lado y me doy estoy dando cuenta de
-            que
-            la reserva de salas está quedando muy feo, habrá que cambiarlo de alguna forma.
+            Bienvenido <?php if($correo != "") echo $correo;?>, inicio de sesión correcto.
+            Esperamos que tenga una buena estancia en nuestra residencia.
             </p>
 
         </div>
@@ -83,14 +80,16 @@ cerrarConexionBD($conn);
                 <p class="adminP3">Pago realizado</p>
             </section>
             <section class="adminS2">
-                <p class="adminP2"> <?php echo $fechas[0]["FECHA_INICIO"]; ?></p>
+                <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
+                                        else echo "No hay fecha"; ?></p>
                 <p class="adminP3"> Sí</p>
             </section>
             <section class="adminS2">
                 <p class="adminP2">Fecha de salida</p>
             </section>
             <section class="adminS2">
-                <p class="adminP2"> <?php echo $fechas[0]["FECHA_FIN"]; ?></p>
+                <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_FIN"])) echo $fechas[0]["FECHA_FIN"];
+                                        else echo "No hay fecha"; ?></p>
             </section>
         </div>
     </div>

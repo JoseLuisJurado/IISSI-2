@@ -27,7 +27,7 @@
 			<?php } ?>
 		</li>
 		
-		<li><?php if ((isset($_SESSION['login']))&($_SESSION['login'])!='margarita@gmail.com') {	?>
+		<li><?php if ((isset($_SESSION['login']))&(isset($_SESSION['login'])!='margarita@gmail.com')) {	?>
 				<a href="Perfil.php">Perfil</a>
 			<?php } ?>
 		<li><?php if (isset($_SESSION['login'])) {	?>

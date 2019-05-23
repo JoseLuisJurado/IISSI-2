@@ -1,5 +1,6 @@
 <?php
 
+//extraigo todos los datos de la paginacion
 function consulta_paginada($conn, $query, $pag_num, $pag_size)
 {
 	try {
@@ -24,6 +25,7 @@ function consulta_paginada($conn, $query, $pag_num, $pag_size)
 	}
 }
 
+// Devuelve el tamaño de la consulta
 function total_consulta($conn, $query)
 {
 	try {

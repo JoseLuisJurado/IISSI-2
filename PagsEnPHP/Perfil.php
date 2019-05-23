@@ -2,8 +2,9 @@
 session_start();
 require_once("gestionAdministracion_Usuario.php");
 
+//si hay usuario (que debería de haber), extraigo de él las fechas.
 if(isset($_SESSION['login'])){
-   $correo = $_SESSION['login']; //correo del usuario
+   $correo = $_SESSION['login'];
    $conn = crearconexionBD();
 
    $fechas = extraerFechasLlegadaSalida($conn, $correo);
@@ -33,6 +34,7 @@ if(isset($_SESSION['login'])){
         <div class="admin2">
             <p class="adminP">
             <img src="imagenes\caritaTriste.png" alt="ImagenDelUsuario" class="adminI">
+            <!--Extraigo el usuario que se ha aportado al incio de sesion -->
             Bienvenido <?php if($correo != "") echo $correo;?>, inicio de sesión correcto.<br>
             Esperamos que tenga una buena estancia en nuestra residencia.
             </p>
@@ -71,7 +73,7 @@ if(isset($_SESSION['login'])){
                 <p class="adminP3">Habitación Actual</p>
             </section>
             <section class="adminS2">
-                <!-- Poner la fecha del último pago-->
+                <!-- Extraigo la fecha de pago de la residencia de la base de datos-->
                 <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
                                         else echo "No hay fecha"; ?></p>
                 <p class="adminP3"> 14</p>
@@ -81,6 +83,7 @@ if(isset($_SESSION['login'])){
                 <p class="adminP3">Pago realizado</p>
             </section>
             <section class="adminS2">
+                <!--Extraigo la fecha de entrada de la base de datos-->
                 <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
                                         else echo "No hay fecha"; ?></p>
                 <p class="adminP3"> Sí</p>
@@ -89,6 +92,7 @@ if(isset($_SESSION['login'])){
                 <p class="adminP2">Fecha de salida</p>
             </section>
             <section class="adminS2">
+                <!--Extraigo de la base de datos la fecha de salida que se especifica en la reserva-->
                 <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_FIN"])) echo $fechas[0]["FECHA_FIN"];
                                         else echo "No hay fecha"; ?></p>
             </section>

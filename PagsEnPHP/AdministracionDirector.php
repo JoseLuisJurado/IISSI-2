@@ -46,6 +46,7 @@ cerrarConexionBD($conn);
 
     ?>
     <main class="cuerpo">
+    	
         <nav>
             <div>
                 <?php
@@ -58,14 +59,20 @@ cerrarConexionBD($conn);
                 }
                 ?>
             </div>
+            
+
+	
 
             <form method="get" action="AdministracionDirector.php">
                 <input type="number" id="pag_size" name="pag_size" value="<?php echo $pag_size ?>" autofocus>
                 <input type="submit" value="Cambiar!">
             </form><br><br>
         </nav>
+        <div class="cuadro">
         <?php foreach ($filas as $pagina) { ?>
+        	
             <article>
+            	
                 <form method="post" action="controlarAdministracionDirector.php" class="muestraFormulario">
 
                     <div id="botones_modificacion" class="botones_modificacion">
@@ -86,9 +93,9 @@ cerrarConexionBD($conn);
 
                     <div id="input_display" class="input_display">
                         <input id="DNI" name="DNI" type="hidden" height="40px" value="<?php echo $pagina["DNI_R"]; ?>" />
-                        <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" maxlength="50"/>
-                        <input id="APELLIDO1" name="APELLIDO1" value="<?php echo $pagina["APELLIDO1"]; ?>" maxlength="50"/>
-                        <input id="APELLIDO2" name="APELLIDO2" value="<?php echo $pagina["APELLIDO2"]; ?>" maxlength="50"/>
+                        <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" />
+                        <input id="APELLIDO1" name="APELLIDO1" value="<?php echo $pagina["APELLIDO1"]; ?>" />
+                        <input id="APELLIDO2" name="APELLIDO2" value="<?php echo $pagina["APELLIDO2"]; ?>" />
                         <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"]; ?>" />
                         <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
                         <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />
@@ -101,9 +108,11 @@ cerrarConexionBD($conn);
                     } else ?> -->
 
                 </form>
+                
             </article>
+            
         <?php   } ?>
-
+</div>
     </main>
     <?php
     include "php/pie.php";

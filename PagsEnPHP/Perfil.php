@@ -1,4 +1,4 @@
-ambio<?php
+<?php
 session_start();
 require_once("gestionAdministracion_Usuario.php");
 
@@ -31,9 +31,9 @@ if(isset($_SESSION['login'])){
     ?>
     <div class="admin1">
         <div class="admin2">
-            <p class="adminP"></p>
+            <p class="adminP">
             <img src="imagenes\caritaTriste.png" alt="ImagenDelUsuario" class="adminI">
-            Bienvenido <?php if($correo != "") echo $correo;?>, inicio de sesión correcto.
+            Bienvenido <?php if($correo != "") echo $correo;?>, inicio de sesión correcto.<br>
             Esperamos que tenga una buena estancia en nuestra residencia.
             </p>
 

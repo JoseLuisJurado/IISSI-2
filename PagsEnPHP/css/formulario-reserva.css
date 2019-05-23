@@ -87,15 +87,15 @@ div.admin2{
 }
 
 p.adminP{
-	text-align: left;
+    text-align: left;
 }
 
 img.adminI{
 	height: 5%;
 	width: 5%;
-	margin-right: 0%; 
+	margin-right: 5%; 
 	margin-bottom: 0%; 
-	float: left;
+    float: left;
 }
 
 label.adminL{

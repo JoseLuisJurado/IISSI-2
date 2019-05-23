@@ -2,6 +2,16 @@ button{
     float: left;
 }
 
-/* div#input_display input{
-	size: 40px;
-} */
+div.cuadro{
+	border-radius: 1em;
+    margin-bottom: 1%;
+    border-width: .2em;
+    background-color: #DEF0F3;
+    padding: 2%;
+    padding-bottom: 2%;
+    border-width: 0.125em;
+    border-color: black;
+    border-style: solid;
+    padding-bottom: 0em;
+}
+

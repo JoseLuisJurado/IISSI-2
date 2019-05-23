@@ -27,12 +27,14 @@
 			<?php } ?>
 		</li>
 		
-		<li><?php if ((isset($_SESSION['login']))&(isset($_SESSION['login'])!='margarita@gmail.com')) {	?>
-				<a href="Perfil.php">Perfil</a>
-			<?php } ?>
-		<li><?php if (isset($_SESSION['login'])) {	?>
+		<li><?php if ((isset($_SESSION['login']))) {	?>
+				<?php if($_SESSION['login']== 'margarita@gmail.com'){?>
 				<a href="AdministracionDirector.php">Administrar</a>
-			<?php } ?>
+			<?php }} ?>
+		<li><?php if (isset($_SESSION['login'])) {	?>
+				<?php if($_SESSION['login'] != 'margarita@gmail.com'){?>
+				<a href="Perfil.php">Perfil</a>
+			<?php }} ?>
 		</li>
                 <li><a href="Residencia.php">Residencia</a>
                 <!-- start menu desplegable -->

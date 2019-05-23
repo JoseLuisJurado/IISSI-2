@@ -20,7 +20,6 @@ session_start();
 	 	?>
     <!-- cuerpo de la pagina de inicio solamente, si estas con otro html no uses esta clase -->
     <div class="cuerpo2">
-        <div class="cuerpo3">
             <img class="imagen" src="imagenes/fachada1.jpg"/>
             <p> Se estableció en la calle S.Alejandro, 179, con lo imprescindible, y tan
                 solo quince alumnos. Tras su remodelación en 1983
@@ -57,7 +56,6 @@ session_start();
             <a href="pagina_Base.php">
                 <img class="imagen2" src="imagenes/panoramica1.jpg"/>
             </a>
-        </div>
         </div>
 <?php 
 	include "php/pie.php";

@@ -179,3 +179,11 @@ div.margen{
     margin:10px auto;
 	display:block;
 }
+
+span.TextoNombre{
+    margin-left: 3%;
+}
+
+span.TextoApellido1{
+    margin-left: 7%;    
+}

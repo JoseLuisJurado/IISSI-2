@@ -27,8 +27,11 @@
 			<?php } ?>
 		</li>
 		
-		<li><?php if (isset($_SESSION['login'])) {	?>
+		<li><?php if ((isset($_SESSION['login']))&($_SESSION['login'])!='margarita@gmail.com') {	?>
 				<a href="Perfil.php">Perfil</a>
+			<?php } ?>
+		<li><?php if (isset($_SESSION['login'])) {	?>
+				<a href="AdministracionDirector.php">Administrar</a>
 			<?php } ?>
 		</li>
                 <li><a href="Residencia.php">Residencia</a>

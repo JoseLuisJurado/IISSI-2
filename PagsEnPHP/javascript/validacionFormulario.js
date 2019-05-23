@@ -4,6 +4,7 @@ function validacionGeneral() {
     res = res & validacionFormulario();
     res = res & validacionFechas();
     res = res & validacionConfirmacionContraseña();
+    return res;
 }
 
 function validacionFormulario() {
@@ -13,7 +14,6 @@ function validacionFormulario() {
     var letra = DNI.charAt(8);
     var numero = parseInt(DNI.slice(0, 8));
     if (LetrasDNI.charAt(numero % 23) != letra) {
-        alert("La letra del DNI no coincide con el número del DNI");
         return false;
     }else{
         return true;
@@ -25,7 +25,6 @@ function validacionFechas() {
     var fechaSalida = new Date(document.forms["formularioReserva"]["FechaSalida"].value);
 
     if (fechaSalida <= fechaLLegada) {
-        alert("La fecha de llegada debe de ser anterior a la fecha de salida");
         return false;
     }else{
         return true;
@@ -36,7 +35,6 @@ function validacionNombre() {
     var nombre = document.forms["formularioReserva"]["Nombre"].value;
 
     if (nombre.length > 15) {
-        alert("Este nombre es demasiado largo para la base de datos");
         return false;
     }else{
         return true;
@@ -47,7 +45,6 @@ function validacionPrimerApellido() {
     var apellido1 = document.forms["formularioReserva"]["PrimerApellido"].value;
 
     if (apellido1.length > 15) {
-        alert("Este primero apellido no se puede insertar en la base de datos");
         return false;
     }else{
         return true;
@@ -58,7 +55,6 @@ function validacionSegundoApellido() {
     var apellido2 = document.forms["formularioReserva"]["SegundoApellido"].value;
 
     if (apellido2.length > 15) {
-        alert("Este segundo apellido no se puede insertar en la base de datos");
         return false;
     }else{
         return true;
@@ -70,13 +66,11 @@ function validacionConfirmacionContraseña() {
     var confirmarContraseña = document.forms["formularioReserva"]["confirmpass"].value;
 
     if (contraseña != confirmarContraseña) {
-        alert("Las contraseñas no coinciden");
         return false;
 
     } else {
 
         if (contraseña.length > 25) {
-            alert("No se puede introducir una contraseña tan larga, debe de ser menor que 25");
             return false;
 
         } else {
@@ -84,7 +78,6 @@ function validacionConfirmacionContraseña() {
             var hasNumber = /\d/; var hasUpperCases = /[A-Z]/; var hasLowerCases = /[a-z]/;
             valid = valid && (contraseña.length >= 6) && (hasNumber.test(contraseña)) && (hasUpperCases.test(contraseña)) && (hasLowerCases.test(contraseña));
             if (valid == false) {
-                alert("La contraseña debe de tener un número, una mayúscula y una minúscula y mayor que 8");
                 return valid;
             }else{
                 return true;
@@ -98,7 +91,6 @@ function validacionPoblacion() {
 
     if (poblacion != "") {
         if (poblacion.length > 30) {
-            alert("No existe ninguna poblacion con este tamaño");
             return false;
         }else{
             return true;
@@ -114,12 +106,68 @@ function validacionCorreo() {
 
     if (correo != "" || correoPadre != "") {
         if (correo.length > 25 || correoPadre.length > 25) {
-            alert("No se permite en la base de datos un correo tan largo");
             return false;
         }else{
             return true;
         }
     }else{
         return true;
+    }
+}
+
+function inputContraseña(){
+    var contraseña = document.forms["formularioReserva"]["pass"].value;
+    var hasNumber = /\d/; var hasUpperCases = /[A-Z]/; var hasLowerCases = /[a-z]/;
+
+    if(!hasNumber.test(contraseña)){
+        document.getElementById("TextosPass").innerHTML = "La contraseña no contiene números";
+    }else if(!hasUpperCases.test(contraseña)){
+        document.getElementById("TextosPass").innerHTML = "La contraseña no contiene mayúsculas";
+    }else if(!hasLowerCases.test(contraseña)){
+        document.getElementById("TextosPass").innerHTML = "La contraseña no contiene minúsculas";
+    }else if(contraseña.length < 8){
+        document.getElementById("TextosPass").innerHTML = "La contraseña debe de tener almenos 8 dígitos";
+    }else{
+        document.getElementById("TextosPass").innerHTML = "";
+    }
+
+}
+
+function inputDNI(){
+    var DNI = document.forms["formularioReserva"]["DNI"].value;
+    var LetrasDNI = 'TRWAGMYFPDXBNJZSQVHLCKE';
+    var hasUpperCases = /[A-Z]/;
+
+
+    var letra = DNI.charAt(8);
+    var numero = parseInt(DNI.slice(0, 8));
+    if (!hasUpperCases.test(DNI)) {
+        document.getElementById("TextoDNI").innerHTML = "El dni no tiene letra mayúscula";
+    }else if(LetrasDNI.charAt(numero % 23) != letra){
+        document.getElementById("TextoDNI").innerHTML = "El valor no coincide con la letra del DNI";
+    }else{
+        document.getElementById("TextoDNI").innerHTML = "";
+    }
+}
+
+function inputFechas(){
+    var fechaLLegada = new Date(document.forms["formularioReserva"]["FechaLlegada"].value);
+    var fechaSalida = new Date(document.forms["formularioReserva"]["FechaSalida"].value);
+
+    if (fechaSalida <= fechaLLegada) {
+        document.getElementById("textoFecha").innerHTML = "La fecha de salida es anterior o igual a la fecha de llegada";
+    }else{
+        document.getElementById("textoFecha").innerHTML = "";
+    }
+}
+
+function inputCoincidenContraseñas(){
+    var contraseña = document.forms["formularioReserva"]["pass"].value;
+    var confirmarContraseña = document.forms["formularioReserva"]["confirmpass"].value;
+
+    if(contraseña != confirmarContraseña){
+        document.getElementById("textoConfirm").innerHTML = "Las contraseñas escritas no coinciden";
+    }else{
+        document.getElementById("textoConfirm").innerHTML = "";
     }
 }

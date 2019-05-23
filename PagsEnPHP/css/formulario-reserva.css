@@ -155,3 +155,15 @@ span.error{
     font-style: normal;
     color: red;
 }
+
+span.TextosPass{
+    margin-left: 3em;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+span.TextoDNI{
+    margin-left: 3em;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}

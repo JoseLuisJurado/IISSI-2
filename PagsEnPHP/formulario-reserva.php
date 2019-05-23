@@ -67,7 +67,7 @@
             <legend>Datos Personales</legend>
             <section>
                 <label>
-                    DNI: <input type="text" name="DNI" id="DNI" placeholder="12345678A" maxlength="9" required>
+                    DNI: <input type="text" name="DNI" id="DNI" placeholder="12345678A" maxlength="9" oninput="inputDNI()" required><span id="TextoDNI"></span>
                 </label>
             </section>
             <section>
@@ -130,12 +130,12 @@
                     Correo electrónico del tutor legal: <input type="email" name="CorreoPadre"  maxlength="50" id="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
                 
-                  <label for="pass">Password:
-                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" maxlength="50" required oninput="validacionConfirmacionContraseña(); "/>
+                  <label for="pass" class="pass">Password:
+                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" maxlength="50" oninput="inputContraseña()" required/> <span id="TextosPass"></span>
                 </label>
                 
                 <label for="confirmpass">Confirmar Password: 
-				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="passwordConfirmation();" required"/>
+				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required/> <span id="textoConfirm"></span>
                 </label>
                 
             </section>
@@ -146,7 +146,7 @@
             </section>
             <section>
                 <label>
-                    Fecha de salida: <input type="date" name="FechaSalida" id="FechaSalida" class="margenGeneral" required>
+                    Fecha de salida: <input type="date" name="FechaSalida" id="FechaSalida" class="margenGeneral" oninput="inputFechas()" required> <span id="textoFecha"></span>
                 </label>
             </section>
             <section class="margenGeneral">

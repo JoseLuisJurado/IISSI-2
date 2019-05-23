@@ -98,7 +98,7 @@
                     <section>
                         Asunto*: <input type="text" name="Asunto" id="Asunto" maxlength="100" class="margenGeneral" required>
                     </section>
-                    <section style="margin-top: 1%; margin-bottom: 1%">
+                    <section class = "secM">
                         Mensaje*:
                     </section>
                     <textarea name="Mensaje" rows=10 cols=140 maxlength="600">

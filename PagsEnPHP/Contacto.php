@@ -47,7 +47,7 @@
     <fieldset>
         <div class="margenFormulario">
 
-            <h2>
+            <h2 class = "h">
                 Contacto
             </h2>
             <p class="texto">
@@ -66,7 +66,7 @@
                 CorreoFalso@gmaol.ez
             </p>
 
-            <h2>
+            <h2 class = "h">
                 Consulta
             </h2>
 

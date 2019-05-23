@@ -1,4 +1,4 @@
-<?php
+ambio<?php
 session_start();
 require_once("gestionAdministracion_Usuario.php");
 
@@ -72,7 +72,8 @@ if(isset($_SESSION['login'])){
             </section>
             <section class="adminS2">
                 <!-- Poner la fecha del último pago-->
-                <p class="adminP2"> 16/04/2019</p>
+                <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
+                                        else echo "No hay fecha"; ?></p>
                 <p class="adminP3"> 14</p>
             </section>
             <section class="adminS2">

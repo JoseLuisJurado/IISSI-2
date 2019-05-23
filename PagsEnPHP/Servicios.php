@@ -7,9 +7,8 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
-    <meta name="autor" content="Antonio Miguel González Villar">
-    <link rel="stylesheet" href="css/Servicios.css" />
     <link rel="stylesheet" href="css/cssInicio.css" />
+    <link rel="stylesheet" href="css/Servicios.css" />
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>
@@ -19,7 +18,6 @@ session_start();
     include "php/menu.php";
     ?>
     <div class="cuerpo2">
-    <div class="cuerpo3">
     <div class="margen">
         <h2 class="titulo">
             Servicios
@@ -27,7 +25,7 @@ session_start();
         <h2 class="titulo2">
             Comedor
         </h2>
-        <img class="centro"  src="imagenes/gfoto45.jpg" border="2" width="300" height="200" />
+        <img class="centrar"  src="imagenes/gfoto45.jpg"/>
         <p>
             El servicio de comedor, puede ser pedido de forma opcional, con un coste adicional.
             Incluye Almuerzo completo. Este servicio estará disponible cuando un mínimo de 30 residentes lo hayan
@@ -36,7 +34,7 @@ session_start();
         <h2 class="titulo2">
             Mantenimiento
         </h2>
-        <img class="centro" style="margin-top:10px; " src="imagenes/100D7VIZ003_1.jpg" border="2" width="300" height="200" />
+        <img class="centrar2" src="imagenes/100D7VIZ003_1.jpg"/>
 
         <p>
             Esta residencia consta con un eficiente servicio de mantenimiento que se encargará de la
@@ -47,7 +45,7 @@ session_start();
         <h2 class="titulo2">
             Vigilancia
         </h2>
-        <img class="centro" style="margin-top:10px; " src="imagenes/Chuck Norris.jpg" border="2" width="300" height="200" />
+        <img class="centrar2" src="imagenes/Chuck Norris.jpg"/>
 
         <p>
 			El servicio de vigilancia, es el encargado de evitar que personas no autorizadas entren
@@ -57,7 +55,7 @@ session_start();
         <h2 class="titulo2">
             Limpieza
         </h2>
-        <img class="centro" style="margin-top:10px; " src="imagenes/depositphotos_98500248-stock-photo-worker-in-protective-chemical-suit.jpg" border="2" width="300" height="200" />
+        <img class="centrar2" src="imagenes/depositphotos_98500248-stock-photo-worker-in-protective-chemical-suit.jpg"/>
 
         <p>
          	El contrato de la residencia incluye nuestro servicio de limpieza. Los residentes
@@ -67,8 +65,7 @@ session_start();
 
 
 
-    </div>
-    </div>
+    </div>	
     </div>
     <?php
     include "php/pie.php";

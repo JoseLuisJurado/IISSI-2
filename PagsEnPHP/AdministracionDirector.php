@@ -48,7 +48,7 @@ cerrarConexionBD($conn);
     <main class="cuerpo">
     	
         <nav>
-            <div>
+            <div class="pag">
                 <?php
                 for ($pagina = 1; $pagina <= $consultaTotal; $pagina++) {
                     if ($pagina == $pag_act) {
@@ -59,10 +59,12 @@ cerrarConexionBD($conn);
                 }
                 ?>
             </div>
+            
+
+	
 
             <form method="get" action="AdministracionDirector.php">
                 <input type="number" id="pag_size" name="pag_size" value="<?php echo $pag_size ?>" autofocus>
-                <input type="submit" value="Cambiar!">
             </form><br><br>
         </nav>
         <div class="cuadro">
@@ -71,35 +73,9 @@ cerrarConexionBD($conn);
             <article>
             	
                 <form method="post" action="controlarAdministracionDirector.php" class="muestraFormulario">
-                    <div class="DescripcionBotones">
-                        <span class="TextoEditar">
-                            Editar
-                        </span>
-                        <span class="TextoBorrar">
-                            Borrar
-                        </span>
-                        <span class="TextoNombre">
-                            Nombre
-                        </span>
-                        <span class="TextoApellido1">
-                            Primer Apellido
-                        </span>
-                        <span class="TextoApellido2">
-                            Segundo Apellido
-                        </span>
-                        <span class="TextoSexo">
-                            Sexo
-                        </span>
-                        <span class="TextoFecha1">
-                            Fecha Llegada
-                        </span>
-                        <span class="TextoFecha2">
-                            Fecha Salida
-                        </span>
-                    </div>
 
                     <div id="botones_modificacion" class="botones_modificacion">
-                        
+                        <?php ?>
                         <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
                             <button id="modificar" class="modificar" type="submit" name="modificar">
                                 <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="22px">
@@ -136,6 +112,7 @@ cerrarConexionBD($conn);
             
         <?php   } ?>
 </div>
+<input type="submit" value="Cambiar!">
     </main>
     <?php
     include "php/pie.php";

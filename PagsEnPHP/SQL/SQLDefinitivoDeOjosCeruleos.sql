@@ -393,3 +393,9 @@ BEGIN
   commit;
 END;
 /
+
+insert into DIRECTOR_A(DNID, NOMBRE)
+      values('53964017Z', 'Margarita');
+
+insert into USUARIO_REGISTRADO(CORREO, CONTRASEÑA, DNID)
+      values('margarita@gmail.com', 'contraseña1', '53964017Z');

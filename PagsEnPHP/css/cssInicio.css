@@ -1,6 +1,3 @@
-
-/* Esto es la hoja de estilo principal*/
-
 input[type=submit], input[type=button] {
     color: white;
     background-color: #16A5BE !important;
@@ -164,18 +161,16 @@ div.margen{
 	text-align: center;
     color: black;
     font-family: 'Arial Black', Gadget, sans-serif;
-    font-size: 10 px;
     text-decoration: underline;
 }
 
 .titulo2{
     text-align: center;
     color: black;
-    font-size: 10 px;
     text-decoration: underline;
 }
 
 .centro{
-    margin:10px auto;
+    margin:0.625em auto;
 	display:block;
 }

@@ -1,6 +1,6 @@
 <?php
 
-//extraigo todos los datos de la paginacion
+//extraigo los datos especificados con la primera y última
 function consulta_paginada($conn, $query, $pag_num, $pag_size)
 {
 	try {
@@ -42,17 +42,20 @@ function total_consulta($conn, $query)
 
 $consulta = "SELECT * FROM RESIDENTE NATURAL JOIN CONTRATO_RESIDENTE ORDER BY FECHA_INICIO, FECHA_FIN";
 
+//Extraigo todos los datos de la base de datos
 function consultarTodos($conexion)
 {
 	global $consulta;
 	return $conexion->query($consulta);
 }
 
-function editarLibros($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECHALLEGADA, $FECHASALIDA)
+
+//Llamo al procedimiento de la base de datos modificando la tabla;
+function editarResidente($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECHALLEGADA, $FECHASALIDA)
 {
 
 	try {
-		print_r($APELLIDO1);
+		
 		$director = "CALL UPDATEARRESIDENTE(:dni, :nombre, :apellido1, :apellido2, :sexo, :fechallegada, :fechasalida)";
 
 		$stmt = $conn->prepare($director);
@@ -72,6 +75,7 @@ function editarLibros($conn, $DNI, $NOMBRE, $APELLIDO1, $APELLIDO2, $SEXO, $FECH
 	}
 }
 
+//Borro la fila de la base de datos
 function borrarConsulta($conn, $DNI_R)
 {
 	try {
@@ -94,7 +98,7 @@ function borrarConsulta($conn, $DNI_R)
 	}
 }
 
-//Esto se encuentra sin uso ahora mismo
+//A la hora de registrar el usuario en inicio sesion, compruebo que ya se encuentra registrado entre otras cosas 
 function validacionCreacionUsuario($conn, $usuario)
 {
 	$res = "";

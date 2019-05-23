@@ -40,12 +40,12 @@ if (isset($_SESSION["destino"])) {
 	?>
 	<div class="cuerpo">
 
-		<p>La Página a la que intenta acceder no existe</p>
+		<p>Se ha producido un error</p>
 		<img class="caritatriste" src="imagenes/caritaTriste.png" />
 
 	</div>
 	<div class='excepcion'>
-		<?php echo "Información relativa al problema: $excepcion;" ?>
+		<?php echo "Información relativa al problema: <span class='Error' > $excepcion <span/>" ?>
 	</div>
 	<?php
 	include "php/pie.php";

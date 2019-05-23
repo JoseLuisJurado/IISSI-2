@@ -75,7 +75,7 @@ if(isset($_SESSION['login'])){
             <section class="adminS2">
                 <!-- Extraigo la fecha de pago de la residencia de la base de datos-->
                 <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
-                                        else echo "No hay fecha"; ?></p>
+                                        else echo "<span class='error'> No hay fecha <span/>"; ?></p>
                 <p class="adminP3"> 14</p>
             </section>
             <section class="adminS2">
@@ -85,7 +85,7 @@ if(isset($_SESSION['login'])){
             <section class="adminS2">
                 <!--Extraigo la fecha de entrada de la base de datos-->
                 <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
-                                        else echo "No hay fecha"; ?></p>
+                                        else echo "<span class='error'> No hay fecha <span/>"; ?></p>
                 <p class="adminP3"> Sí</p>
             </section>
             <section class="adminS2">
@@ -94,7 +94,7 @@ if(isset($_SESSION['login'])){
             <section class="adminS2">
                 <!--Extraigo de la base de datos la fecha de salida que se especifica en la reserva-->
                 <p class="adminP2"> <?php if(isset($fechas[0]["FECHA_FIN"])) echo $fechas[0]["FECHA_FIN"];
-                                        else echo "No hay fecha"; ?></p>
+                                        else echo "<span class='error'> No hay fecha <span/>"; ?></p>
             </section>
         </div>
     </div>

@@ -12,7 +12,7 @@ if (isset($_SESSION["reserva"])) {
     require_once("gestion_AdministracionDirector.php");
 
     $conn = crearconexionBD();
-    $borrar = editarLibros($conn, $reserva["DNI"],
+    $borrar = editarResidente($conn, $reserva["DNI"],
     $reserva["NOMBRE"],$reserva["APELLIDO1"],$reserva["APELLIDO2"],
     $reserva["SEXO"],$reserva["FECHALLEGADA"],$reserva["FECHASALIDA"] );
 

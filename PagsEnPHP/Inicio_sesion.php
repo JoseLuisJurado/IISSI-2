@@ -3,7 +3,8 @@
   	
   	include_once("conexionBD.php");
  	include_once("funcionLogin.php");
-	
+    
+     //Escribimos las funciones y validamos que exista el usuario con su email y contraseña
 	if (isset($_REQUEST['Enviar'])){
 		$email= $_REQUEST['Email'];
 		$pass = $_REQUEST['Contraseña'];
@@ -15,9 +16,10 @@
 			$login = "error";	
         
         else {
-            
+            //Si se da el caso de que el usuario es nuestro administrador, se redigirá a administracionDirector
+            //Desde la página de reserva no se puede crear dos veces el mismo correo
             $_SESSION['login'] = $email;
-            if($_SESSION['login'] == 'margarita@gmail.com') Header("Location: administracionDirector.php");
+            if($_SESSION['login'] == 'margarita@gmail.com') Header("Location: AdministracionDirector.php");
 			else Header("Location: Perfil.php");
 		}	
 	}

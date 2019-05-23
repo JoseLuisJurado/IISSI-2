@@ -1,13 +1,17 @@
 <?php
 
+//Funcion para insertar las reservas en la base de datos
 function insertarReserva($conexion, $reservaForm)
 {
 
 	try {
+		//Formateamos la fecha introducida para introducida en la base de datos
 		$fechaLlegada = date('d/m/Y', strtotime($reservaForm["FechaLlegada"]));
 		$fechaSalida = date('d/m/Y', strtotime($reservaForm["FechaSalida"]));
 		$mayor = $reservaForm["MayoriaEdad"];
 		$comedor = $reservaForm["pagoComedor"];
+
+		//Formateamos las checkbox para introducirla en la base de datos
 		if ($mayor == "on") {
 			$mayor = "1";
 			$mayor = (integer)$mayor;
@@ -22,9 +26,11 @@ function insertarReserva($conexion, $reservaForm)
 			$comedor = "0";
 			$comedor = (integer)$comedor;
 		}
+		//Convertimos el código postal en Integer
 		$codPostal = $reservaForm["CodigoPostal"];
 		$codPostal = (integer)$codPostal;
 
+		//Llamamos al procedure que está en la base de datos
 		$reservar = "CALL INSERTAR_RESERVA(:dni, :nombre, :ape1, :ape2, :sex, :may, :pai, :pob,
 											 :cod, :dom, :corr, :corp, :pas, :lleg, :sal, :pag, :fpag, :pagc)";
 		$stmt = $conexion->prepare($reservar);

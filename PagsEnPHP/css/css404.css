@@ -17,9 +17,18 @@ fieldset{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
+  size: 60%;
 }
 
 .excepcion{
 	text-align: center;
-	font-size: 120%
+  font-size: 120%;
+  text-transform: capitalize;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+span.Error{
+  font-weight: 100;
+  text-decoration: underline;
+  color: red;
 }

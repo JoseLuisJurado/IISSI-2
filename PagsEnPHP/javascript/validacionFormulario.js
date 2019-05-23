@@ -10,6 +10,8 @@ function validacionGeneral() {
         if (LetrasDNI.charAt(numero % 23) != letra) {
             alert("La letra del DNI no coincide con el número del DNI");
             return false;
+        }else{
+            return true;
         }
     }
 
@@ -20,6 +22,8 @@ function validacionGeneral() {
         if (fechaSalida <= fechaLLegada) {
             alert("La fecha de llegada debe de ser anterior a la fecha de salida");
             return false;
+        }else{
+            return true;
         }
     }
 
@@ -29,6 +33,8 @@ function validacionGeneral() {
         if (nombre.length > 15) {
             alert("Este nombre es demasiado largo para la base de datos");
             return false;
+        }else{
+            return true;
         }
     }
 
@@ -38,6 +44,8 @@ function validacionGeneral() {
         if (apellido1.length > 15) {
             alert("Este primero apellido no se puede insertar en la base de datos");
             return false;
+        }else{
+            return true;
         }
     }
 
@@ -47,6 +55,8 @@ function validacionGeneral() {
         if (apellido2.length > 15) {
             alert("Este segundo apellido no se puede insertar en la base de datos");
             return false;
+        }else{
+            return true;
         }
     }
 
@@ -71,6 +81,8 @@ function validacionGeneral() {
                 if (valid == false) {
                     alert("La contraseña debe de tener un número, una mayúscula y una minúscula y mayor que 8");
                     return valid;
+                }else{
+                    return 
                 }
             }
         }

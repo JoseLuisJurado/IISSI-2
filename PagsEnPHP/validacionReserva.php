@@ -11,7 +11,8 @@ try {
 
 	// Comprobar que hemos llegado a esta página porque se ha rellenado el formulario
 	if (isset($_SESSION["formulario"])) {
-		// Recogemos los datos del formulario
+
+		// Recogemos los datos del formulario, si alguno no existe controlamos el error y lo asignamos como vacío;
 		if(isset($_REQUEST["DNI"])) $reservaForm['DNI'] = $_REQUEST["DNI"]; 
 
 		if(isset($_REQUEST["Nombre"])) $reservaForm['Nombre'] = $_REQUEST["Nombre"];

@@ -59,9 +59,6 @@ cerrarConexionBD($conn);
                 }
                 ?>
             </div>
-            
-
-	
 
             <form method="get" action="AdministracionDirector.php">
                 <input type="number" id="pag_size" name="pag_size" value="<?php echo $pag_size ?>" autofocus>
@@ -74,9 +71,35 @@ cerrarConexionBD($conn);
             <article>
             	
                 <form method="post" action="controlarAdministracionDirector.php" class="muestraFormulario">
+                    <div class="DescripcionBotones">
+                        <span class="TextoEditar">
+                            Editar
+                        </span>
+                        <span class="TextoBorrar">
+                            Borrar
+                        </span>
+                        <span class="TextoNombre">
+                            Nombre
+                        </span>
+                        <span class="TextoApellido1">
+                            Primer Apellido
+                        </span>
+                        <span class="TextoApellido2">
+                            Segundo Apellido
+                        </span>
+                        <span class="TextoSexo">
+                            Sexo
+                        </span>
+                        <span class="TextoFecha1">
+                            Fecha Llegada
+                        </span>
+                        <span class="TextoFecha2">
+                            Fecha Salida
+                        </span>
+                    </div>
 
                     <div id="botones_modificacion" class="botones_modificacion">
-                        <?php ?>
+                        
                         <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
                             <button id="modificar" class="modificar" type="submit" name="modificar">
                                 <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="22px">

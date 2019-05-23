@@ -1,4 +1,6 @@
 <?php
+
+//En el formulario-reserva se muestra esta funcion, especificamente en paises
 $paises = array(
      "EL"=> "Elegir",
      "AF"=> "Afganistán",

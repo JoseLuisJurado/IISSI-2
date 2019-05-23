@@ -150,3 +150,8 @@ li a.enlace{
   padding: 1em;
   text-decoration: none;
 }
+
+span.error{
+    font-style: normal;
+    color: red;
+}

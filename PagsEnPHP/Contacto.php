@@ -32,7 +32,6 @@
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
-    <meta name="autor" content="Antonio Miguel González Villar">
     <link rel="stylesheet" href="css/cssContacto.css" />
     <link rel="stylesheet" href="css/cssInicio.css" />
     <script src="javascript/validacionContacto.js" type="text/javascript"></script>

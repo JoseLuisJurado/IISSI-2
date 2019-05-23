@@ -1,9 +1,10 @@
+
 button{
     float: left;
 }
 
 div.cuadro{
-	border-radius: 1em;
+    border-radius: 1em;
     margin-bottom: 1%;
     border-width: .2em;
     background-color: #DEF0F3;
@@ -15,7 +16,6 @@ div.cuadro{
     padding-bottom: 0em;
 }
 
-div.DescripcionBotones{
-    
+div.pag{
+	text-decoration: underline;
 }
-

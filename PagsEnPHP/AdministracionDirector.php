@@ -2,31 +2,23 @@
 session_start();
 //if (!isset($_SESSION['login'])=='margarita@gmail.com')
 //	Header("Location: Inicio_sesion.php");
-
 require_once("conexionBD.php");
 $conn = crearconexionBD();
 require_once("gestion_AdministracionDirector.php");
-
 if (isset($_SESSION["reserva"])) $reserva = $_SESSION["reserva"];
 $pag_act = isset($_GET["pag_act"]) ? (int)$_GET["pag_act"] : (isset($reserva["PAG_ACT"]) ? (int)$reserva["PAG_ACT"] : 1);
 $pag_size = isset($_GET["pag_size"]) ? (int)$_GET["pag_size"] : (isset($reserva["PAG_SIZE"]) ? (int)$reserva["PAG_SIZE"] : 10);
 if ($pag_act < 1) $pag_act = 1;
 if ($pag_size < 1) $pag_size = 10;
-
 unset($_SESSION["reserva"]);
-
 $total_registros = total_consulta($conn, $consulta); //Cantidad de registros totales
 $consultaTotal = ceil($total_registros / $pag_size);
 if ($pag_act > $consultaTotal) $pag_act = $consultaTotal;
-
 $reserva["PAG_ACT"] = $pag_act;
 $reserva["PAG_SIZE"] = $pag_size;
 $_SESSION["reserva"] = $reserva;
-
 $filas = consulta_paginada($conn, $consulta, $pag_act, $pag_size);
-
 cerrarConexionBD($conn);
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -43,12 +35,11 @@ cerrarConexionBD($conn);
 <body>
     <?php
     include "php/menu.php";
-
     ?>
     <main class="cuerpo">
 
         <nav>
-            <div>
+            <div class="pag">
                 <?php
                 for ($pagina = 1; $pagina <= $consultaTotal; $pagina++) {
                     if ($pagina == $pag_act) {
@@ -58,11 +49,12 @@ cerrarConexionBD($conn);
                     }
                 }
                 ?>
+                
             </div>
 
             <form method="get" action="AdministracionDirector.php">
                 <input type="number" id="pag_size" name="pag_size" value="<?php echo $pag_size ?>" autofocus>
-                <input type="submit" value="Cambiar!">
+                <div><input type="submit" value="Cambiar!"></div>
             </form><br><br>
         </nav>
         <div class="cuadro">

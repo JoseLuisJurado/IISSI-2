@@ -383,13 +383,19 @@ BEGIN
   commit;
   INSERT INTO contrato_residente(OID_CR, Correo_Hijo, Correo_padre,
                                 Fecha_inicio, Fecha_fin, TipoPago,
-                                FormaPago, Pais, Domicilio, Poblacion, CodPostal)
+                                FormaPago, Pais, Domicilio, Poblacion, CodPostal, DNI_R)
   VALUES(sec_contrato_residente.nextval, correoElectronico, 
         correoPadre, fechaLlegada, fechaSalida, tipoPago,
-        formaPago, pais, domicilio,poblacion, codigoPostal);
+        formaPago, pais, domicilio,poblacion, codigoPostal, dni);
   commit;
   INSERT INTO usuario_registrado(OID_UR, correo, contraseña, DNI_R)
   VALUES(sec_usuario_registrado.nextval, correoElectronico, pass, dni);
   commit;
 END;
 /
+
+insert into DIRECTOR_A(DNID, NOMBRE)
+      values('53964017Z', 'Margarita');
+
+insert into USUARIO_REGISTRADO(CORREO, CONTRASEÑA, DNID)
+      values('margarita@gmail.com', 'contraseña1', '53964017Z');

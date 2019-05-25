@@ -19,3 +19,75 @@ div.cuadro{
 div.pag{
 	text-decoration: underline;
 }
+
+span.TextoBorrar{
+    margin-left: 0.5%;
+}
+
+span.TextoNombre{
+    margin-left: 2.5%;
+}
+
+span.TextoApellido1{
+    margin-left: 6.5%;    
+}
+
+span.TextoApellido2{
+    margin-left: 2.5%;    
+}
+
+span.TextoSexo{
+    margin-left: 5%;
+}
+
+span.TextoFecha1{
+    margin-left: 7%;
+}
+
+span.TextoFecha2{
+    margin-left: 4.5%;
+}
+
+div.DescripcionBotones{
+    border-bottom: 0.125em solid grey;
+    margin-bottom: 1em;
+}
+
+input#pag_size{
+    float: left;
+}
+
+input[type=number]{
+    height: 5%;
+    margin-top: 0.2%;
+    font-size: 14px;
+}
+
+input[type=submit]{
+    
+}
+
+a#pagina{
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: .2em;
+    font-style: oblique;
+}
+
+span#pagina{
+    color: blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: .2em;
+    font-style: oblique;
+}
+
+div.pag{
+    margin-top: .2em;
+    background-color: coral;
+    margin-bottom: .2em;
+}
+
+form[method=get]{
+    margin-bottom: 1%
+}
+

@@ -43,9 +43,9 @@ cerrarConexionBD($conn);
                 <?php
                 for ($pagina = 1; $pagina <= $consultaTotal; $pagina++) {
                     if ($pagina == $pag_act) {
-                        echo ("<span>$pagina</span>");
+                        echo ("<span id ='pagina'>$pagina</span>");
                     } else {
-                        echo ("<a href='AdministracionDirector.php?pag_act=$pagina'>$pagina</a>");
+                        echo ("<a id='pagina' href='AdministracionDirector.php?pag_act=$pagina'>$pagina</a>");
                     }
                 }
                 ?>
@@ -54,7 +54,7 @@ cerrarConexionBD($conn);
 
             <form method="get" action="AdministracionDirector.php">
                 <input type="number" id="pag_size" name="pag_size" value="<?php echo $pag_size ?>" autofocus>
-                <div><input type="submit" value="Cambiar!"></div>
+                <div><input type="submit" id="Cambiar" value="Cambiar!"></div>
             </form><br><br>
         </nav>
         <div class="cuadro">

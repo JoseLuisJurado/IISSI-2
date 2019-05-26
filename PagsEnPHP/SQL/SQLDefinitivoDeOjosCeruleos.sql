@@ -233,7 +233,7 @@ FOREIGN KEY (OID_H) REFERENCES HABITACION ON DELETE CASCADE
 create table usuario_registrado(
 OID_UR integer primary key,
 correo varchar2(100) not null,
-contraseña varchar2(100) not null,
+contrasena varchar2(100) not null,
 DNI_R varchar2(9) ,
 DNID varchar2(50) ,
 Foreign key (DNI_R) References residente on delete cascade,
@@ -449,7 +449,7 @@ BEGIN
         correoPadre, fechaLlegada, fechaSalida, tipoPago,
         formaPago, pais, domicilio,poblacion, codigoPostal, dni);
   commit;
-  INSERT INTO usuario_registrado(OID_UR, correo, contraseña, DNI_R)
+  INSERT INTO usuario_registrado(OID_UR, correo, contrasena, DNI_R)
   VALUES(sec_usuario_registrado.nextval, correoElectronico, pass, dni);
   commit;
 END;
@@ -458,5 +458,5 @@ END;
 insert into DIRECTOR_A(DNID, NOMBRE)
       values('53964017Z', 'Margarita');
 
-insert into USUARIO_REGISTRADO(CORREO, CONTRASEÑA, DNID)
-      values('margarita@gmail.com', 'contraseña1', '53964017Z');
+insert into USUARIO_REGISTRADO(CORREO, CONTRASENA, DNID)
+      values('margarita@gmail.com', 'contrasena1', '53964017Z');

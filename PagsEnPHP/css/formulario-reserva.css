@@ -119,12 +119,11 @@ section.adminS2{
 
 p.adminP2{
     text-align: left;
-    display: block;
 }
 
 p.adminP3{
     text-align: right;
-    display: block;
+    margin-left: 50%;
 }
 
 p.adminP4{

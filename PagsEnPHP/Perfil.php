@@ -59,7 +59,7 @@ if(isset($_SESSION['login'])){
                     </fieldset>
                     <div><input type="submit" value="Enviar"> </div>
                 </form>
-            </main>
+            </main><br>
             <section class="adminS2">
                 <span class="adminP2">Fecha último pago</span>
                 <span class="adminP3">Habitación Actual</span>

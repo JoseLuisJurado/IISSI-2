@@ -117,11 +117,11 @@ section.adminS2{
     display: inherit;
 }
 
-p.adminP2{
+span.adminP2{
     text-align: left;
 }
 
-p.adminP3{
+span.adminP3{
     text-align: right;
     margin-left: 50%;
 }

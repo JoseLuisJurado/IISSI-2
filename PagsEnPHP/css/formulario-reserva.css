@@ -110,15 +110,21 @@ section.adminS{
 section.adminS2{
 	margin-right: 20%;
 	margin-left: 20%;
-	margin-bottom: 5%
+    margin-bottom: 5%;
+    border-bottom: .2em;
+    border-color: black;
+    border-width: 1em;
+    display: inherit;
 }
 
 p.adminP2{
-	float: left;
+    text-align: left;
+    display: block;
 }
 
 p.adminP3{
-	float:right;
+    text-align: right;
+    display: block;
 }
 
 p.adminP4{

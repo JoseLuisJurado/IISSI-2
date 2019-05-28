@@ -27,7 +27,6 @@ if (isset($_SESSION["destino"])) {
 <head>
 	<meta charset="utf-8">
 	<meta title="Residencia Estudiantil Digital">
-	<link rel="stylesheet" href="css/css404.css" />
 	<link rel="stylesheet" href="css/cssInicio.css" />
 	<link rel="icon" type="image/jpeg" href="imagenes/LogoRED.jpeg" />
 	<Title>Residencia de estudiantes bahía</Title>
@@ -40,7 +39,7 @@ if (isset($_SESSION["destino"])) {
 	?>
 	<div class="cuerpo">
 
-		<p>Se ha producido un error</p>
+		<p class="p404">Se ha producido un error</p>
 		<img class="caritatriste" src="imagenes/caritaTriste.png" />
 
 	</div>

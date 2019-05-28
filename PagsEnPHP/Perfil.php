@@ -19,7 +19,6 @@ if(isset($_SESSION['login'])){
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
     <meta name="autor" content="José Luis Jurado Ortiz">
-    <link rel="stylesheet" href="css/formulario-reserva.css">
     <link rel="stylesheet" href="css/cssInicio.css">
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg">
     <Title>Residencia de estudiantes bahía</Title>
@@ -42,17 +41,17 @@ if(isset($_SESSION['login'])){
         </div>
         <div class="alineacion">
             <main>
-                <form method="GET">
+                <form class="formRes" method="GET">
                     <legend>Reserva de salas</legend>
-                    <fieldset>
+                    <fieldset class= "fieldsetRes">
                         <label class="adminL">Reserve un día:</label>
                         <section class="adminS">
-                            <label>
+                            <label class="labelRes">
                                 Desde: <input type="datetime-local">
                             </label>
                         </section>
-                        <section>
-                            <label>
+                        <section class="sectionRes">
+                            <label class="labelRes">
                                 Hasta: <input type="datetime-local">
                             </label>
                         </section>

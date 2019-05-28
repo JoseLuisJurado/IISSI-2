@@ -48,7 +48,6 @@
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
-    <link rel="stylesheet" href="css/formulario-reserva.css"/>
     <link rel="stylesheet" href="css/cssInicio.css"/>
     <script src="javascript/validacionFormulario.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
@@ -62,46 +61,46 @@
         ?>
 
     </div>
-    <form name="formularioReserva" method="post" onsubmit="return validacionGeneral()" action="validacionReserva.php">
-        <fieldset>
+    <form  class="formRes" name="formularioReserva" method="post" onsubmit="return validacionGeneral()" action="validacionReserva.php">
+        <fieldset class="fieldsetRes">
             <legend>Datos Personales</legend>
-            <section>
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     DNI: <input type="text" name="DNI" id="DNI" placeholder="12345678A" maxlength="9" oninput="inputDNI()" required><span id="TextoDNI"></span>
                 </label>
             </section>
-            <section>
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Nombre: <input type="text" name="Nombre" id="Nombre" maxlenght="50" class="margenGeneral" required>
                 </label>
             </section>
-            <section>
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Primer Apellido: <input type="text" name="PrimerApellido" maxlenght="50" id="PrimerApellido" class="margenGeneral" required>
                 </label>
             </section>
-            <section>
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Segundo Apellido: <input type="text" name="SegundoApellido" maxlenght="50" id="SegundoApellido" class="margenGeneral" required>
                 </label>
             </section>
-            <section class="margenGeneral">
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Sexo:
                     <input value="hombre" name="Sexo" id="Sexo" type="radio" required>Hombre
                     <input value="mujer" name="Sexo" id="Sexo" type="radio">Mujer
                 </label>
             </section>
-            <section class="margenGeneral">
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Eres mayor de edad?: <input type="checkbox" name="MayoriaEdad" id="MayoriaEdad">
                 </label>
             </section>
         </fieldset>
-        <fieldset class="margenGeneral">
+        <fieldset class="fieldsetRes">
             <legend>Otros Datos de Importancia</legend>
-            <section>
-                <label for="paises"> País:
+            <section class="sectionRes">
+                <label class="labelRes" for="paises"> País:
                     <select name="paises" id="paises">
                         <?php
                         $selected = "";
@@ -112,45 +111,45 @@
                         ?>
                     </select>
                 </label>
-                <label>
+                <label class="labelRes">
                     Población: <input type="text" name="Poblacion" id="Poblacion" maxlength="50" class="margenSexo" placeholder="Sevilla">
                 </label>
-                <label>
+                <label class="labelRes">
                     Código Postal: <input type="text" name="CodigoPostal" id="CodigoPostal" maxlength="6" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" required>
                 </label>
             </section>
-            <section class="margenGeneral">
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Domicilio: <input type="text" name="Domicilio" id="Domicilio" maxlength="50" class="margenSexo">
                 </label>
-                <label>
+                <label class="labelRes">
                     Correo electrónico: <input type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
                 </label>
-                <label>
+                <label class="labelRes">
                     Correo electrónico del tutor legal: <input type="email" name="CorreoPadre"  maxlength="50" id="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
                 
-                  <label for="pass" class="pass">Password:
+                  <label for="pass" class="labelRes">Password:
                 <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" maxlength="50" oninput="inputContraseña()" required/> <span id="TextosPass"></span>
                 </label>
                 
-                <label for="confirmpass">Confirmar Password: 
+                <label class="labelRes" for="confirmpass">Confirmar Password: 
 				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required/> <span id="textoConfirm"></span>
                 </label>
                 
             </section>
-            <section>
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Fecha de llegada: <input type="date" name="FechaLlegada" id="FechaLlegada" class="margenGeneral" required>
                 </label>
             </section>
-            <section>
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Fecha de salida: <input type="date" name="FechaSalida" id="FechaSalida" class="margenGeneral" oninput="inputFechas()" required> <span id="textoFecha"></span>
                 </label>
             </section>
-            <section class="margenGeneral">
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Tipo de pago:
                     <input value="mensual" name="TipoPago" id="TipoPago" type="radio" required>Mensual
                     <input value="bimensual" name="TipoPago" id="TipoPago" type="radio">Bimensual
@@ -158,8 +157,8 @@
                     <input value="anual" name="TipoPago" id="TipoPago" type="radio">Anual
                 </label>
             </section>
-            <section class="margenGeneral">
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Forma de pago:
                     <input name="FormaPago" id="FormaPago" type="radio" value="efectivo" required>Efectivo
                     <input name="FormaPago" id="FormaPago" type="radio" value="transferencia">Transferencia
@@ -167,8 +166,8 @@
                     <input name="FormaPago" id="FormaPago" type="radio" value="TPV">TPV
                 </label>
             </section>
-            <section class="margenGeneral">
-                <label>
+            <section class="sectionRes">
+                <label class="labelRes">
                     Va a pagar el comedor?: <input type="checkbox" id="pagoComedor" name="pagoComedor">
                 </label>
             </section>

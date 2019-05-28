@@ -94,11 +94,18 @@ img.adminI{
 
 label.adminL{
 	text-align: left;
-}
+	display:inline-block;
+    float: left;
+    clear: left;
+    text-align: left;
+    padding: .2em;
+    }
 
 section.adminS{
 	margin-bottom: 1%;
 	margin-top: 1%;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 0.625em;
 }
 
 section.adminS2{
@@ -109,6 +116,8 @@ section.adminS2{
     border-color: black;
     border-width: 1em;
     display: inherit;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 0.625em;
 }
 
 span.adminP2{

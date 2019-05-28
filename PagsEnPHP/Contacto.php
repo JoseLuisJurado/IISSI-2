@@ -72,17 +72,17 @@
             <form method="get" name="formularioContacto" if="formularioContacto" action="validacionContacto.php" onsubmit="return validacionGeneral()">
                 <section>
                     <label>
-                        Nombre*: <input type="text" name="Nombre" id="Nombre" maxlength="50" class="margenGeneral" required>
+                        Nombre*: <input class="margenContactoNOM" type="text" name="Nombre" id="Nombre" maxlength="50" required>
                     </label>
                 </section>
                 <section>
                     <label>
-                        Primer Apellido*: <input type="text" name="PrimerApellido" id="PrimerApellido" maxlength="50" class="margenGeneral" required>
+                        Primer Apellido*: <input class="margenContactoPA" type="text" name="PrimerApellido" id="PrimerApellido" maxlength="50" required>
                     </label>
                 </section>
                 <section>
                     <label>
-                        Segundo Apellido: <input type="text" name="SegundoApellido" id="SegundoApellido" maxlength="50" class="margenGeneral" required>
+                        Segundo Apellido: <input class="margenContactoSA" type="text" name="SegundoApellido" id="SegundoApellido" maxlength="50" required>
                     </label>
                 </section>
 
@@ -94,7 +94,7 @@
 
                 <section class="margenGeneral">
                     <section>
-                        Asunto*: <input type="text" name="Asunto" id="Asunto" maxlength="100" class="margenGeneral" required>
+                        Asunto*: <input class="margenContactoAS" type="text" name="Asunto" id="Asunto" maxlength="100" required>
                     </section>
                     <section class = "secM">
                         Mensaje*:

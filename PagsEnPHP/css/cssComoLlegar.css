@@ -1,18 +1,9 @@
-iframe {
-    display: block;
-    width: 18.75em;
-    height: 18.75em;
-    margin-left: auto;
-    margin-right: auto;
-    border-width: .2em;
-}
-
 #all{
     width:100%;
     float:left;
     text-align:center;
 }
-div.sub, iframe {
+iframe {
     width: 41.25em;
     height: 28.75em;
     margin: 0 auto;
@@ -23,7 +14,7 @@ address{
     text-align: center;
     
 }
-h1.ubi-text{
+h1.ubi-textCLL{
 	margin: 0%;
 	margin-bottom: 5%;
 	text-align: center;

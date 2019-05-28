@@ -1,9 +1,8 @@
-
-button{
+button.buttonAD{
     float: left;
 }
 
-div.cuadro{
+div.cuadroAD{
     border-radius: 1em;
     margin-bottom: 1%;
     border-width: .2em;
@@ -16,7 +15,8 @@ div.cuadro{
     padding-bottom: 0em;
 }
 
-div.pag{
+
+div.pagAD{
 	text-decoration: underline;
 }
 

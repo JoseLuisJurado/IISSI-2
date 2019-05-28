@@ -1,6 +1,14 @@
 @import "cssAdministracionDirector.css";
 @import "Conocenos.css";
 @import "cssComoLlegar.css";
+@import "Residencia.css";
+@import "Servicios.css";
+@import "css404.css";
+@import "cssAdministracionDirector.css";
+@import "cssContacto.css";
+@import "cssInstalaciones.css";
+@import "formulario-reserva.css";
+@import "tarjeta.css";
 
 input[type=submit], input[type=button] {
     color: white;

@@ -1,18 +1,14 @@
-.cajon3{
-    margin-top: 1cm;    
-}
-
-p{
+p.pCon{
 	text-align: inherit;
 }
-img.imagen{
+img.imagenCon{
 	float: left; 
 	margin-right:1%;
 	width: 43%;
 	height: 13.75em;
 }
 
-img.imagen2{
+img.imagen2Con{
 	margin-top:4%; 
 	margin:2% auto;
 	display:block;

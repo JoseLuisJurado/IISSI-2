@@ -23,3 +23,20 @@ section.secM{
 	margin-top: 1%;
 	margin-bottom: 1%";
 }
+input.margenContactoNOM{
+	margin-left: 5em;
+	margin-top: 0.625em;
+}
+input.margenContactoPA{
+	margin-left: 1.2em;
+	margin-top: 0.625em;
+}
+input.margenContactoSA{
+	margin-left: 0.85em;
+	margin-top: 0.625em;
+}
+
+input.margenContactoAS{
+	margin-left: 5.5em;
+	margin-top: 0.625em;
+}

@@ -1,5 +1,6 @@
 @import "cssAdministracionDirector.css";
 @import "Conocenos.css";
+@import "cssComoLlegar.css";
 
 input[type=submit], input[type=button] {
     color: white;

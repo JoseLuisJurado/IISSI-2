@@ -31,7 +31,6 @@
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
     <link rel="stylesheet" href="css/cssInicio.css" />
-    <link rel="stylesheet" href="css/inicio_sesion.css" />
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>
@@ -40,18 +39,18 @@
     include "php/menu.php";
     ?>
     <div>
-        <main class="main">
+        <main class="mainInSes">
             <form method="get" action="Inicio_sesion.php">
-                <fieldset class="field">
+                <fieldset class="fieldInSes">
                     <legend><u> Iniciar sesión</u></legend>
                     <section>
                         <label>
-                            Email: <input type="text" name="Email" id="Email" placeholder="EmailDeEjemplo@gmail.com" required>
+                            Email: <input class = "botonInSesEmail" type="text" name="Email" id="Email" placeholder="EmailDeEjemplo@gmail.com" required>
                         </label>
                     </section>
                     <section>
                         <label>
-                            Contraseña: <input type="password" name="Contraseña" id="Contraseña" placeholder="Ejemplo: 123456abcdef" required>
+                            Contraseña: <input class = "botonInSes" type="password" name="Contraseña" id="Contraseña" placeholder="Ejemplo: 123456abcdef" required>
                         </label>
                         <div>
                             <label>
@@ -68,7 +67,7 @@
                         	</label>
                     </section>
                 </fieldset>
-                <input type="submit" title="Enviar" name="Enviar">
+                <input class = "botonInSes" type="submit" title="Enviar" name="Enviar">
             </form>
         </main>
     </div>

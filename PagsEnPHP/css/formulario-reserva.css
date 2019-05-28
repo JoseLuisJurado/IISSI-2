@@ -1,32 +1,29 @@
 /*
  * USADO EN: formulario-reserva, Administración_usuario
  */
-form{
+form.formRes{
     padding: 2%;
     padding-bottom: 2%;
 }
 
-fieldset{
+fieldset.fieldsetRes{
     border-radius: 1em;
     margin-bottom: 1%;
     border-width: .2em;
     background-color: #DEF0F3;
 }
 
-section{
+section.sectionRes{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 0.625em;
 }
 
-label{
+label.labelRes{
     display:inline-block;
     float: left;
     clear: left;
     text-align: left;
     padding: .2em;
-}
-
-.ubi-text{
-    text-align: center;
 }
 
 .Cuerpo{
@@ -48,9 +45,6 @@ label{
 }
 .margenSexo {
     margin-right: 1.875em;
-}
-.margenGeneral {
-    margin-top: 0.625em;
 }
 
 .titulo{

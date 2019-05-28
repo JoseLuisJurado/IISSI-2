@@ -1,4 +1,4 @@
-.margenFormulario {
+.margenFormularioContacto {
     padding: 2%;
     border-style: solid;
     border-color: grey;
@@ -7,11 +7,7 @@
     border-width: .2em;
 }
 
-.margenGeneral {
-    margin-top: 0.625em;
-}
-
-p.texto{
+p.textoContacto{
    border: 0.125em solid black;
    margin-right: 50em;
    padding-left: 0.25em;
@@ -19,7 +15,7 @@ p.texto{
    background-color: white;
 }
 
-h2.h{
+h2.hContacto{
 	text-decoration: underline;
 }
 

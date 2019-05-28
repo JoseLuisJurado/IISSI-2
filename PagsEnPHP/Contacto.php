@@ -32,7 +32,6 @@
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
-    <link rel="stylesheet" href="css/cssContacto.css" />
     <link rel="stylesheet" href="css/cssInicio.css" />
     <script src="javascript/validacionContacto.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
@@ -45,28 +44,28 @@
     ?>
 
     <fieldset>
-        <div class="margenFormulario">
+        <div class="margenFormularioContacto">
 
-            <h2 class = "h">
+            <h2 class = "hContacto">
                 Contacto
             </h2>
-            <p class="texto">
+            <p class="textoContacto">
                 Residencia estudiantil Bahia
             </p>
 
-            <p class="texto">
+            <p class="textoContacto">
                 C/S.Alejandro, 179, 11510, Puerto Real, Cádiz
             </p>
 
-            <p class="texto">
+            <p class="textoContacto">
                 954-789-856-1
             </p>
 
-            <p class="texto">
+            <p class="textoContacto">
                 CorreoFalso@gmaol.ez
             </p>
 
-            <h2 class = "h">
+            <h2 class = "hContacto">
                 Consulta
             </h2>
 

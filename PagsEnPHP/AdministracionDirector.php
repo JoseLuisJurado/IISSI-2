@@ -27,7 +27,7 @@ cerrarConexionBD($conn);
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
     <link rel="stylesheet" href="css/cssInicio.css" />
-    <link rel="stylesheet" href="css/cssAdministracionDirector.css" />
+    
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>
@@ -39,7 +39,7 @@ cerrarConexionBD($conn);
     <main class="cuerpo">
 
         <nav>
-            <div class="pag">
+            <div class="pagAD">
                 <?php
                 for ($pagina = 1; $pagina <= $consultaTotal; $pagina++) {
                     if ($pagina == $pag_act) {
@@ -57,7 +57,7 @@ cerrarConexionBD($conn);
                 <div><input type="submit" id="Cambiar" value="Cambiar!"></div>
             </form><br><br>
         </nav>
-        <div class="cuadro">
+        <div class="cuadroAD">
             <div class="DescripcionBotones">
                 <span class="TextoEditar">
                     Editar
@@ -94,15 +94,15 @@ cerrarConexionBD($conn);
                         <div id="botones_modificacion" class="botones_modificacion">
 
                             <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
-                                <button id="modificar" class="modificar" type="submit" name="modificar">
+                                <button class = "buttonAD" id="modificar" class="modificar" type="submit" name="modificar">
                                     <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="22px">
                                 </button>
                             <?php } else { ?>
-                                <button id="editar" class="editar" type="submit" name="editar">
+                                <button class = "buttonAD"  id="editar" class="editar" type="submit" name="editar">
                                     <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="22px">
                                 </button>
                             <?php } ?>
-                            <button id="borrar" class="borrar" type="submit" name="borrar">
+                            <button class = "buttonAD"  id="borrar" class="borrar" type="submit" name="borrar">
                                 <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="22px" />
                             </button>
                         </div>

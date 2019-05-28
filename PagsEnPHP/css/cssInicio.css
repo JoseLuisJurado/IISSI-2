@@ -1,3 +1,6 @@
+@import "cssAdministracionDirector.css";
+@import "Conocenos.css";
+
 input[type=submit], input[type=button] {
     color: white;
     background-color: #16A5BE !important;
@@ -174,3 +177,26 @@ div.margen{
     margin:0.625em auto;
 	display:block;
 }
+
+/*Inicio de Sesión*/
+main.mainInSes {
+	margin: 5% 20% 0% 20%;
+}
+
+fieldset.fieldInSes{
+    border-radius: 1em;
+    margin-bottom: 1%;
+    border-width: .2em;
+    background-color: #DEF0F3;
+    padding: 2%;
+}
+
+input.botonInSes{
+	margin-bottom: 1%;
+}
+
+input.botonInSesEmail{
+	margin-bottom: 1%;
+	margin-left: 2.5em;
+}
+

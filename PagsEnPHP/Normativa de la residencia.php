@@ -7,8 +7,6 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<meta title="Residencia Estudiantil Digital">
-	<meta name="autor" content="José Luis Jurado Ortiz">
-	<link rel="stylesheet" href="css/cssComoLlegar.css" />
 	<link rel="stylesheet" href="css/cssInicio.css" />
 	<link rel="icon" type="image/jpeg" href="imagenes/LogoRED.jpeg" />
 	<Title>Residencia de estudiantes bahía</Title>

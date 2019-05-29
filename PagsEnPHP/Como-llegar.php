@@ -7,7 +7,6 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
-    <meta name="autor" content="Antonio Miguel González Villar">
     <link rel="stylesheet" href="css/cssInicio.css" />
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>

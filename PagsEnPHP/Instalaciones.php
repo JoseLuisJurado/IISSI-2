@@ -7,8 +7,6 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
-    <meta name="autor" content="José Luis Jurado Ortiz">
-    <link rel="stylesheet" href="css/cssInstalaciones.css">
     <link rel="stylesheet" href="css/cssInicio.css" />
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg">
     <Title>Residencia de estudiantes bahía</Title>
@@ -28,7 +26,7 @@ session_start();
         <h2 class="titulo2">
             Sala de Estudio
         </h2>
-        <img class="centro" src="imagenes/sala_estudio.jpg"/>
+        <img class="centroInst" src="imagenes/sala_estudio.jpg"/>
         <p>
             La sala de estudio es un lugar de tranquilidad y perfectamente equipado para realizar trabajos o simplemente
             poder estar en silencio
@@ -40,7 +38,7 @@ session_start();
         <h2 class="titulo2">
             Sala Común
         </h2>
-        <img class="centro" src="imagenes/sala_comun.jpg"/>
+        <img class="centroInst" src="imagenes/sala_comun.jpg"/>
 
         <p>
             El centro dispone de una sala común en la que los residentes pueden relajarse y socializar con el resto de
@@ -54,7 +52,7 @@ session_start();
         <h2 class="titulo2">
             Jardines
         </h2>
-        <img class="centro" src="imagenes/jardin.jpg"/>
+        <img class="centroInst" src="imagenes/jardin.jpg"/>
 
         <p>
             El equipo de mantenimiento se enorgullece de los preciosos jardines de los que disponemos, con una vadiedad
@@ -68,7 +66,7 @@ session_start();
         <h2 class="titulo2">
             Comedor
         </h2>
-        <img class="centro" src="imagenes/comedor.jpg"/>
+        <img class="centroInst" src="imagenes/comedor.jpg"/>
 
         <p>
             El centro tampoco escatima gastos, y mucho menos para una de las cosas mas importantes para todo estudiante, la alimentación

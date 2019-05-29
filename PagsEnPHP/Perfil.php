@@ -59,15 +59,19 @@ if(isset($_SESSION['login'])){
                     <div><input type="submit" value="Enviar"> </div>
                 </form>
             </main><br>
+            <div class="cuerpoPerfil">
             <section class="adminS2">
+            	
                 <span class="adminP2">Fecha último pago</span>
                 <span class="adminP3">Habitación Actual</span>
             </section>
             <section class="adminS2">
+                
                 <!-- Extraigo la fecha de pago de la residencia de la base de datos-->
-                <span class="adminP2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
+                <span class="adminR2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
                                         else echo "<span class='error'> No hay fecha </span>" ?></span>
-                <span class="adminP3"> 14</span>
+                <span class="adminR3"> WIP</span>
+                
             </section>
             <section class="adminS2">
                 <span class="adminP2">Fecha de entrada</span>
@@ -75,18 +79,19 @@ if(isset($_SESSION['login'])){
             </section>
             <section class="adminS2">
                 <!--Extraigo la fecha de entrada de la base de datos-->
-                <span class="adminP2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
+                <span class="adminR2"> <?php if(isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
                                         else echo "<span class='error'> No hay fecha </span>" ?></span>
-                <span class="adminP3"> Sí</span>
+                <span class="adminR3"> Sí</span>
             </section>
             <section class="adminS2">
                 <span class="adminP2">Fecha de salida</span>
             </section>
             <section class="adminS2">
                 <!--Extraigo de la base de datos la fecha de salida que se especifica en la reserva-->
-                <span class="adminP2"> <?php if(isset($fechas[0]["FECHA_FIN"])) echo $fechas[0]["FECHA_FIN"];
+                <span class="adminR2"> <?php if(isset($fechas[0]["FECHA_FIN"])) echo $fechas[0]["FECHA_FIN"];
                                         else echo "<span class='error'> No hay fecha </span>" ?></span>
             </section>
+            </div>
         </div>
     </div>
     <?php

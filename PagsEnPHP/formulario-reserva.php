@@ -119,7 +119,7 @@
                     Población: <input class="FR_Ajuste_Pob" type="text" name="Poblacion" id="Poblacion" maxlength="50" class="margenSexo" placeholder="Sevilla">
                 </label>
                 <label class="labelRes">
-                    Código Postal*: <input class="FR_Ajuste_Pos" type="text" name="CodigoPostal" id="CodigoPostal" maxlength="6" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" required>
+                    Código Postal*: <input class="FR_Ajuste_Pos" type="text" name="CodigoPostal" id="CodigoPostal" maxlength="5" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" required>
                 </label>
             </section>
             <section class="sectionRes">

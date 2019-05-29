@@ -119,7 +119,9 @@ function inputContraseña(){
     var contraseña = document.forms["formularioReserva"]["pass"].value;
     var hasNumber = /\d/; var hasUpperCases = /[A-Z]/; var hasLowerCases = /[a-z]/;
 
-    if(!hasNumber.test(contraseña)){
+    if(contraseña == ""){
+        document.getElementById("TextosPass").innerHTML = "";
+    }else if(!hasNumber.test(contraseña)){
         document.getElementById("TextosPass").innerHTML = "La contraseña no contiene números";
     }else if(!hasUpperCases.test(contraseña)){
         document.getElementById("TextosPass").innerHTML = "La contraseña no contiene mayúsculas";
@@ -141,7 +143,9 @@ function inputDNI(){
 
     var letra = DNI.charAt(8);
     var numero = parseInt(DNI.slice(0, 8));
-    if (!hasUpperCases.test(DNI)) {
+    if(DNI == ""){
+        document.getElementById("TextoDNI").innerHTML = "";
+    }else if (!hasUpperCases.test(DNI)) {
         document.getElementById("TextoDNI").innerHTML = "El dni no tiene letra mayúscula";
     }else if(LetrasDNI.charAt(numero % 23) != letra){
         document.getElementById("TextoDNI").innerHTML = "El valor no coincide con la letra del DNI";
@@ -164,8 +168,10 @@ function inputFechas(){
 function inputCoincidenContraseñas(){
     var contraseña = document.forms["formularioReserva"]["pass"].value;
     var confirmarContraseña = document.forms["formularioReserva"]["confirmpass"].value;
-
-    if(contraseña != confirmarContraseña){
+    
+    if(confirmarContraseña == ""){
+        document.getElementById("textoConfirm").innerHTML = "";
+    }else if(contraseña != confirmarContraseña){
         document.getElementById("textoConfirm").innerHTML = "Las contraseñas escritas no coinciden";
     }else{
         document.getElementById("textoConfirm").innerHTML = "";

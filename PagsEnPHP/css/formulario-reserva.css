@@ -47,8 +47,6 @@ label.labelRes{
     margin-right: 1.875em;
 }
 
-
-
 div.alineacion{
 	margin-top: 2%;
 	margin-bottom: 2%; 
@@ -120,30 +118,6 @@ p.adminP4{
 	text-align: left;
 }
 
-section.tabla{
-	margin-top: 0;
-	float: left;
-}
-
-ul.sala{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-}
-
-li.lista{
-float:left;
- }
- 
-li a.enlace{
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 1em;
-  text-decoration: none;
-}
 
 span.error{
     font-style: normal;
@@ -160,4 +134,8 @@ span.TextoDNI{
     margin-left: 3em;
     color: green;
     font-family: 'Times New Roman', Times, serif;
+}
+
+span.colorSpan{
+	color: #FF0000;
 }

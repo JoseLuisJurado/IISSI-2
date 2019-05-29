@@ -187,6 +187,10 @@ div.margen{
 	display:block;
 }
 
+.margenGeneral {
+    margin-top: 0.625em;
+}
+
 /*Inicio de Sesión*/
 main.mainInSes {
 	margin: 5% 20% 0% 20%;

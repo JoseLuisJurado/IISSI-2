@@ -4,18 +4,21 @@
     text-align:center;
 }
 iframe {
-    width: 41.25em;
+    width: 78%;
     height: 28.75em;
     margin: 0 auto;
     border: 0.3125em solid gray;
 }
 address{
     font-size: 1.25em;
-    text-align: center;
+    text-align: left;
+    margin-left: 10%;
     
 }
 h1.ubi-textCLL{
 	margin: 0%;
 	margin-bottom: 5%;
 	text-align: center;
+	text-decoration: underline;
 }
+

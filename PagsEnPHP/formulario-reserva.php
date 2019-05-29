@@ -134,7 +134,7 @@
                 </label>
                 
                 <label class="labelRes" for="confirmpass">Confirmar Password*: 
-				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required/> <span id="textoConfirm"></span>
+				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required/> <span class="colorSpan" id="textoConfirm"></span>
                 </label>
                 
             </section>
@@ -145,7 +145,7 @@
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Fecha de salida*: <input type="date" name="FechaSalida" id="FechaSalida" class="margenGeneral" oninput="inputFechas()" required> <span id="textoFecha"></span>
+                    Fecha de salida*: <input type="date" name="FechaSalida" id="FechaSalida" class="margenGeneral" oninput="inputFechas()" required> <span class="colorSpan" id="textoFecha"></span>
                 </label>
             </section>
             <section class="sectionRes">

@@ -1,4 +1,4 @@
-img.izq{
+img.izqRes{
 	float: left;
 	margin-left: 0.625em;
 	border-color: black;
@@ -8,7 +8,7 @@ img.izq{
 	height: 12.5em;
 }
 
-img.der{
+img.derRes{
 	float: right;
 	margin-left:0.625em;
 	border-color: black;

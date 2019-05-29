@@ -138,4 +138,60 @@ span.TextoDNI{
 
 span.colorSpan{
 	color: #FF0000;
+	margin-left: 1.5em;
 }
+
+input.FR_Ajuste_DNI{
+	margin-left: 7.45em;
+}
+
+input.FR_Ajuste_NOM{
+	margin-left: 5.3em;
+	margin-top:2%;
+}
+
+input.FR_Ajuste_PA{
+	margin-left: 1.3em;
+	margin-top:2%;
+}
+
+input.FR_Ajuste_SA{
+	margin-left: .5em;
+	margin-top:2%;
+}
+
+input.FR_Ajuste_Pob{
+	margin-left: 12.5em;
+	margin-top:2%;
+}
+
+input.FR_Ajuste_Pos{
+	margin-left: 10em;
+	margin-top:2%;
+}
+
+select.FR_Ajuste_Pais{
+	margin-left: 14.9em;
+	width: 11em;
+}
+
+input.FR_Ajuste_Dom{
+	margin-left: 12.5em;
+	margin-top:2%;
+}
+
+input.FR_Ajuste_Correo{
+	margin-left: 7.4em;
+	margin-top:2%;
+}
+
+input.FR_Ajuste_CorreoTA{
+	margin-left:0.5em;
+	margin-top:2%;
+}
+
+.underline{
+	text-decoration: underline;
+}
+
+

@@ -7,7 +7,6 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
-    <link rel="stylesheet" href="css/Residencia.css">
     <link rel="stylesheet" href="css/cssInicio.css" />
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg">
     <Title>Residencia de estudiantes bahía</Title>
@@ -20,7 +19,7 @@ session_start();
     ?>
     <div class="cuerpo2">
         <div>
-            <img class="der" src="imagenes/fachada1.jpg"/>
+            <img class="derRes" src="imagenes/fachada1.jpg"/>
             <p> Residencia Bahía, se encuentra situada muy cerca del Campus Universitario Rio San Pedro (Puerto Real),
                 creada y
                 orientada para alojamientos de universitarios, profesores o trabajadores. </p>
@@ -39,7 +38,7 @@ session_start();
         </div>
 
         <div>
-            <img class="izq" src="imagenes/comedor.jpg"/>
+            <img class="izqRes" src="imagenes/comedor.jpg"/>
             <p>Entre sus instalaciones podemos encontrar un comedor, en el cual se servirá por parte de nuestro personal
                 culificado de cocina,
                 una extensa variedad de productos, un menú especial diario, frutas de temporada, pescados y toda clase
@@ -60,7 +59,7 @@ session_start();
             </p>
         </div>
         <div>
-            <img class="der" src="imagenes/mantenimiento.jpg"/>
+            <img class="derRes" src="imagenes/mantenimiento.jpg"/>
             <p> Otra de las cosas que esta residencia puede destacar es su servicio de mantenimiento al igual que el de
                 limpieza, el cual
                 es uno de los mas valorados entre todas las residencia de la provincia de Cadiz. </p>

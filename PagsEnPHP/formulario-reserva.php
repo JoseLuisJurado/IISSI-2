@@ -1,4 +1,26 @@
 <?php
+	if(isset($_POST['Enviar'])){
+		$dni = $_POST['DNI'];
+		$nombre = $_POST['Nombre'];
+		$primerApe = $_POST['PrimerApellido'];
+		$segundoApe = $_POST['SegundoApellido'];
+		$sex = $_POST['Sexo'];
+		$mayor = $_POST['MayoriaEdad'];
+		$pais = $_POST['paises'];
+		$pob = $_POST['Poblacion'];
+		$codpost = $_POST['CodigoPostal'];
+		$dom = $_POST['Domicilio'];
+		$corr = $_POST['CorreoElectronico'];
+		$corrpadre = $_POST['CorreoPadre'];
+		$contra = $_POST['pass'];
+		$lleg = $_POST['FechaLlegada'];
+		$sal = $_POST['FechaSalida'];
+		$tipP = $_POST['TipoPago'];
+		$forP = $_POST['FormaPago'];
+		$pagoC = $_POST['pagoComedor'];
+	}
+?>
+<?php
 	session_start();
 	
 	// Importar librerías necesarias para gestionar direcciones y géneros literarios
@@ -70,22 +92,22 @@
             <legend class="underline">Datos Personales</legend>
             <section class="sectionRes">
                 <label class="labelRes">
-                    DNI*: <input class="FR_Ajuste_DNI" type="text" name="DNI" id="DNI" placeholder="12345678A" maxlength="9" oninput="inputDNI()" required><span class="colorSpan" id="TextoDNI"></span>
+                    DNI*: <input class="FR_Ajuste_DNI" type="text" name="DNI" id="DNI" placeholder="12345678A" maxlength="9" oninput="inputDNI()" value="<?php if(isset($dni)) echo $dni ?>" required><span class="colorSpan" id="TextoDNI"></span>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Nombre*: <input class="FR_Ajuste_NOM" type="text" name="Nombre" id="Nombre" maxlenght="50" class="margenGeneral" required>
+                    Nombre*: <input class="FR_Ajuste_NOM" type="text" name="Nombre" id="Nombre" maxlenght="50" class="margenGeneral" value="<?php if(isset($nombre)) echo $nombre ?>" required>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Primer Apellido*: <input class="FR_Ajuste_PA" type="text" name="PrimerApellido" maxlenght="50" id="PrimerApellido" class="margenGeneral" required>
+                    Primer Apellido*: <input class="FR_Ajuste_PA" type="text" name="PrimerApellido" maxlenght="50" id="PrimerApellido" class="margenGeneral" value="<?php if(isset($primerApe)) echo $primerApe ?>" required>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Segundo Apellido*: <input class="FR_Ajuste_SA" type="text" name="SegundoApellido" maxlenght="50" id="SegundoApellido" class="margenGeneral" required>
+                    Segundo Apellido*: <input class="FR_Ajuste_SA" type="text" name="SegundoApellido" maxlenght="50" id="SegundoApellido" class="margenGeneral" value="<?php if(isset($segundoApe)) echo $segundoApe ?>" required>
                 </label>
             </section>
             <section class="sectionRes">
@@ -119,17 +141,17 @@
                     Población: <input class="FR_Ajuste_Pob" type="text" name="Poblacion" id="Poblacion" maxlength="50" class="margenSexo" placeholder="Sevilla">
                 </label>
                 <label class="labelRes">
-                    Código Postal*: <input class="FR_Ajuste_Pos" type="text" name="CodigoPostal" id="CodigoPostal" maxlength="5" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" required>
+                    Código Postal*: <input class="FR_Ajuste_Pos" type="text" name="CodigoPostal" id="CodigoPostal" maxlength="6" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" value="<?php if(isset($codpost)) echo $codpost ?>" required>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Domicilio: <input class="FR_Ajuste_Dom" type="text" name="Domicilio" id="Domicilio" maxlength="50" class="margenSexo">
-                </label>
-                <label class="labelRes">
-                    Correo electrónico*: <input class="FR_Ajuste_Correo" type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
+                    Domicilio: <input class="FR_Ajuste_Dom" type="text" name="Domicilio" id="Domicilio" maxlength="50" class="margenSexo" value="<?php if(isset($dom)) echo $dom ?>">
                 </label>
                 <label class="labelRes jquery">
+                    Correo electrónico*: <input class="FR_Ajuste_Correo" type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
+                </label>
+                <label class="labelRes">
                     Correo electrónico del tutor legal: <input class="FR_Ajuste_CorreoTA" type="email" name="CorreoPadre"  maxlength="50" id="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
                 
@@ -138,7 +160,7 @@
                 </label>
                 
                 <label class="labelRes" for="confirmpass">Confirmar Password*: 
-				<input class="FR_Ajuste_ConPassword" type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required><span class="colorSpan" id="textoConfirm"></span>
+				<input class="FR_Ajuste_ConPassword" type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required/> <span class="colorSpan" id="textoConfirm"></span>
                 </label>
                 
             </section>
@@ -176,7 +198,10 @@
                 </label>
             </section>
         </fieldset>
-        <div><input type="submit" value="Enviar"> </div>
+        <div><input type="submit" value="Enviar" name="Enviar"> </div>
+        <?php
+        include "php/validacionesPhp.php";
+		?>
     </form>
 	<?php 
 	include "php/pie.php";

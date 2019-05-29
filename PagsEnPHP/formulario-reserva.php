@@ -63,25 +63,25 @@
     </div>
     <form  class="formRes" name="formularioReserva" method="post" onsubmit="return validacionGeneral()" action="validacionReserva.php">
         <fieldset class="fieldsetRes">
-            <legend>Datos Personales</legend>
+            <legend class="underline">Datos Personales</legend>
             <section class="sectionRes">
                 <label class="labelRes">
-                    DNI*: <input type="text" name="DNI" id="DNI" placeholder="12345678A" maxlength="9" oninput="inputDNI()" required><span class="colorSpan" id="TextoDNI"></span>
+                    DNI*: <input class="FR_Ajuste_DNI" type="text" name="DNI" id="DNI" placeholder="12345678A" maxlength="9" oninput="inputDNI()" required><span class="colorSpan" id="TextoDNI"></span>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Nombre*: <input type="text" name="Nombre" id="Nombre" maxlenght="50" class="margenGeneral" required>
+                    Nombre*: <input class="FR_Ajuste_NOM" type="text" name="Nombre" id="Nombre" maxlenght="50" class="margenGeneral" required>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Primer Apellido*: <input type="text" name="PrimerApellido" maxlenght="50" id="PrimerApellido" class="margenGeneral" required>
+                    Primer Apellido*: <input class="FR_Ajuste_PA" type="text" name="PrimerApellido" maxlenght="50" id="PrimerApellido" class="margenGeneral" required>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Segundo Apellido*: <input type="text" name="SegundoApellido" maxlenght="50" id="SegundoApellido" class="margenGeneral" required>
+                    Segundo Apellido*: <input class="FR_Ajuste_SA" type="text" name="SegundoApellido" maxlenght="50" id="SegundoApellido" class="margenGeneral" required>
                 </label>
             </section>
             <section class="sectionRes">
@@ -98,10 +98,10 @@
             </section>
         </fieldset>
         <fieldset class="fieldsetRes">
-            <legend>Otros Datos de Importancia</legend>
+            <legend class="underline">Otros Datos de Importancia</legend>
             <section class="sectionRes">
                 <label class="labelRes" for="paises"> País*:
-                    <select name="paises" id="paises">
+                    <select class="FR_Ajuste_Pais" name="paises" id="paises">
                         <?php
                         $selected = "";
                         foreach ($paises as $p => $paises) {
@@ -112,25 +112,25 @@
                     </select>
                 </label>
                 <label class="labelRes">
-                    Población: <input type="text" name="Poblacion" id="Poblacion" maxlength="50" class="margenSexo" placeholder="Sevilla">
+                    Población: <input class="FR_Ajuste_Pob" type="text" name="Poblacion" id="Poblacion" maxlength="50" class="margenSexo" placeholder="Sevilla">
                 </label>
                 <label class="labelRes">
-                    Código Postal*: <input type="text" name="CodigoPostal" id="CodigoPostal" maxlength="6" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" required>
+                    Código Postal*: <input class="FR_Ajuste_Pos" type="text" name="CodigoPostal" id="CodigoPostal" maxlength="6" placeholder="12345" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" required>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Domicilio: <input type="text" name="Domicilio" id="Domicilio" maxlength="50" class="margenSexo">
+                    Domicilio: <input class="FR_Ajuste_Dom" type="text" name="Domicilio" id="Domicilio" maxlength="50" class="margenSexo">
                 </label>
                 <label class="labelRes">
-                    Correo electrónico*: <input type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
+                    Correo electrónico*: <input class="FR_Ajuste_Correo" type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
                 </label>
                 <label class="labelRes">
-                    Correo electrónico del tutor legal: <input type="email" name="CorreoPadre"  maxlength="50" id="CorreoPadre" placeholder="aaaa@buscador.com">
+                    Correo electrónico del tutor legal: <input class="FR_Ajuste_CorreoTA" type="email" name="CorreoPadre"  maxlength="50" id="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
                 
                   <label for="pass" class="labelRes">Password*:
-                <input type="password" name="pass" id="pass" placeholder="Mínimo 8 caracteres" maxlength="50" oninput="inputContraseña()" required/> <span id="TextosPass"></span>
+                <input type="password" name="pass" id="pass" placeholder="Ej: ContrAseña1234" maxlength="50" oninput="inputContraseña()" required/> <span id="TextosPass"></span>
                 </label>
                 
                 <label class="labelRes" for="confirmpass">Confirmar Password*: 

@@ -130,22 +130,22 @@
                 </label>
                 
                   <label for="pass" class="labelRes">Password*:
-                <input type="password" name="pass" id="pass" placeholder="Ej: ContrAseña1234" maxlength="50" oninput="inputContraseña()" required/> <span id="TextosPass"></span>
+                <input class="FR_Ajuste_Password" type="password" name="pass" id="pass" placeholder="Ej: ContrAseña1234" maxlength="50" oninput="inputContraseña()" required/> <span id="TextosPass"></span>
                 </label>
                 
                 <label class="labelRes" for="confirmpass">Confirmar Password*: 
-				<input type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required/> <span class="colorSpan" id="textoConfirm"></span>
+				<input class="FR_Ajuste_ConPassword" type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required/> <span class="colorSpan" id="textoConfirm"></span>
                 </label>
                 
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Fecha de llegada: <input type="date" name="FechaLlegada" id="FechaLlegada" class="margenGeneral" required>
+                    Fecha de llegada*: <input class="FR_Ajuste_entrada" type="date" name="FechaLlegada" id="FechaLlegada" class="margenGeneral" required>
                 </label>
             </section>
             <section class="sectionRes">
                 <label class="labelRes">
-                    Fecha de salida*: <input type="date" name="FechaSalida" id="FechaSalida" class="margenGeneral" oninput="inputFechas()" required> <span class="colorSpan" id="textoFecha"></span>
+                    Fecha de salida*: <input class="FR_Ajuste_salida" type="date" name="FechaSalida" id="FechaSalida" class="margenGeneral" oninput="inputFechas()" required> <span class="colorSpan" id="textoFecha"></span>
                 </label>
             </section>
             <section class="sectionRes">

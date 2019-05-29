@@ -106,11 +106,37 @@ section.adminS2{
 
 span.adminP2{
     text-align: left;
+    font-weight: bold;
+    font-size: 107%;
+
 }
+
+span.adminR2{
+	text-align:left;
+	
+}
+
+span.adminP3_1{
+    text-align: right;
+    margin-left: 46%;
+    font-weight: bold;
+    font-size: 107%;
+    
+}
+
 
 span.adminP3{
     text-align: right;
     margin-left: 50%;
+    font-weight: bold;
+    font-size: 107%;
+    
+}
+
+span.adminR3{
+	text-align: right;
+    margin-left: 63%;
+	
 }
 
 p.adminP4{
@@ -214,4 +240,16 @@ input.FR_Ajuste_salida{
 	text-decoration: underline;
 }
 
+.cuerpoPerfil {
 
+    margin-top: 7%;
+    margin-left: 2.75%;
+    margin-right: 2.75%;
+    
+    border-radius: .5em;
+    margin-bottom: 1%;
+    border-width: .2em;
+    background-color: #DEF0F3;
+    border-style: groove;
+    border-color: threedface;
+}

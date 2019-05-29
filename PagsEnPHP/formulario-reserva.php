@@ -50,6 +50,10 @@
     <meta title="Residencia Estudiantil Digital">
     <link rel="stylesheet" href="css/cssInicio.css"/>
     <script src="javascript/validacionFormulario.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"
+              integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="
+              crossorigin="anonymous"></script>
+    <script src="javascript/comprobarcheckbox.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>
@@ -125,7 +129,7 @@
                 <label class="labelRes">
                     Correo electrónico*: <input class="FR_Ajuste_Correo" type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
                 </label>
-                <label class="labelRes">
+                <label class="labelRes jquery">
                     Correo electrónico del tutor legal: <input class="FR_Ajuste_CorreoTA" type="email" name="CorreoPadre"  maxlength="50" id="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
                 

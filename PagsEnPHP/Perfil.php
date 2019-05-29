@@ -6,11 +6,21 @@ require_once("gestionAdministracion_Usuario.php");
 if(isset($_SESSION['login'])){
    $correo = $_SESSION['login'];
    $conn = crearconexionBD();
-
+   $comedor = extraerPagoComedor($conn, $correo);
+   if (isset($comedor)){
+   $comedorValor = $comedor[0]["PAGOCOMEDOR"];
+   
+   if ($comedorValor == 0) {
+       $comedorValor = 'No';
+   }else{
+   	$comedorValor = 'Si';
+   }}
    $fechas = extraerFechasLlegadaSalida($conn, $correo);
    cerrarConexionBD($conn);
+   
+} else{
+	Header("Location: Inicio_sesion.php");
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +42,7 @@ if(isset($_SESSION['login'])){
     <div class="admin1">
         <div class="admin2">
             <span class="adminP">
-            <img src="imagenes\caritaTriste.png" alt="ImagenDelUsuario" class="adminI">
+            <img src="imagenes\avatar.png" alt="ImagenDelUsuario" class="adminI">
             <!--Extraigo el usuario que se ha aportado al incio de sesion -->
             Bienvenido <?php if($correo != "") echo $correo;?>, inicio de sesión correcto.<br>
             Esperamos que tenga una buena estancia en nuestra residencia.
@@ -63,7 +73,7 @@ if(isset($_SESSION['login'])){
             <section class="adminS2">
             	
                 <span class="adminP2">Fecha último pago</span>
-                <span class="adminP3">Habitación Actual</span>
+                <span class="adminP3_1">Habitación Actual</span>
             </section>
             <section class="adminS2">
                 
@@ -74,8 +84,8 @@ if(isset($_SESSION['login'])){
                 
             </section>
             <section class="adminS2">
-                <span class="adminP2">Fecha de entrada</span>
-                <span class="adminP3">Pago realizado</span>
+                <span class="adminP2">Fecha de llegada</span>
+                <span class="adminP3">   Pago realizado</span>
             </section>
             <section class="adminS2">
                 <!--Extraigo la fecha de entrada de la base de datos-->
@@ -84,12 +94,16 @@ if(isset($_SESSION['login'])){
                 <span class="adminR3"> Sí</span>
             </section>
             <section class="adminS2">
-                <span class="adminP2">Fecha de salida</span>
+                <span class="adminP2">Fecha de partida</span>
+                <span class="adminP3">Comedor Pagado</span>
             </section>
             <section class="adminS2">
                 <!--Extraigo de la base de datos la fecha de salida que se especifica en la reserva-->
                 <span class="adminR2"> <?php if(isset($fechas[0]["FECHA_FIN"])) echo $fechas[0]["FECHA_FIN"];
                                         else echo "<span class='error'> No hay fecha </span>" ?></span>
+                <span class="adminR3"><?php if(isset($comedorValor)) echo $comedorValor;
+                else echo "<span class='error'> dato no encontrado </span>" ?></span>
+                
             </section>
             </div>
         </div>

@@ -134,7 +134,7 @@
                 </label>
                 
                 <label class="labelRes" for="confirmpass">Confirmar Password*: 
-				<input class="FR_Ajuste_ConPassword" type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required/> <span class="colorSpan" id="textoConfirm"></span>
+				<input class="FR_Ajuste_ConPassword" type="password" name="confirmpass" id="confirmpass" placeholder="Confirmación de contraseña" maxlength="50" oninput="inputCoincidenContraseñas()" required><span class="colorSpan" id="textoConfirm"></span>
                 </label>
                 
             </section>

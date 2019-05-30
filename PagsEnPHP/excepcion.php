@@ -4,8 +4,8 @@ session_start();
 $excepcion = "No hay error";
 if (isset($_SESSION['excepcion'])) {
 	$excepcion = $_SESSION['excepcion'];
+	}
 	unset($_SESSION['excepcion']);
-}
 
 if (isset($_SESSION["destino"])) {
 	$destino = $_SESSION["destino"];
@@ -44,7 +44,10 @@ if (isset($_SESSION["destino"])) {
 
 	</div>
 	<div class='excepcion'>
-		<?php echo "Información relativa al problema: <span class='Error' > $excepcion <span/>" ?>
+		<?php if ($exception= 'SQLSTATE[HY000]: General error: 1 OCIStmtExecute: ORA-00001: unique constraint (IISSI.SYS_C007026) violated ORA-06512: at "IISSI.INSERTAR_RESERVA", line 23 (ext\pdo_oci\oci_statement.c:148)'){
+			$excepcion = 'Usuario ya registrado';
+		}
+		echo "Información relativa al problema: <span class='Error' > $excepcion <span/>" ?>
 	</div>
 	<?php
 	include "php/pie.php";

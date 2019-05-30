@@ -156,7 +156,7 @@
                 </label>
                 
                   <label for="pass" class="labelRes">Password*:
-                <input class="FR_Ajuste_Password" type="password" name="pass" id="pass" placeholder="Ej: ContrAseña1234" maxlength="50" oninput="inputContraseña()" required/> <span id="TextosPass"></span>
+                <input class="FR_Ajuste_Password" type="password" name="pass" id="pass" placeholder="Ej: ContrAseña1234" maxlength="50" oninput="inputContraseña()" required/> <span class="colorSpan" id="TextosPass"></span>
                 </label>
                 
                 <label class="labelRes" for="confirmpass">Confirmar Password*: 

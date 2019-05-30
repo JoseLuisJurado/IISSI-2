@@ -50,6 +50,10 @@
     <meta title="Residencia Estudiantil Digital">
     <link rel="stylesheet" href="css/cssInicio.css"/>
     <script src="javascript/validacionFormulario.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"
+              integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="
+              crossorigin="anonymous"></script>
+    <script src="javascript/comprobarcheckbox.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>

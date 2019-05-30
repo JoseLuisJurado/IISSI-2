@@ -21,6 +21,8 @@ if(isset($_SESSION['login'])){
 } else{
 	Header("Location: Inicio_sesion.php");
 }
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,18 +40,22 @@ if(isset($_SESSION['login'])){
 
     <?php
     include "php/menu.php";
+
     ?>
-    <div class="admin1">
-        <div class="admin2">
-            <span class="adminP">
-            <img src="imagenes\avatar.png" alt="ImagenDelUsuario" class="adminI">
-            <!--Extraigo el usuario que se ha aportado al incio de sesion -->
+    <script text="javascript">
+    setTimeout("document.getElementById('mensaje').style.display='none';", 8000);
+    
+</script>
+    <div id="mensaje" style="display:block">            <!--Extraigo el usuario que se ha aportado al incio de sesion -->
             Bienvenido <?php if($correo != "") echo $correo;?>, inicio de sesión correcto.<br>
             Esperamos que tenga una buena estancia en nuestra residencia.
-            </p>
+            </p></div>
+    
+</body> 
+        
+            <span class="adminP">
 
-        </div>
-        <div class="alineacion">
+        
             <main>
                 <form class="formRes" method="GET">
                     <legend>Reserva de salas</legend>
@@ -68,7 +74,7 @@ if(isset($_SESSION['login'])){
                     </fieldset>
                     <div><input type="submit" value="Enviar"> </div>
                 </form>
-            </main><br>
+            </main>
             <div class="cuerpoPerfil">
             <section class="adminS2">
             	
@@ -106,8 +112,8 @@ if(isset($_SESSION['login'])){
                 
             </section>
             </div>
-        </div>
-    </div>
+        
+    
     <?php
     include "php/pie.php";
     ?>

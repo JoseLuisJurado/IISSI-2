@@ -71,9 +71,12 @@ p.adminP{
 img.adminI{
 	height: 5%;
 	width: 5%;
-	margin-right: 5%; 
-	margin-bottom: 0%; 
+	margin-top:1%; 
     float: left;
+}
+
+legend.adminSala{
+	margin-left: 6%;
 }
 
 label.adminL{

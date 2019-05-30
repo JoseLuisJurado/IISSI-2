@@ -42,6 +42,8 @@ if(isset($_SESSION['login'])){
     include "php/menu.php";
 
     ?>
+    
+    
     <script text="javascript">
     setTimeout("document.getElementById('mensaje').style.display='none';", 8000);
     
@@ -58,7 +60,8 @@ if(isset($_SESSION['login'])){
         
             <main>
                 <form class="formRes" method="GET">
-                    <legend>Reserva de salas</legend>
+                    <legend class="adminSala">Reserva de salas</legend>
+                    <img src="imagenes\avatar.png" alt="ImagenDelUsuario" class="adminI">
                     <fieldset class= "fieldsetRes">
                         <label class="adminL">Reserve un día:</label>
                         <section class="adminS">

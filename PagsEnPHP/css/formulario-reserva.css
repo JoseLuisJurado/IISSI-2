@@ -71,12 +71,9 @@ p.adminP{
 img.adminI{
 	height: 5%;
 	width: 5%;
-	margin-top:1%; 
+	margin-right: 5%; 
+	margin-bottom: 0%; 
     float: left;
-}
-
-legend.adminSala{
-	margin-left: 6%;
 }
 
 label.adminL{
@@ -176,7 +173,7 @@ input.FR_Ajuste_Pos{
 
 select.FR_Ajuste_Pais{
 	margin-left: 7.3em;
-	width: 40.5%;
+	width: 30.5%;
 	margin-top:2%;
 }
 
@@ -228,7 +225,6 @@ div.divForm{
 div.divFormO{
 	float:right;
 	display:block;
-	padding-right: 10$;
 	grid-area: right;
 }
  label.labelResCom{

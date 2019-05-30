@@ -1,49 +1,63 @@
 <?php
-	function validarDatosReserva($conexion, $nuevoUsuario){
+	function validarDatosReserva($conexion, $reservaForm){
 	$errores=array();
-    if(isset($_POST['Enviar'])){
-		if($nuevoUsuario['DNI']==""){
-			$errores[] ='* DNI es un campo obligatorio';
-		} else if(!preg_match("/^[0-9]{8}[A-Z]$/", $nuevoUsuario["DNI"])){
-		$errores[] = 'El DNI debe contener 8 números y una letra mayúscula';
-	}
+    	// Validación del DNI
+		if($reservaForm["DNI"]=="") 
+		$errores[] = "<p>El DNI no puede estar vacío</p>";
+		else if(!preg_match("/^[0-9]{8}[A-Z]$/", $reservaForm["DNI"])){
+		$errores[] = "<p>El NIF debe contener 8 números y una letra mayúscula: " . $reservaForm["DNI"]. "</p>";
 		}
-		if($nuevoUsuario['Nombre']==""){
-			$errores[] ='* El nombre es un campo obligatorio';
+		// Validación del nombre
+		if($reservaForm['Nombre']==""){
+		$errores[] ='* El nombre es un campo obligatorio';
 		} else {
-			if($nuevoUsuario['Nombre']>50){
-				$errores[] = '* Nombre demasiado largo';
+			if($reservaForm['Nombre']>50){
+			$errores[] = '* Nombre demasiado largo';
 			}
 		}
-		if($nuevoUsuario['PrimerApellido']==""){
+		// Validación del primer apellido
+		if($reservaForm['PrimerApellido']==""){
 			$errores[] ='* Primer apellido es un campo obligatorio';
 		} else {
-			if($nuevoUsuario['PrimerApellido']>50){
+			if($reservaForm['PrimerApellido']>50){
 				$errores[] ='* Primer apellido demasiado largo, acórtelo';
 			}
 		}
-		if($nuevoUsuario['SegundoApellido']==""){
+		// Validación del segundo apellido
+		if($reservaForm['SegundoApellido']==""){
 			$errores[] ='* Segundo apellido es un campo obligatorio';
 		} else {
-			if($nuevoUsuario['SegundoApellido']>50){
+			if($reservaForm['SegundoApellido']>50){
 				$errores[] ='* Segundo apellido demasiado largo, acórtelo';
 			}
 		}
-		if($nuevoUsuario['Sexo']==""){
-			$errores[] ='* Por favor, elija con lo que mejor se identifique, pero elija';
+		// Validación del sexo
+		if($reservaForm['Sexo']==""){
+			$errores[] ='*Sexo: Por favor, elija con lo que mejor se identifique, pero elija';
 		}
-		if($nuevoUsuario['CodigoPostal']==""){
+		// Validación del código postal
+		if($reservaForm['CodigoPostal']==""){
 			$errores[] ='* El código postal es un campo obligatorio';
 		}
-		if($nuevoUsuario['CorreoElectronico']==""){
+		else if(!preg_match("/[0-9]{5}/", $reservaForm["CodigoPostal"])){
+		$errores[] = "<p>El Código postal debe contener 5 números" . $reservaForm["CodigoPostal"]. "</p>";
+		}
+		// Validación del correo
+		if($reservaForm['CorreoElectronico']==""){
 			$errores[] ='* El correo electrónico propio es un campo obligatorio';
 		}
-		if($nuevoUsuario['pass']==""){
+		// Validación de la contraseña
+		if($reservaForm['pass']==""){
 			$errores[] = 'La contraseña es un campo obligatorio';
+		} else{
+			if($reservaForm['pass']!=$reservaForm['confirmpass']){
+				$errores[] = 'Las contraseñas no coinciden';
+			}
 		}
-		if($nuevoUsuario["FechaLlegada"]>$nuevoUsuario["FechaSalida"]){
+		// Validación de las fechas
+		if($reservaForm["FechaLlegada"]>$reservaForm["FechaSalida"]){
 			$errores[] ='* La fecha de llegada no puede ser posterior a la fecha de salida';
 		}
+		return $errores;
 	}
-
 ?>

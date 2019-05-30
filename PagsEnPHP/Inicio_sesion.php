@@ -67,7 +67,7 @@
                         	</label>
                     </section>
                 </fieldset>
-                <input class = "botonInSes" type="submit" title="Enviar" name="Enviar">
+                <input class = "botonInSes" type="submit" title="Enviar" name="Enviar" value="Iniciar Sesión">
             </form>
         </main>
     </div>

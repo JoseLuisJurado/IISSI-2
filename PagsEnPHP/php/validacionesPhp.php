@@ -1,55 +1,60 @@
 <?php
+	function validarDatosReserva($conexion, $nuevoUsuario){
+	$errores=array();
     if(isset($_POST['Enviar'])){
-		if(empty($dni)){
-			echo "<span class='error'>* DNI es un campo obligatorio</span>";
+		if($nuevoUsuario['DNI']==""){
+			$errores[] ='* DNI es un campo obligatorio';
+		} else if(!preg_match("/^[0-9]{8}[A-Z]$/", $nuevoUsuario["nif"])){
+		$errores[] = 'El NIF debe contener 8 números y una letra mayúscula';
+	}
+		}
+		if($nuevoUsuario['Nombre']==""){
+			$errores[] ='* El nombre es un campo obligatorio';
 		} else {
-			if(strlen($dni)!=9){
-				echo "<span class='error'>* DNI incorrecto</span>";
+			if($nuevoUsuario['Nombre']>50){
+				$errores[] = '* Nombre demasiado largo';
 			}
 		}
-		if(empty($nombre)){
-			echo "<span class='error'>* El nombre es un campo obligatorio</span>";
+		if($nuevoUsuario['PrimerApellido']==""){
+			$errores[] ='* Primer apellido es un campo obligatorio';
 		} else {
-			if(strlen($nombre)>50){
-				echo "<span class='error'>* Nombre demasiado largo</span>";
+			if($nuevoUsuario['PrimerApellido']>50){
+				$errores[] ='* Primer apellido demasiado largo, acórtelo';
 			}
 		}
-		if(empty($primerApe)){
-			echo "<span class='error'>* Primer apellido es un campo obligatorio</span>";
+		if($nuevoUsuario['SegundoApellido']==""){
+			$errores[] ='* Segundo apellido es un campo obligatorio';
 		} else {
-			if(strlen($segundoApe)>50){
-				echo "<span class='error'>* Primer apellido demasiado largo, acórtelo/span>";
+			if($nuevoUsuario['SegundoApellido']>50){
+				$errores[] ='* Segundo apellido demasiado largo, acórtelo';
 			}
 		}
-		if(empty($segundoApe)){
-			echo "<span class='error'>* Segundo apellido es un campo obligatorio</span>";
-		} else {
-			if(strlen($segundoApe)>50){
-				echo "<span class='error'>* Segundo apellido demasiado largo, acórtelo/span>";
-			}
+		if($nuevoUsuario['Sexo']==""){
+			$errores[] ='* Por favor, elija con lo que mejor se identifique, pero elija';
 		}
-		if(empty($sex)){
-			echo "<span class='error'>* Por favor, elija con lo que mejor se identifique, pero elija</span>";
-		}
-		if(empty($codpost)){
-			echo "<span class='error'>* El código postal es un campo obligatorio</span>";
+		if($nuevoUsuario['CodigoPostal']==""){
+			$errores[] ='* El código postal es un campo obligatorio';
 		} else{
-			if(!filter_has_var($codpost, FILTER_VALIDATE_INT)){
-				echo "<span class='error'>* El código postal debe ser un número</span>";
+			if(!filter_has_var($nuevoUsuario['CodigoPostal'], FILTER_VALIDATE_INT)){
+				$errores[] ='* El código postal debe ser un número';
 			}
 		}
-		if(empty($corr)){
-			echo "<span class='error'>* El correo electrónico propio es un campo obligatorio</span>";
+		if($nuevoUsuario['CorreoElectronico']==""){
+			$errores[] ='* El correo electrónico propio es un campo obligatorio';
 		} else{
-			if(!filter_has_var($corr, FILTER_VALIDATE_EMAIL)){
-				echo "<span class='error'>* El correo electrónico es incorrecto</span>";
+			if(!filter_has_var($nuevoUsuario['CorreoElectronico'], FILTER_VALIDATE_EMAIL)){
+				$errores[] ='* El correo electrónico es incorrecto';
 			}
 		}
-		if(empty($contra)){
-			echo "<span class='error'>* La contraseña es un campo obligatorio</span>";
+		if($nuevoUsuario['pass']==""){
+			$errores[] = 'La contraseña es un campo obligatorio';
 		}
-		if($lleg>$sal){
-			echo "<span class='error'>* La fecha de llegada no puede ser posterior a la fecha de salida</span>";
+		else if($nuevoUsuario["pass"] != $nuevoUsuario["confirmpass"]){
+		$errores[] = 'Las contraseñas no coinciden';
+	}
+		if($nuevoUsuario["FechaLlegada"]>$nuevoUsuario["FechaSalida"]){
+			$errores[] ='* La fecha de llegada no puede ser posterior a la fecha de salida';
 		}
 	}
+
 ?>

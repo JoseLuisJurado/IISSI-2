@@ -4,7 +4,7 @@
     border-color: grey;
     margin: 2%;
     background-color: lightblue;
-    border-width: .2em;
+    border-width: 1%; 
 }
 
 p.textoContacto{
@@ -12,7 +12,7 @@ p.textoContacto{
    margin-right: 50em;
    padding-left: 0.25em;
    margin-bottom: 0.625em;
-   background-color: white;
+   background-color: #FFFFFF;
 }
 
 h2.hContacto{

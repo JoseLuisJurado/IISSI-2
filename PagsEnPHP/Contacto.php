@@ -82,7 +82,7 @@
                 </section>
                 <section>
                     <label>
-                        Segundo Apellido: <input class="margenContactoSA" type="text" name="SegundoApellido" id="SegundoApellido" maxlength="50" required>
+                        Segundo Apellido: <input class="margenContactoSA" type="text" name="SegundoApellido" id="SegundoApellido" maxlength="50">
                     </label>
                 </section>
 

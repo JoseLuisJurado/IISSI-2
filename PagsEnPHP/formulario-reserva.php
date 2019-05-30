@@ -135,7 +135,7 @@
                 <label class="labelRes">
                     Correo electrónico*: <input class="FR_Ajuste_Correo" type="email" name="CorreoElectronico" maxlength="50" id="CorreoElectronico" class="margenSexo" placeholder="aaaa@buscador.com" required>
                 </label>
-                <label class="labelRes">
+                <label class="labelRes jquery">
                     Correo electrónico del tutor legal: <input class="FR_Ajuste_CorreoTA" type="email" name="CorreoPadre"  maxlength="50" id="CorreoPadre" placeholder="aaaa@buscador.com">
                 </label>
                 

@@ -10,7 +10,6 @@ fieldset.fieldsetRes{
     border-radius: 1em;
     border-width: .2em;
     background-color: #DEF0F3;
-    padding-bottom: 2%
 }
 
 section.sectionRes{
@@ -233,7 +232,7 @@ div.divFormO{
     clear: left;
     text-align: left;
     padding: .2em;
-    margin-bottom: 2%;
+    margin-bottom: 5.5%;
  }
 
 .gridFR{

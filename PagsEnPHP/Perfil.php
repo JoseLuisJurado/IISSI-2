@@ -30,7 +30,6 @@ if(isset($_SESSION['login'])){
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
-    <meta name="autor" content="José Luis Jurado Ortiz">
     <link rel="stylesheet" href="css/cssInicio.css">
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg">
     <Title>Residencia de estudiantes bahía</Title>

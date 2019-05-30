@@ -87,7 +87,7 @@
         ?>
 
     </div>
-    <form  class="formRes" name="formularioReserva" method="post" onsubmit="validacionGeneral()" action="validacionReserva.php">
+    <form  class="formRes" name="formularioReserva" method="post" onsubmit="return validacionGeneral()" action="validacionReserva.php">
         <fieldset class="fieldsetRes">
             <legend class="underline">Datos Personales</legend>
             <section class="sectionRes">

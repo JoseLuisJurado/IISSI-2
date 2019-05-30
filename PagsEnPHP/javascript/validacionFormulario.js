@@ -1,9 +1,9 @@
 function validacionGeneral() {
 
     res = true;
-    res = res & validacionFormulario();
-    res = res & validacionFechas();
-    res = res & validacionConfirmacionContraseña();
+    res = res && validacionFormulario();
+    res = res && validacionFechas();
+    res = res && validacionConfirmacionContraseña();
     return res;
 }
 

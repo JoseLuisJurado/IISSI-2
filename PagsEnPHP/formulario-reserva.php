@@ -122,7 +122,7 @@
                 </label>
             </section>
             <section class="sectionRes">
-                <label class="labelRes">
+                <label class="labelRes jquery">
                     ¿Eres mayor de edad?: <input type="checkbox" name="MayoriaEdad" id="MayoriaEdad">
                 </label>
             </section>

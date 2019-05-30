@@ -137,8 +137,9 @@ span.TextoDNI{
 }
 
 span.colorSpan{
+	position: absolute;
 	color: #FF0000;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 
 input.FR_Ajuste_DNI{
@@ -219,10 +220,13 @@ div.divForm{
 	float:left;
 	display:block;
 	padding-bottom: 0%;
+	grid-area: left;
 }
 div.divFormO{
+	float:right;
 	display:block;
-	padding-bottom: 0%
+	padding-right: 10$;
+	grid-area: right;
 }
  label.labelResCom{
  	display:inline-block;
@@ -233,9 +237,8 @@ div.divFormO{
     margin-bottom: 2%;
  }
 
-
 .gridFR{
 	display:grid;
-	grid-template-columns: 45% 55%;
-    grid-template-rows: 50% 50%;
+	grid-template:
+    'left left left right right right right right';
 }

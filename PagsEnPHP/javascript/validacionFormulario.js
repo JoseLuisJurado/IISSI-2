@@ -146,9 +146,9 @@ function inputDNI() {
     if (DNI == "") {
         document.getElementById("TextoDNI").innerHTML = "";
     } else if (!hasUpperCases.test(DNI)) {
-        document.getElementById("TextoDNI").innerHTML = "El dni no tiene letra mayúscula";
+        document.getElementById("TextoDNI").innerHTML = "Mayúscula Requerida";
     } else if (LetrasDNI.charAt(numero % 23) != letra) {
-        document.getElementById("TextoDNI").innerHTML = "El valor no coincide con la letra del DNI";
+        document.getElementById("TextoDNI").innerHTML = "DNI inexistente";
     } else {
         document.getElementById("TextoDNI").innerHTML = "";
     }
@@ -159,7 +159,7 @@ function inputFechas() {
     var fechaSalida = new Date(document.forms["formularioReserva"]["FechaSalida"].value);
 
     if (fechaSalida <= fechaLLegada) {
-        document.getElementById("textoFecha").innerHTML = "La fecha de salida es anterior o igual a la fecha de llegada";
+        document.getElementById("textoFecha").innerHTML = "Fechas incoerentes";
     } else {
         document.getElementById("textoFecha").innerHTML = "";
     }
@@ -172,7 +172,7 @@ function inputCoincidenContraseñas() {
     if (confirmarContraseña == "") {
         document.getElementById("textoConfirm").innerHTML = "";
     } else if (contraseña != confirmarContraseña) {
-        document.getElementById("textoConfirm").innerHTML = "Las contraseñas escritas no coinciden";
+        document.getElementById("textoConfirm").innerHTML = "Contraseña incorrecta";
     } else {
         document.getElementById("textoConfirm").innerHTML = "";
     }

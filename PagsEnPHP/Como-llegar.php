@@ -8,7 +8,7 @@ session_start();
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="css/cssInicio.css" />
+    <link rel="stylesheet" href="css/cssInicio.css"/>
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>
@@ -17,7 +17,7 @@ session_start();
     <?php
     include "php/menu.php";
     ?>
-	<div class="cuerpo2">
+	<div class="cuerpo2CLL">
     <h1 class="ubi-textCLL">Residencia de estudiantes Bahía</h1>
 
     <div id="all">

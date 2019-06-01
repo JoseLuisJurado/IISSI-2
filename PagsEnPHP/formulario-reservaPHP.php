@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	
+	//formulario creado para probar las validaciones PHP, con únicamente estas
 	require_once("ConexionBD.php");
 	
 	// Si no existen datos del formulario en la sesión, se crea una entrada con valores por defecto

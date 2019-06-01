@@ -13,6 +13,7 @@ if (isset($_SESSION["reserva"])) {
     require_once("ConexionBD.php");
     require_once("gestion_AdministracionDirector.php");
 
+    //Se llama a la función borrar consulta
     $conn = crearconexionBD();
     $borrar = borrarConsulta($conn, $reserva["DNI"]);
     cerrarConexionBD($conn);

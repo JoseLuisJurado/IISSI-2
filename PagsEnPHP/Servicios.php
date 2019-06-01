@@ -49,7 +49,7 @@ session_start();
 
         <p>
 			El servicio de vigilancia, es el encargado de evitar que personas no autorizadas entren
-            en la residencia, así como de defender la misma de cualquier peligro externo, como ladrones o ETA.
+            en la residencia, así como de defender la misma de cualquier peligro externo, como ladrones o maleantes.
         </p>
 
         <h4 class="titulo2">

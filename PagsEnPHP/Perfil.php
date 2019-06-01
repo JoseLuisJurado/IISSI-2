@@ -24,6 +24,10 @@ if (isset($_SESSION['login'])) {
 
 
 ?>
+
+<?php
+        include "php/funciones.php";
+        ?>
 <!DOCTYPE html>
 <html>
 
@@ -56,17 +60,38 @@ if (isset($_SESSION['login'])) {
         <form class="formPer" method="GET">      
             <fieldset class="fieldsetRes">
             	<legend class="underline">Reserva de salas</legend>
-                <label class="adminL">Reserve un día:</label>
-                <section class="adminS">
-                    <label class="labelRes">
-                        Desde: <input type="datetime-local">
+                <label class="adminL">Reserve para hoy:</label>
+                    
+                    <label class="labelRes" for="paises"> Desde:
+                    <select class="P_Ajuste_Hora" name="paises" id="paises">
+                          
+                        <?php
+                        $selected = "";
+                        foreach ($horas as $p => $horas) {
+                            $selected = ($p == $default_hora) ? "selected" : "";
+                            echo "<option $selected value='$p'>$horas</option>";
+                        }
+                        ?>
                     </label>
                 </section>
-                <section class="sectionRes">
-                    <label class="labelRes">
-                        Hasta: <input type="datetime-local">
-                    </label>
+                
+                
+                <select class="sectionRes">
+                
+                <label class="labelRes" > Hasta :
+                <select class="sectionRes" >    
+                        <?php
+                        $selected = "";
+                        foreach ($horas2 as $p => $horas2) {
+                            $selected = ($p == $default_hora2) ? "selected" : "";
+                            echo "<option $selected value='$p'>$horas2</option>";
+                        }
+                        ?>
+                    </label>  
+                    
                 </section>
+               
+
             </fieldset>
             <div><input type="submit" value="Enviar"> </div>
         </form>
@@ -94,30 +119,30 @@ if (isset($_SESSION['login'])) {
         </section>
     	</div>
     	<div class="divPerfilRight">
-        <section class="sectionPerfil1">
+        <section class="sectionPerfil2">
             <!-- Extraigo la fecha de pago de la residencia de la base de datos-->
             <span class="adminR2"> <?php if (isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
                                     else echo "<span class='error'> No hay fecha </span>" ?></span>             
         </section>
-        <section class="sectionPerfil1">
+        <section class="sectionPerfil2">
             <span class="adminR3"> Sí</span>
         </section>
              
-        <section class="sectionPerfil1">
+        <section class="sectionPerfil2">
             <span class="adminR3"> WIP</span>
         </section>
         
-        <section class="sectionPerfil1">
+        <section class="sectionPerfil2">
             <!--Extraigo la fecha de entrada de la base de datos-->
             <span class="adminR2"> <?php if (isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
                                     else echo "<span class='error'> No hay fecha </span>" ?></span>
         </section>
-        <section class="sectionPerfil1">
+        <section class="sectionPerfil2">
             <!--Extraigo de la base de datos la fecha de salida que se especifica en la reserva-->
             <span class="adminR2"> <?php if (isset($fechas[0]["FECHA_FIN"])) echo $fechas[0]["FECHA_FIN"];
                                     else echo "<span class='error'> No hay fecha </span>" ?></span>
         </section>
-        <section class="sectionPerfil1">
+        <section class="sectionPerfil2">
             <span class="adminR3"><?php if (isset($comedorValor)) echo $comedorValor;
                                     else echo "<span class='error'> dato no encontrado </span>" ?></span>
         </section>

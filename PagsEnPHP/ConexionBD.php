@@ -22,8 +22,8 @@
         $conexion = null;
     }
 
-    //Esto hay que cambiarlo entero, no esta haciendo ninguna insercion en la base de datos.
-    //Hay que utilizar la conexion y luego insertar directamente los datos.
+    
+    
     //funcion de inserción de residente primigenea, actualmente en desuso debido a una mejor versión
     function altaUsuarioBD($f){
         $nif = $f["DNI"];

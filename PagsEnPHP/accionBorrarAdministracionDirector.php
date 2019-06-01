@@ -4,6 +4,7 @@ session_start();
 if (isset($_SESSION["reserva"])) {
     $reserva = $_SESSION["reserva"];
     unset($_SESSION["reserva"]);
+    //Nos aseguramos de que los valores de la página actual y el tamaño de página se mantengan
     $reservaAux["PAG_ACT"] = $reserva["PAG_ACT"];
     $reservaAux["PAG_SIZE"] = $reserva["PAG_SIZE"];
     $_SESSION["reserva"] = $reservaAux;

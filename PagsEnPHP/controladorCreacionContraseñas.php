@@ -1,5 +1,6 @@
 <?php
-	//Funcion en un principio para crear contraseñas desde administración, después se optó por que los residentes eligieran su contraseña
+    //Funcion en un principio para crear contraseñas desde administracionDirector,
+    // después se optó por que los residentes eligieran su contraseña
     try{
     session_start();
 

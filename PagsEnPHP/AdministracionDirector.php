@@ -4,20 +4,35 @@ session_start();
 //if (!isset($_SESSION['login'])=='margarita@gmail.com')
 //	Header("Location: Inicio_sesion.php");
 require_once("conexionBD.php");
-$conn = crearconexionBD();
 require_once("gestion_AdministracionDirector.php");
+
+$conn = crearconexionBD();
+
+//Recuperamos la reserva, la página actual y el tamaño de página
 if (isset($_SESSION["reserva"])) $reserva = $_SESSION["reserva"];
 $pag_act = isset($_GET["pag_act"]) ? (int)$_GET["pag_act"] : (isset($reserva["PAG_ACT"]) ? (int)$reserva["PAG_ACT"] : 1);
 $pag_size = isset($_GET["pag_size"]) ? (int)$_GET["pag_size"] : (isset($reserva["PAG_SIZE"]) ? (int)$reserva["PAG_SIZE"] : 10);
+
+//Asegurarnos simplemente de que no se puedan dar dichos casos
 if ($pag_act < 1) $pag_act = 1;
 if ($pag_size < 1) $pag_size = 10;
+
+//Ya no nos sirve reserva, asi que lo liberamos
 unset($_SESSION["reserva"]);
+
 $total_registros = total_consulta($conn, $consulta); //Cantidad de registros totales
-$consultaTotal = ceil($total_registros / $pag_size);
+$consultaTotal = ceil($total_registros / $pag_size); //Valor de la cantidad total de valores dentro de la consulta
+
+//Asegurarnos de que no se pueda producir ningún error de acceder a una página mayor que la actual
 if ($pag_act > $consultaTotal) $pag_act = $consultaTotal;
+
+//Guardamos los valores dentro del mismo array que se hace la consulta.
+//Entendemos que esto no se hace así pero ya está implementado y funciona
 $reserva["PAG_ACT"] = $pag_act;
 $reserva["PAG_SIZE"] = $pag_size;
 $_SESSION["reserva"] = $reserva;
+
+//Consultamos la fila de valores dentro de la base de datos
 $filas = consulta_paginada($conn, $consulta, $pag_act, $pag_size);
 cerrarConexionBD($conn);
 ?>
@@ -118,7 +133,8 @@ cerrarConexionBD($conn);
                         <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
                         <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />
                     </div><br>
-
+                    
+                    <!--Función de debugg de Administración director-->
                     <!-- <?php foreach ($_SESSION["reserva"] as $res) echo "<br>Lo que hay dentro de reserva: " . $res ?> -->
                     <!-- <?php if (isset($_SESSION["dentro"])) {
                                 echo $_SESSION["dentro"];

@@ -1,5 +1,6 @@
 <?php
 session_start();
+//nos aseguramos de que solo la directora pueda entrar
 //if (!isset($_SESSION['login'])=='margarita@gmail.com')
 //	Header("Location: Inicio_sesion.php");
 require_once("conexionBD.php");

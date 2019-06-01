@@ -57,6 +57,7 @@ cerrarConexionBD($conn);
                 <div><input type="submit" id="Cambiar" value="Cambiar!"></div>
             </form><br><br>
         </nav>
+
         <div class="cuadroAD">
             <div class="DescripcionBotones">
                 <span class="TextoEditar">
@@ -101,7 +102,7 @@ cerrarConexionBD($conn);
                             </button>
                         <?php } ?>
                         <button class="buttonAD" id="borrar" class="borrar" type="submit" name="borrar">
-                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="17px" />
+                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="17px" height="22px"/>
                         </button>
                     </div>
 

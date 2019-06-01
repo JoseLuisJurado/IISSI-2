@@ -47,6 +47,7 @@ if (isset($_SESSION["destino"])) {
 	<div class='excepcion'>
 		<?php if ($exception == 'SQLSTATE[HY000]: General error: 1 OCIStmtExecute: ORA-00001: unique constraint (IISSI.SYS_C007026) violated ORA-06512: at "IISSI.INSERTAR_RESERVA", line 23 (ext\pdo_oci\oci_statement.c:148)'){
 			$excepcion = 'Usuario ya registrado';
+			//Capturamos el error y si se trata de unique constrain proporcionamos el mensaje de usuario repetido
 		}
 		echo "Información relativa al problema: <span class='Error' > $excepcion <span/>" ?>
 	</div>

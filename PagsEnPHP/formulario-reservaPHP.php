@@ -67,7 +67,7 @@
         ?>
         
         <?php 
-		// Mostrar los erroes de validación (Si los hay)
+		// Mostrar los errores de validación (Si los hay)
 		if (isset($errores) && count($errores)>0) { 
 	    	echo "<div id=\"div_errores\" class=\"error\">";
 			echo "<h4> Errores en el formulario:</h4>";

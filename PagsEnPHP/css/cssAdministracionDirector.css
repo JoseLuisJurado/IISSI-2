@@ -28,7 +28,7 @@ div.cuadroAD{
     border-width: 0.125em;
     border-color: black;
     border-style: solid;
-    padding-bottom: 0em;
+    padding-bottom: 0em;	
 }
 
 
@@ -37,31 +37,31 @@ div.pagAD{
 }
 
 span.TextoBorrar{
-    margin-left: 0.1%;
+    margin-left: 0.3%;
 }
 
 span.TextoNombre{
-    margin-left: 2.5%;
+    margin-left: 0.6%;
 }
 
 span.TextoApellido1{
-    margin-left: 6.5%;    
+    margin-left: 7.4%;    
 }
 
 span.TextoApellido2{
-    margin-left: 2.5%;    
+    margin-left: 3.4%;    
 }
 
 span.TextoSexo{
-    margin-left: 5%;
+    margin-left: 2.3%;
 }
 
 span.TextoFecha1{
-    margin-left: 7%;
+    margin-left: 8.9%;
 }
 
 span.TextoFecha2{
-    margin-left: 4.5%;
+    margin-left: 4.2%;
 }
 
 div.DescripcionBotones{
@@ -79,9 +79,6 @@ input[type=number]{
     font-size: 14px;
 }
 
-input[type=submit]{
-    
-}
 
 a#pagina{
     color: black;

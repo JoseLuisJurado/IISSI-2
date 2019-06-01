@@ -232,8 +232,8 @@ FOREIGN KEY (OID_H) REFERENCES HABITACION ON DELETE CASCADE
 
 create table usuario_registrado(
 OID_UR integer primary key,
-correo varchar2(100) not null,
-contrasena varchar2(100) not null,
+correo varchar2(100) not null unique,
+contrasena varchar2(100) not null unique,
 DNI_R varchar2(9) ,
 DNID varchar2(50) ,
 Foreign key (DNI_R) References residente on delete cascade,

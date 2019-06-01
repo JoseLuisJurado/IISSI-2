@@ -27,7 +27,6 @@ cerrarConexionBD($conn);
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
     <link rel="stylesheet" href="css/cssInicio.css" />
-    
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg" />
     <Title>Residencia de estudiantes bahía</Title>
 </head>
@@ -49,7 +48,7 @@ cerrarConexionBD($conn);
                     }
                 }
                 ?>
-                
+
             </div>
 
             <form method="get" action="AdministracionDirector.php">
@@ -87,45 +86,41 @@ cerrarConexionBD($conn);
 
             <?php foreach ($filas as $pagina) { ?>
 
-                <article>
+                <form method="post" action="controlarAdministracionDirector.php" class="muestraFormulario">
 
-                    <form method="post" action="controlarAdministracionDirector.php" class="muestraFormulario">
+                    <div id="botones_modificacion" class="botones_modificacion">
 
-                        <div id="botones_modificacion" class="botones_modificacion">
-
-                            <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
-                                <button class = "buttonAD" id="modificar" class="modificar" type="submit" name="modificar">
-                                    <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="22px">
-                                </button>
-                            <?php } else { ?>
-                                <button class = "buttonAD"  id="editar" class="editar" type="submit" name="editar">
-                                    <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="22px">
-                                </button>
-                            <?php } ?>
-                            <button class = "buttonAD"  id="borrar" class="borrar" type="submit" name="borrar">
-                                <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="22px" />
+                        <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
+                            <button class="buttonAD" id="modificar" class="modificar" type="submit" name="modificar">
+                                <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="17px">
                             </button>
-                        </div>
+                        <?php } else { ?>
+                            <button class="buttonAD" id="editar" class="editar" type="submit" name="editar">
+                                <img src="https://www.fileformat.info/info/unicode/char/2702/black_scissors.png" width="17px">
+                            </button>
+                        <?php } ?>
+                        <button class="buttonAD" id="borrar" class="borrar" type="submit" name="borrar">
+                            <img src="http://www.fileformat.info/info/unicode/char/270f/pencil.png" width="17px" />
+                        </button>
+                    </div>
 
-                        <div id="input_display" class="input_display">
-                            <input id="DNI" name="DNI" type="hidden" height="40px" value="<?php echo $pagina["DNI_R"]; ?>" />
-                            <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" />
-                            <input id="APELLIDO1" name="APELLIDO1" value="<?php echo $pagina["APELLIDO1"]; ?>" />
-                            <input id="APELLIDO2" name="APELLIDO2" value="<?php echo $pagina["APELLIDO2"]; ?>" />
-                            <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"]; ?>" />
-                            <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
-                            <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />
-                        </div><br>
+                    <div id="input_display" class="input_display">
+                        <input id="DNI" name="DNI" type="hidden" height="40px" value="<?php echo $pagina["DNI_R"]; ?>" />
+                        <input id="NOMBRE" name="NOMBRE" type="text" value="<?php echo $pagina["NOMBRE"]; ?>" />
+                        <input id="APELLIDO1" name="APELLIDO1" value="<?php echo $pagina["APELLIDO1"]; ?>" />
+                        <input id="APELLIDO2" name="APELLIDO2" value="<?php echo $pagina["APELLIDO2"]; ?>" />
+                        <input id="SEXO" name="SEXO" type="text" value="<?php echo $pagina["GENERO"]; ?>" />
+                        <input id="FECHALLEGADA" name="FECHALLEGADA" type="text" value="<?php echo $pagina["FECHA_INICIO"]; ?>" />
+                        <input id="FECHASALIDA" name="FECHASALIDA" type="text" value="<?php echo $pagina["FECHA_FIN"]; ?>" />
+                    </div><br>
 
-                        <!-- <?php foreach ($_SESSION["reserva"] as $res) echo "<br>Lo que hay dentro de reserva: " . $res ?> -->
-                        <!-- <?php if (isset($_SESSION["dentro"])) {
-                                    echo $_SESSION["dentro"];
-                                    unset($_SESSION["dentro"]);
-                                } else ?> -->
+                    <!-- <?php foreach ($_SESSION["reserva"] as $res) echo "<br>Lo que hay dentro de reserva: " . $res ?> -->
+                    <!-- <?php if (isset($_SESSION["dentro"])) {
+                                echo $_SESSION["dentro"];
+                                unset($_SESSION["dentro"]);
+                            } else ?> -->
 
-                    </form>
-
-                </article>
+                </form>
 
             <?php   } ?>
         </div>

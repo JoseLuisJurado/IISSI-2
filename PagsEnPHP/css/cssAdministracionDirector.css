@@ -1,5 +1,21 @@
 button.buttonAD{
     float: left;
+    background-color: #16A5BE ;
+    border: none;
+    border-radius: 2%;
+}
+
+button#editar, button#modificar{
+    margin-right: .5em;
+    width: 3%;
+    height: 25px;
+    font-style: italic;
+    font-size: 100%;
+}
+
+button#borrar{
+    margin-right: 1em;
+    width: 3%;
 }
 
 div.cuadroAD{
@@ -21,7 +37,7 @@ div.pagAD{
 }
 
 span.TextoBorrar{
-    margin-left: 0.5%;
+    margin-left: 0.1%;
 }
 
 span.TextoNombre{

@@ -159,7 +159,7 @@ function inputFechas() {
     var fechaSalida = new Date(document.forms["formularioReserva"]["FechaSalida"].value);
 
     if (fechaSalida <= fechaLLegada) {
-        document.getElementById("textoFecha").innerHTML = "Fechas incoerentes";
+        document.getElementById("textoFecha").innerHTML = "Fechas incoherentes";
     } else {
         document.getElementById("textoFecha").innerHTML = "";
     }

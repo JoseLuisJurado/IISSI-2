@@ -4,7 +4,7 @@ include_once 'gestionarContacto.php';
 <?php
 	session_start();
 
-	// Importar librerías necesarias para gestionar direcciones y géneros literarios
+	
 	require_once("ConexionBD.php");
 
 	// Comprobar que hemos llegado a esta página porque se ha rellenado el formulario

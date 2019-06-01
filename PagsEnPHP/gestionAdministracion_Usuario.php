@@ -1,6 +1,6 @@
 <?php
 require_once("ConexionBD.php");
-
+//función para extraer las fechas de los residentes
 function extraerFechasLlegadaSalida($conn, $correo)
 {
     try {
@@ -24,7 +24,7 @@ function extraerFechasLlegadaSalida($conn, $correo)
         header("Location: excepcion.php");
     }
 }
-
+//función para saber si el residente paga el comedor
 function extraerPagoComedor($conn, $correo)
 {
     try {

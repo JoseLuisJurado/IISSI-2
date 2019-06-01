@@ -1,4 +1,4 @@
-//Función auxiliar para mostrar las fechas en la página de perfil
+//Función auxiliar para mostrar las fechas
 function conversionFecha(){
     var fecha = new Date(document.getElementsByClassName[fechas].value);
     fecha.setDate(fecha.getDate-7);

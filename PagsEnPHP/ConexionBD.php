@@ -1,6 +1,6 @@
 <?php
     function crearconexionBD(){
-        
+        //función para crear la conexión a la BD
         $host="oci:dbname=localhost/XE;charset=UTF8";
         $usuario = "IISSI";
         $password = "IISSI";
@@ -24,6 +24,7 @@
 
     //Esto hay que cambiarlo entero, no esta haciendo ninguna insercion en la base de datos.
     //Hay que utilizar la conexion y luego insertar directamente los datos.
+    //funcion de inserción de residente primigenea, actualmente en desuso debido a una mejor versión
     function altaUsuarioBD($f){
         $nif = $f["DNI"];
         $nombre = $f["FirstName"];

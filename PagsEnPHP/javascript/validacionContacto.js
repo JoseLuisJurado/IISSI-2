@@ -1,9 +1,12 @@
+//Función sobre la que se comprueba que los datos introducidos son validados.
 function validacionGeneral(){
     
     res = true;
     return res;
 }
 
+//Función para comprobar que los datos insertados no superan el límite de la base de datos
+//Actualmente en desuso debido a que hay una mejor opción y más eficiente en html
 function validacionNombre(){
     nombre = document.forms["formularioContacto"]["Nombre"].value;
 
@@ -13,6 +16,8 @@ function validacionNombre(){
     }
 }
 
+//Función para comprobar que los datos insertados no superan el límite de la base de datos
+//Actualmente en desuso debido a que hay una mejor opción y más eficiente en html
 function validacionPrimerApellido(){
     apellido1 = document.forms["formularioContacto"]["PrimerApellido"].value;
 
@@ -22,6 +27,8 @@ function validacionPrimerApellido(){
     }
 }
 
+//Función para comprobar que los datos insertados no superan el límite de la base de datos
+//Actualmente en desuso debido a que hay una mejor opción y más eficiente en html
 function validacionSegundoApellido(){
     apellido2 = document.forms["formularioContacto"]["SegundoApellido"].value;
 
@@ -31,6 +38,8 @@ function validacionSegundoApellido(){
     }
 }
 
+//Función para comprobar que los datos insertados no superan el límite de la base de datos
+//Actualmente en desuso debido a que hay una mejor opción y más eficiente en html
 function validacionCorreo(){
     correo = document.forms["formularioContacto"]["CorreoElectronico"].value;
 
@@ -40,6 +49,8 @@ function validacionCorreo(){
     }
 }
 
+//Función para comprobar que los datos insertados no superan el límite de la base de datos
+//Actualmente en desuso debido a que hay una mejor opción y más eficiente en html
 function validacionAsunto(){
     asunto = document.forms["formularioContacto"]["Asunto"].value;
 

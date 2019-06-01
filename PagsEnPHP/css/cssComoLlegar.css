@@ -5,18 +5,21 @@
 }
 iframe {
     width: 78%;
-    height: 28.75em;
+    height: 17.75em;
     margin: 0 auto;
-    border: 0.3125em solid gray;
+    border: 0.1125em solid gray;
 }
+
 address{
-    font-size: 1.25em;
+    margin-top: .5%;
+    font-size: 1em;
     text-align: left;
     margin-left: 10%;
-    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
-h1.ubi-textCLL{
-	margin: 0%;
+
+h2.ubi-textCLL{
+	margin: 1em;
 	margin-bottom: 5%;
 	text-align: center;
 	text-decoration: underline;

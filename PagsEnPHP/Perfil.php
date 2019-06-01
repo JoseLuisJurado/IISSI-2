@@ -2,7 +2,7 @@
 session_start();
 require_once("gestionAdministracion_Usuario.php");
 
-//si hay usuario (que debería de haber), extraigo de él las fechas y si ha pagado el comedor.
+//si hay usuario (que debería de haber, y si no se devuelve al login), extraigo de él las fechas y si ha pagado el comedor.
 if (isset($_SESSION['login'])) {
     $correo = $_SESSION['login'];
     $conn = crearconexionBD();

@@ -1,7 +1,6 @@
 <?php
 	session_start();
-	
-	// Importar librerías necesarias para gestionar direcciones y géneros literarios
+	//formulario creado para probar las validaciones PHP, con el menor número posible de restricciones para probarlas
 	require_once("ConexionBD.php");
 	
 	// Si no existen datos del formulario en la sesión, se crea una entrada con valores por defecto
@@ -32,7 +31,7 @@
 	else
 		$formulario = $_SESSION["formulario"];
 			
-	// Si hay errores de validación, hay que mostrarlos y marcar los campos (El estilo viene dado y ya se explicará)
+	// Si hay errores de validación, hay que mostrarlos
 	if (isset($_SESSION["errores"])){
 		$errores = $_SESSION["errores"];
 		unset($_SESSION["errores"]);
@@ -106,7 +105,7 @@
             <section class="sectionRes">
                 <label class="labelRes">
                     Sexo*:
-                    <input value="hombre" name="Sexo" id="Sexo" type="radio" required>Hombre
+                    <input value="hombre" name="Sexo" id="Sexo" type="radio" >Hombre
                     <input value="mujer" name="Sexo" id="Sexo" type="radio">Mujer
                 </label>
             </section>

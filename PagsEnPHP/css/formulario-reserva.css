@@ -105,11 +105,14 @@ section.adminS2{
 
 span.adminP2{
     text-align: left;
+    
+    
 }
 
 span.adminP3{
     text-align: right;
     margin-left: 50%;
+    
 }
 
 p.adminP4{
@@ -174,6 +177,15 @@ select.FR_Ajuste_Pais{
 	margin-left: 7.3em;
 	width: 30.5%;
 	margin-top:2%;
+}
+
+select.P_Ajuste_Hora{
+	margin-left: 0.3em;
+	width: 30.5%;
+	margin-top:2%;
+	margin-bottom:3%;
+	
+	
 }
 
 input.FR_Ajuste_Dom{
@@ -241,13 +253,19 @@ div.divFormO{
     'left left left right right right right right';
 }
 
+
+
+
+
+
 .gridPerfil{
 	padding: 2%;
     padding-bottom: 2%;
 	border-radius: 1em;
-    border-width: 2em;
     background-color: #DEF0F3;
 	margin-top: 3%;
+	border-style: groove;
+	border-color: threedface;
 	margin-left: 2%;
 	display:grid;
 	grid-template:
@@ -279,6 +297,14 @@ div.divPerfilRight{
 
 section.sectionPerfil1{
 	margin-bottom: 2%;
+	font-size: 105%;
+	font-weight:bold;
+	text-decoration: underline;
+}
+
+section.sectionPerfil2{
+	margin-bottom: 2.2%;
+	
 }
 
 form.formPer{

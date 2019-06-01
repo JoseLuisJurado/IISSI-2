@@ -4,7 +4,7 @@ include_once 'gestionarContacto.php';
 <?php
 	session_start();
 
-	// Importar librerías necesarias para gestionar direcciones y géneros literarios
+	
 	require_once("ConexionBD.php");
 
 	// Comprobar que hemos llegado a esta página porque se ha rellenado el formulario
@@ -43,7 +43,7 @@ include_once 'gestionarContacto.php';
 	include "php/menu.php";
 	 ?>
     <div class="cuerpo2">
-        <h1>Su mensaje ha sido correctamente enviado, le responderemos lo antes posible(mentira, es mas, ni siquiera lo leeremos)</h1>
+        <h1>Su mensaje ha sido correctamente enviado, le responderemos lo antes posible</h1>
         
     </div>
 			<?php 

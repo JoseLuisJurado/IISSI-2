@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//procedimiento para modificar los datos de un residente mediante la administración
 if (isset($_SESSION["reserva"])) {
     $reserva = $_SESSION["reserva"];
     unset($_SESSION["reserva"]);

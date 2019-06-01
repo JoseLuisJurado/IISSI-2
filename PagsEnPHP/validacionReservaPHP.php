@@ -37,7 +37,7 @@ $conexion = crearconexionBD();
 			<?php } else { ?>
 			<h1>Residente existente.</h1>
 			<div >
-				Pulsa <a href="formulario-reserva.php">aquí</a> para volver a realizar la reserva.
+				<p>Pulsa <a href="formulario-reserva.php">aquí</a> para volver a realizar la reserva.</p>
 			</div>
 			<?php } ?>
 		</div>

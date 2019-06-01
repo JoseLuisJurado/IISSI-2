@@ -15,7 +15,7 @@ try {
 		// Recogemos los datos del formulario, si alguno no existe controlamos el error y lo asignamos como vacío;
 
 		//La razón por la que está puesto así es porque algunos nos daba fallo en la página.
-		//Aunque esté mal hecho, está a prueba de fallos
+		//Aunque no se haga así, está a prueba de fallos
 		if(isset($_REQUEST["DNI"])) $reservaForm['DNI'] = $_REQUEST["DNI"]; 
 
 		if(isset($_REQUEST["Nombre"])) $reservaForm['Nombre'] = $_REQUEST["Nombre"];

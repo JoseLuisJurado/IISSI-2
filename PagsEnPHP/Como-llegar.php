@@ -18,7 +18,7 @@ session_start();
     include "php/menu.php";
     ?>
 	<div class="cuerpo2CLL">
-    <h1 class="ubi-textCLL">Residencia de estudiantes Bahía</h1>
+    <h2 class="ubi-textCLL">Residencia de estudiantes Bahía</h2>
 
         <div id="all">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.850105977093!2d-6.198180984717585!3d36.53361048000445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dcdd53820fc45%3A0x6b11cb52d77977a0!2sResidencia+de+Estudiantes+Bah%C3%ADa!5e0!3m2!1ses!2ses!4v1551192901730">ss</iframe>

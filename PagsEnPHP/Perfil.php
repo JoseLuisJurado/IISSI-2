@@ -30,6 +30,7 @@ if (isset($_SESSION['login'])) {
 <head>
     <meta charset="utf-8">
     <meta title="Residencia Estudiantil Digital">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="css/cssInicio.css">
     <link rel="icon" type="image/png" href="imagenes/LogoRED.jpeg">
     <Title>Residencia de estudiantes bahía</Title>
@@ -41,11 +42,8 @@ if (isset($_SESSION['login'])) {
     include "php/menu.php";
     ?>
 
-
-    <script text="javascript">
-        setTimeout("document.getElementById('mensaje').style.display='none';", 8000);
-    </script>
-    <div id="mensaje" style="display:block">
+<img class="imgPerfil" src="imagenes\avatar.png" alt="ImagenDelUsuario" class="adminI">
+    <div id="mensaje" class="mensajePerfil">
         <!--Extraigo el usuario que se ha aportado al incio de sesion -->
         Bienvenido <?php if ($correo != "") echo $correo; ?>, inicio de sesión correcto.<br>
         Esperamos que tenga una buena estancia en nuestra residencia.
@@ -54,10 +52,10 @@ if (isset($_SESSION['login'])) {
 
 
     <main>
-        <form class="formRes" method="GET">
-            <legend class="adminSala">Reserva de salas</legend>
-            <img src="imagenes\avatar.png" alt="ImagenDelUsuario" class="adminI">
+    	 
+        <form class="formPer" method="GET">      
             <fieldset class="fieldsetRes">
+            	<legend class="underline">Reserva de salas</legend>
                 <label class="adminL">Reserve un día:</label>
                 <section class="adminS">
                     <label class="labelRes">
@@ -73,42 +71,59 @@ if (isset($_SESSION['login'])) {
             <div><input type="submit" value="Enviar"> </div>
         </form>
     </main>
-    <div class="cuerpoPerfil">
-        <section class="adminS2">
-
-            <span class="adminP2">Fecha último pago</span>
-            <span class="adminP3_1">Habitación Actual</span>
+    
+    <div class="gridPerfil">
+    	<div class="divPerfilLeft">
+    	<section class="sectionPerfil1">
+            <span>Fecha último pago</span>
         </section>
-        <section class="adminS2">
-
+        <section class="sectionPerfil1">
+            <span> Pago realizado</span>
+        </section>
+        <section class="sectionPerfil1">
+            <span>Habitación Actual</span>
+    	</section>
+    	<section class="sectionPerfil1">
+            <span>Fecha de llegada</span>
+         </section>
+         <section class="sectionPerfil1">
+            <span>Fecha de partida</span>
+        </section>
+        <section class="sectionPerfil1">
+            <span>Comedor Pagado</span>
+        </section>
+    	</div>
+    	<div class="divPerfilRight">
+        <section class="sectionPerfil1">
             <!-- Extraigo la fecha de pago de la residencia de la base de datos-->
             <span class="adminR2"> <?php if (isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
-                                    else echo "<span class='error'> No hay fecha </span>" ?></span>
+                                    else echo "<span class='error'> No hay fecha </span>" ?></span>             
+        </section>
+        <section class="sectionPerfil1">
+            <span class="adminR3"> Sí</span>
+        </section>
+             
+        <section class="sectionPerfil1">
             <span class="adminR3"> WIP</span>
-
         </section>
-        <section class="adminS2">
-            <span class="adminP2">Fecha de llegada</span>
-            <span class="adminP3"> Pago realizado</span>
-        </section>
-        <section class="adminS2">
+        
+        <section class="sectionPerfil1">
             <!--Extraigo la fecha de entrada de la base de datos-->
             <span class="adminR2"> <?php if (isset($fechas[0]["FECHA_INICIO"])) echo $fechas[0]["FECHA_INICIO"];
                                     else echo "<span class='error'> No hay fecha </span>" ?></span>
-            <span class="adminR3"> Sí</span>
         </section>
-        <section class="adminS2">
-            <span class="adminP2">Fecha de partida</span>
-            <span class="adminP3">Comedor Pagado</span>
-        </section>
-        <section class="adminS2">
+        <section class="sectionPerfil1">
             <!--Extraigo de la base de datos la fecha de salida que se especifica en la reserva-->
             <span class="adminR2"> <?php if (isset($fechas[0]["FECHA_FIN"])) echo $fechas[0]["FECHA_FIN"];
                                     else echo "<span class='error'> No hay fecha </span>" ?></span>
+        </section>
+        <section class="sectionPerfil1">
             <span class="adminR3"><?php if (isset($comedorValor)) echo $comedorValor;
                                     else echo "<span class='error'> dato no encontrado </span>" ?></span>
-
         </section>
+        </div>
+        
+        
     </div>
 
 

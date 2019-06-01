@@ -28,6 +28,7 @@ if (isset($_SESSION["destino"])) {
 	<meta charset="utf-8">
 	<meta title="Residencia Estudiantil Digital">
 	<link rel="stylesheet" href="css/cssInicio.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="icon" type="image/jpeg" href="imagenes/LogoRED.jpeg" />
 	<Title>Residencia de estudiantes bahía</Title>
 </head>

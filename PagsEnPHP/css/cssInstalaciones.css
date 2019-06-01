@@ -3,9 +3,9 @@ img.centroInst{
 	display:block;
 	margin-top:0.625em;
 	text-align: center;
-	border-width: .2em;
-	border-radius: 0.2em;
-	border-style: solid;
+	border-radius: 16%;
+	box-shadow: 2px 2px 5px #999;
+    border:none;
 	width: 18.75em;
 	height: 12.5em;
 }
@@ -21,7 +21,6 @@ img.centroInst{
 .titulo2{
     text-align: center;
     color: black;
-    
     font-size: 1.925em;
     text-decoration: underline;
 }

@@ -10,7 +10,6 @@ fieldset.fieldsetRes{
     border-radius: 1em;
     border-width: .2em;
     background-color: #DEF0F3;
-    padding-bottom: 2%
 }
 
 section.sectionRes{
@@ -233,11 +232,63 @@ div.divFormO{
     clear: left;
     text-align: left;
     padding: .2em;
-    margin-bottom: 2%;
+    margin-bottom: 5.5%;
  }
 
 .gridFR{
 	display:grid;
 	grid-template:
     'left left left right right right right right';
+}
+
+.gridPerfil{
+	padding: 2%;
+    padding-bottom: 2%;
+	border-radius: 1em;
+    border-width: 2em;
+    background-color: #DEF0F3;
+	margin-top: 3%;
+	margin-left: 2%;
+	display:grid;
+	grid-template:
+    'left left left right right right';
+}
+
+img.imgPerfil{
+	margin-left: 5%;
+	margin-right: 2%;
+	margin-top: 3%;
+	float:left;
+	width: 5%;
+	border-width: 0.125em;
+    border-color: black;
+    border-style: solid;
+}
+
+div.divPerfilLeft{
+	float:left;
+	display:block;
+	padding-bottom: 0%;
+	grid-area: left;
+}
+div.divPerfilRight{
+	float:right;
+	display:block;
+	grid-area: right;
+}
+
+section.sectionPerfil1{
+	margin-bottom: 2%;
+}
+
+form.formPer{
+	margin-top: 3%;
+    padding: 2%;
+    padding-bottom: 2%;
+    
+}
+
+div.mensajePerfil{
+	margin-top: 3%;
+	display: block;
 }

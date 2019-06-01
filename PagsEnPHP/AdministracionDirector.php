@@ -93,6 +93,8 @@ cerrarConexionBD($conn);
 
                     <div id="botones_modificacion" class="botones_modificacion">
 
+                        <!--No hemos podido cambiar la imagen de los botones a los símbolos ascii.
+                            Como usted vió en clase, no coge los símbolos ascii y se quedan vacíos-->
                         <?php if (isset($reserva["DNI"]) && $reserva["DNI"] == $pagina["DNI_R"]) { ?>
                             <button class="buttonAD" id="modificar" class="modificar" type="submit" name="modificar">
                                 <img src="http://www.fileformat.info/info/unicode/char/2714/heavy_check_mark.png" width="17px">
